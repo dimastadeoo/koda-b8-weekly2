@@ -17,13 +17,18 @@
         }
 
         header {
+            width: 1728px;
+            height: 134px;
             background-color: #FFFFFF;
             border-bottom:solid ;
             border-color: #0000001A;
             border-bottom-width: 1px;
+            position: sticky;
+            top: 0;
         }
         .headOne{
             width: 1728px;
+            max-width: 1728px;
             height: 28px;
             background-color: #1A73E8;
             padding: 6px 224px;
@@ -86,6 +91,169 @@
             letter-spacing: 0;
             vertical-align: middle;
         }
+        
+        .headTwo{
+            width: 1728px;
+            height: 64px;
+            max-width: 1728px;
+            padding: 0 224px;
+            position: relative;
+        }
+        .div-two{
+            max-width: 1280px;
+            width: 1280px;
+            height: 64px;
+            padding: 12px;
+            gap: 16px;
+            position: relative;
+        }
+        span.beliMudah{
+            width: 120px;
+            height: 32px;
+            display: inline-block;
+            gap: 8px;
+        }
+        span.logoB{
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            background-color: #1A73E8;
+            position: absolute;
+            top: 16px;
+            color: #FFFFFF;
+            display: inline-block;
+        }
+        span.logoB > a{
+            width: 10px;
+            height: 20px;
+            padding: 0 11px;
+            font-weight: 400;
+            text-decoration: none;
+            font-size: 14px;
+            line-height: 32px;
+            text-align: center;
+            color: #FFFFFF;
+        }
+        span.textLogo{
+            width: 80px;
+            height: 24px;
+            display: inline-block;
+            color: #111827;
+            position: absolute;
+            line-height: 24px;
+            letter-spacing: 0%;
+            top: 19px;
+            left: 59px;
+        }
+        span.textLogo > a{
+            vertical-align: middle;
+            line-height: 24px;
+            letter-spacing: 0%;
+            font-weight: 400;
+            font-size: 16px;
+            color: #111827;
+            text-decoration: none;
+        }
+        span.search{
+            width: 576px;
+            height: 42px;
+            display: inline-block;
+            position: absolute;
+            padding: 0 11.5px;
+         
+            
+        }
+        .search > .form{
+            width: 576px;
+            height: 42px;
+            border-radius: 12px;
+            border: 1px solid #0000001A;
+            background-color: #F3F4F6;
+            position: relative;
+        }
+        .input-form {
+            width: 100%; 
+            height: 100%;  
+            border: none;
+            outline: none;
+            background-color: transparent;
+            border-radius: 12px;
+            padding-left: 16px;
+            padding-right: 56px;
+            font-size: 14px;
+            color: #111827;
+        }
+
+        .input-form::placeholder {
+            color: #9CA3AF;
+            font-weight: 400;
+        }
+        .search-form {
+            width: 44px;   
+            height: 36px;
+            background-color: #1A73E8;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            position: absolute;
+            top: 2px;   
+            right: 3px;         
+            text-align: center;
+        }
+
+        .search-icon {
+            width: 16px;
+            height: 16px;
+            vertical-align: middle;
+        }
+        span.icon{
+            width: 210px;
+            height: 40px;
+            max-width: 1280px;
+            gap: 4px;
+            right: 332px;
+            display: inline-block;
+            position: absolute;
+        }
+        .icon > span{
+            display: inline-block;
+            border-radius: 8px;
+            padding: 10px;
+        }
+        span.bell, span.love, span.cart{
+            width: 40px;
+            height: 40px;
+        }
+        .bell > img, .profile > img, .love > img, .cart > img {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+        }
+        span.profile{
+            width: 78px;
+            height: 40px;
+            gap: 8px;
+        }
+        span.profile-name{
+            position: absolute;
+            display: inline-block;
+            height: 20px;
+            width: 30px;
+            padding: 0 8px;
+
+        }
+        .profile-name > a{
+            text-decoration: none;
+            font-size: 14px;
+            line-height: 20px;
+            letter-spacing: 0%;
+            vertical-align: middle;
+            color: #111827;
+        }
+
+        
+
+
     </style>
 </head>
 <body>
@@ -103,7 +271,41 @@
             </div>
         </div>
         <div class="headTwo">
-
+            <div class="div-two">
+                <span class="beliMudah">
+                    <span class="logoB">
+                        <a href="#">B</a>
+                    </span>
+                    <span class="textLogo">
+                        <a href="#">BeliMudah</a>
+                    </span>
+                </span>
+                <span class="search">
+                    <form class="form">
+                        <input class="input-form" placeholder="Cari produk, merek, kategori...">
+                        <button class="search-form">
+                            <img class="search-icon" src="/asset/img/search-icon.png" alt="search-icon">
+                        </button>
+                    </form>
+                </span>
+                <span class="icon">
+                    <span class="bell">
+                        <img src="/asset/img/bell.png" alt="lonceng">
+                    </span>
+                    <span class="profile">
+                        <img src="/asset/img/profile.png" alt="Icon Profile">
+                        <span class="profile-name">
+                            <a href="#">Budi</a>
+                        </span>
+                    </span>
+                    <span class="love">
+                        <img src="/asset/img/love.png" alt="Icon Favorite">
+                    </span>
+                    <span class="cart">
+                        <img src="/asset/img/cart.png" alt="Icon Keranjang">
+                    </span>
+                </span>
+            </div>
         </div>
         <div>
             
