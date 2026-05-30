@@ -108,8 +108,8 @@ span.logoB{
     height: 32px;
     border-radius: 8px;
     background-color: #1A73E8;
-    position: absolute;
-    top: 16px;
+    position: relative;
+    top: 6px;
     color: #FFFFFF;
     display: inline-block;
 }
@@ -150,8 +150,6 @@ span.search{
     display: inline-block;
     position: absolute;
     padding: 0 11.5px;
-    
-    
 }
 .search > .form{
     max-width: 530px;
@@ -281,7 +279,6 @@ section.purple-blue{
     height: 420px;
     padding: 0 200px;
     background: linear-gradient(to right, #4F39F6 , #8200DB );
-    
 }
 
 .purple-blue > img{
@@ -332,7 +329,7 @@ section.purple-blue{
     color: #FFFFFFCC;
 }
 
-.text-landing > .button {
+.text-landing .button {
     width: auto;
     height: auto;
     border: none;
@@ -403,4 +400,113 @@ section.purple-blue{
     position: absolute;
     top: 290px;
     right: 15px;
+}
+.section-shop{
+    width: auto;
+    height: 192px;
+    max-width: 1280px;
+    gap: 24px;
+    padding: 0 16px;
+    position: relative;
+    margin: 32px 200px;
+
+}
+div.div-shop-kat{
+    width: auto;
+    max-width: 1248px;
+    height: 30px;
+    justify-content: space-between;
+}
+.div-shop-kat > h2{
+    display: inline-block;
+    font-weight: 500;
+    font-size: 20px;
+    padding: auto;
+    line-height: 30px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+}
+.div-shop-kat > span{
+    max-width: 100px;
+    height: 20px;
+    gap: 4px;
+    padding: auto;
+    top: 4px;
+    right: 16px;
+    position: absolute;
+    display: inline-block;
+}
+a{
+    text-decoration: none;
+    width: 82px;
+    height: 32px;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #1A73E8;
+}
+
+div.item-kat{
+    width: auto;
+    height: 138px;
+    max-width: 1280px;
+    display: inline-block;
+}
+.item-shop{
+    width: auto;
+    position: relative;
+    display: inline-block;
+    max-width: 198px;
+    height: 138px;
+    margin: 16px 8px;
+    gap: 8px;
+    opacity: 1;
+    border-radius: 12px;
+    border-width: 1px;
+    padding: 16px 32px;
+    box-sizing: border-box;
+    text-align: center;
+    border: 1px solid #0000001A;
+    background: #FFFFFF;
+}
+
+.item-shop:nth-child(3){
+    padding-right: 22px;
+    padding-left: 22px;
+}
+
+.item-shop:first-child{
+    margin-left: 0;
+}
+.item-shop:last-child{
+    padding-right: 14px;
+    padding-left: 14px;
+    margin-right: 0;
+}
+
+.img-item-kat{
+    width: 56px;
+    height: 56px;
+    opacity: 1;
+    border-radius: 12px;
+}
+
+.title-item-kat{
+    width: auto;
+    height: 16px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #111827;
+}
+.text-item-kat{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #6B7280;
 }
