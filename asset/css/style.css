@@ -530,7 +530,7 @@ footer{
     max-width: 1280px;
     height: 104px;
     line-height: 104px;
-    padding: 0 8px; 
+    padding: 0 16px; 
     display: inline-block; 
 }
 .container-footer-item{
@@ -586,9 +586,150 @@ footer{
     color: #FFFFFF;
 }
 .container-footer:nth-child(2){
-    height: 338px;
     line-height: 338px;
+    height: 338px;
+}
+.container-footer-midle {
+    width: 24%;
+    max-width: 294px;
+    height: 242px;
+    margin-right: 5px;
+    display: inline-block;
+    color: #F3F4F6;
+    text-align: left; 
+    vertical-align: middle; 
+    line-height: normal; 
+}
+.container-footer-midle:nth-last-child{
+    margin-right: 0;
 }
 
+.title-middle-footer {
+    width: 100%;
+    max-width: 288px;
+    height: 32px;
+    margin-bottom: 12px;
+}
+
+.logoBFoot {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    background: #1A73E8;
+    border-radius: 8px;
+    color: #FFFFFF;
+    vertical-align: middle;
+}
+
+.textBFoot {
+    display: inline-block;
+    padding-left: 8px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+    vertical-align: middle;
+    color: #FFFFFF;
+}
+
+.text-middle-footer {
+    width: 100%;
+    max-width: 288px;
+    margin-bottom: 12px;
+}
+
+.text-middle-footer > p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.5; 
+    color: #9CA3AF; 
+    display: inline;
+    vertical-align: middle;
+}
+.text-middle-footer > img{
+    width: 15px;
+    height: 15px;
+    display: inline;
+}
+.logo-sosmed{
+    display: inline-block;
+    width: 100%;
+    max-width: 288px;
+    height: 32px;
+    opacity: 1;
+}
+
+.icon-sosmed{
+    display: inline-block;
+    position: relative;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    margin-right: 8px;
+    opacity: 1;
+    border-radius: 16777200px;
+    background: #364153;
+}
+
+.container-newsletter {
+    width: 100%;
+    max-width: 288px;
+    height: 82px; 
+    background-color: #1E2939; 
+    border-radius: 8px;
+}
+
+.title-newsletter {
+    color: #FFFFFF;
+    font-size: 12px;
+    padding: 8px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0%;
+}
+
+
+.form-newsletter {
+    width: 100%;
+    max-width: 264px;
+    height: 34px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+
+.input-email {
+    display: inline-block;
+    width: 65%; 
+    max-width: 168px;
+    height: 34px;
+    background: #364153;
+    border: 1px solid #4A5565;
+    border-radius: 6px;
+    padding: 8px 12px;
+    color: #FFFFFF;
+    font-size: 12px;
+    vertical-align: middle; 
+}
+
+.input-email::placeholder {
+    color: #FFFFFF80;
+}
+
+.btn-langganan {
+    display: inline-block;
+    width: 32%; 
+    height: 34px;
+    background-color: #1A73E8; 
+    color: #FFFFFF;
+    border: none;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle; 
+}
 
 
