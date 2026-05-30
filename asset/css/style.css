@@ -732,4 +732,52 @@ footer{
     vertical-align: middle; 
 }
 
+.container-footer:nth-child(3){
+    height: 49px;
+    line-height: 49px;
+    border: #1A73E8 1px solid;
+}
+
+.container-footer-bottom{
+    height: 48px;
+    max-width: 1280px;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    justify-content: space-between;
+    opacity: 1;
+}
+.textLeftFoot{
+    width: 35%;
+    display: inline-block;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #6A7282;
+    text-align: left;         
+    vertical-align: middle;
+}
+.textRightFoot{
+    display: inline-block;
+    width: 64%;
+    text-align: right;    
+}
+.textRightLink{
+    margin-left: 16px;
+    display: inline-block;
+    color: #6A7282;
+
+}
+.textRightLink > a{
+    color: #6A7282;
+    font-weight: 400;
+    font-size: 12px;
+    vertical-align: middle;
+    line-height: 16px;
+    letter-spacing: 0%; 
+}
+
+
 
