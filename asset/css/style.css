@@ -785,6 +785,9 @@ footer{
 .flash-sale{
     height: 475.25px;
 }
+.new-product{
+    height: 908.5px;
+}
 
 .div-section{
     width: 100%;
@@ -832,10 +835,34 @@ footer{
     color: #FFFFFF;
 }
 .logoFlash > svg{
+    position: relative;
+    display: inline-block;
+    top: -1.5px;
     width: 16px;
     height: 16px;
     vertical-align: middle;
 }
+
+.logoNew{
+    max-width: 176px;
+    height: 30px;
+    line-height: 30px;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 20px;
+    letter-spacing: 0%;
+    /* color: #111827; */
+    vertical-align: middle;
+}
+.logoNew > svg{
+    position: relative;
+    display: inline-block;
+    top: -2px;
+    height: 20px;
+    width: 20px;
+    vertical-align: middle;
+}
+
 .textTime{
     height: 24px;
     font-weight: 400;
@@ -864,6 +891,10 @@ footer{
     margin-top: 18px;
     height: 419.25px;
 }
+.div-item-new{
+    margin-top: 18px;
+    height: 854.5px;  
+}
 
 .item-flash-container{
     height: 420px;
@@ -872,6 +903,7 @@ footer{
     display: inline-block;
     width: 24%;
     opacity: 1;
+    margin-bottom: 12px;
     border-radius: 12px;
     border-width: 1px;
     margin-right: 6px;
@@ -902,9 +934,30 @@ footer{
 .link-bg-item-4{
     background-image: url('/asset/img/item-4.png');
 }
+
+.link-bg-item-5{
+    background-image: url('/asset/img/item-5.png');
+}
+
+.link-bg-item-6{
+    background-image: url('/asset/img/item-6.png');
+}
+
+.link-bg-item-7{
+    background-image: url('/asset/img/item-7.png');
+}
+
+.link-bg-item-8{
+    background-image: url('/asset/img/item-8.png');
+}
+
+.link-bg-item-9{
+    background-image: url('/asset/img/item-9.png');
+}
+
 .badge-flash{
     display: inline-block;
-    width: 50%;
+    width: 49%;
     height: 24px;
 }
 .badge-flash > p{
@@ -921,6 +974,9 @@ footer{
     vertical-align: middle;
     text-align: center;
     line-height: 24px;
+}
+.new-badge > p{
+    background: #1A73E8;
 }
 .wishlist-flash{
     text-align: right;
@@ -1025,6 +1081,8 @@ footer{
 	margin-right: 6px;
 }
 
+
+
 .regular-price {
 	display: inline-block;
     position: relative;
@@ -1034,6 +1092,10 @@ footer{
 	font-weight: 400;
 	color: #6b7280;
 	text-decoration: line-through;
+}
+
+.display-none{
+    display: none;
 }
 
 .section-four{
@@ -1077,7 +1139,6 @@ footer{
     max-width: 152px;
     height: 20px;
     width: auto;
-    margin-bottom: 4px;
     opacity: 1;
     font-weight: 400;
     font-size: 14px;
