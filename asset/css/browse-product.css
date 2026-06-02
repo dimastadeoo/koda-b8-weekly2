@@ -34,8 +34,8 @@ a{
 
 .container.main-layout {
     display: flex;
-    padding: 0 180px 60px 180px; 
     gap: 40px;
+    margin-bottom: 32px;
 }
 
 .sidebar-filter {
