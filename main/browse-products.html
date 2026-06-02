@@ -9,69 +9,63 @@
     <link rel="stylesheet" href="/asset/css/style.css">
 </head>
 <body>
-    <header>
-        <!-- header paling atas -->
-        <div class="headOne">
-            <div class="div-one">
-                <span class="left">
-                    <img class="img-map" src="/asset/img/map-icon.png" alt="Icon Map">
-                    <span class="top-text text-city">Kirim ke: Jakarta Selatan</span>
-                </span>
-                <span class="right">
-                    <span class="top-text phone">📞 0800-1234-5678 (Gratis)</span>
-                    <span class="top-text ongkir">🚀 Gratis ongkir di atas Rp 100.000</span>
-                </span>
+    <header class="header">
+        <div class="bg-blue text-white top-bar">
+            <div class="container flex justify-between items-center h-full text-xs">
+                <div class="flex items-center gap-1">
+                    <img class="icon-sm" src="/asset/img/map-icon.png" alt="Icon Map">
+                    <span>Kirim ke: Jakarta Selatan</span>
+                </div>
+                <div class="flex items-center gap-4">
+                    <span>📞 0800-1234-5678 (Gratis)</span>
+                    <span>🚀 Gratis ongkir di atas Rp 100.000</span>
+                </div>
             </div>
         </div>
-        <!-- header middle -->
-        <div class="headTwo">
-            <div class="div-two">
-                <a href="#" class="beliMudah">
-                    <span class="logoB">B</span>
-                    <span class="textLogo">BeliMudah</span>
-                </a>
 
-                <div class="search">
-                    <form class="form">
-                        <input class="input-form" placeholder="Cari produk, merek, kategori...">
-                        <button type="submit" class="search-form">
-                            <img class="search-icon" src="/asset/img/search-icon.png" alt="search-icon">
+        <div class="border-bottom">
+            <div class="container middle-bar-grid">      
+                <a href="#" class="flex items-center gap-2 text-decoration-none">
+                    <div class="logo-box bg-blue text-white flex justify-center items-center font-bold">B</div>
+                    <div class="text-lg text-dark">BeliMudah</div>
+                </a>
+                <div class="search-container">
+                    <form class="search-form flex items-center bg-gray-light">
+                        <input type="text" class="search-input w-full bg-transparent" placeholder="Cari produk, merek, kategori...">
+                        <button type="submit" class="search-btn bg-blue flex justify-center items-center pointer">
+                            <img class="icon-md" src="/asset/img/search-icon.png" alt="search-icon">
                         </button>
                     </form>
                 </div>
 
-                <div class="icon-group">
-                    <span class="icon-item bell">
-                        <img src="/asset/img/bell.png" alt="lonceng">
+                <div class="flex items-center gap-4">
+                    <span class="pointer"><img class="icon-md" src="/asset/img/bell.png" alt="lonceng"></span>
+                    <span class="flex items-center gap-1 pointer">
+                        <img class="icon-md" src="/asset/img/profile.png" alt="Icon Profile">
+                        <span class="text-sm text-dark font-medium">Budi</span>
                     </span>
-                    <span class="icon-item profile">
-                        <img src="/asset/img/profile.png" alt="Icon Profile">
-                        <span class="profile-name">Budi</span>
-                    </span>
-                    <span class="icon-item love">
-                        <img src="/asset/img/love.png" alt="Icon Favorite">
-                    </span>
-                    <span class="icon-item cart">
-                        <img src="/asset/img/cart.png" alt="Icon Keranjang">
-                    </span>
+                    <span class="pointer"><img class="icon-md" src="/asset/img/love.png" alt="Icon Favorite"></span>
+                    <span class="pointer"><img class="icon-md" src="/asset/img/cart.png" alt="Icon Keranjang"></span>
                 </div>
+                
             </div>
         </div>
-        <!-- navigasi -->
-        <nav>
-            <div class="nav-container">
-                <span class="category-container">
-                    <img src="/asset/img/list.png" alt="icon list">
-                    <span class="textNav font-bold margin4">Semua Kategori</span>
-                    <img src="/asset/img/bottom-arrow.png" alt="bottom arrow">
+
+        <nav class="nav-container">
+            <div class="container flex flex-wrap items-center gap-4 text-sm text-gray">
+                <span class="flex items-center gap-1 font-medium text-dark pointer mr-2">
+                    <img class="icon-sm" src="/asset/img/list.png" alt="icon list">
+                    <span>Semua Kategori</span>
+                    <img class="icon-sm" src="/asset/img/bottom-arrow.png" alt="bottom arrow">
                 </span>
-                <span class="category-container textNav">💻 Elektronik</span>
-                <span class="category-container textNav">👗 Fashion</span>
-                <span class="category-container textNav">🏠 Rumah & Dapur</span>
-                <span class="category-container textNav">💄 Kecantikan</span>
-                <span class="category-container textNav">⚽ Olahraga</span>
-                <span class="category-container textNav">📚 Buku & Alat Tulis</span>
-                <span class="category-container textNav text-promo">🔥 Promo</span>
+                
+                <span class="pointer hover-blue">💻 Elektronik</span>
+                <span class="pointer hover-blue">👗 Fashion</span>
+                <span class="pointer hover-blue">🏠 Rumah & Dapur</span>
+                <span class="pointer hover-blue">💄 Kecantikan</span>
+                <span class="pointer hover-blue">⚽ Olahraga</span>
+                <span class="pointer hover-blue">📚 Buku & Alat Tulis</span>
+                <span class="pointer text-red font-medium">🔥 Promo</span>
             </div>
         </nav>
     </header>
