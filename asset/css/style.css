@@ -253,10 +253,8 @@ nav {
 
 main{
     max-width: 1728px;
-    height: 3659.25px;
-    top: 134px;
+    height: auto;
     padding-bottom: 48px;
-    gap: 48px;
 
 }
 section.purple-blue{
@@ -1218,6 +1216,22 @@ footer{
 	font-family: "Inter", sans-serif;
 	color: #6b7280;
 }
+
+.nav-main{
+    width: auto;
+    max-width: 1280px;
+    height: 20px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    margin-top: 24px;
+    color: #6B7280;
+
+}
+
+
 
 
 
