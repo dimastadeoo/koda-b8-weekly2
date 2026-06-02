@@ -812,6 +812,34 @@ footer {
     background-image: url('/asset/img/item-9.png');
 }
 
+.link-bg-item-10{
+    background-image: url('/asset/img/item-10.png');
+}
+
+.link-bg-item-11{
+    background-image: url('/asset/img/item-11.png');
+}
+
+.link-bg-item-12{
+    background-image: url('/asset/img/item-12.png');
+}
+
+.link-bg-item-13{
+    background-image: url('/asset/img/item-13.png');
+}
+
+.link-bg-item-14{
+    background-image: url('/asset/img/item-14.png');
+}
+
+.link-bg-item-15{
+    background-image: url('/asset/img/item-15.png');
+}
+
+.link-bg-item-16{
+    background-image: url('/asset/img/item-16.png');
+}
+
 .flash-sale {
     margin-bottom: 24px;
 }
@@ -1162,18 +1190,10 @@ footer {
     }
 }
 
-.nav-main{
-    width: auto;
-    max-width: 1280px;
-    height: 20px;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
-    letter-spacing: 0%;
-    vertical-align: middle;
-    margin-top: 24px;
-    color: #6B7280;
+.textRight{
+    justify-content: flex-end;
 }
+
 
 
 
