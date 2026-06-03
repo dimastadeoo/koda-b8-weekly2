@@ -1,0 +1,265 @@
+a{
+    text-decoration: none;
+}
+.nav-main{
+    width: auto;
+    height: auto;
+}
+
+.margin-top-bottom{
+    margin-top: 24px;
+	margin-bottom: 24px;
+}
+
+.title-browse-produk{
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 24px;
+    vertical-align: middle;
+}
+
+.last-section-preview{
+    margin-top: 32px;
+    margin-bottom: 64px;
+}
+
+.cart-detail{
+    margin-top: 32px;
+    margin-bottom: 32px;
+    gap: 32px;
+}
+
+.container-left-cart-content {
+    flex: 1; 
+    display: grid;
+    gap: 16px; 
+}
+
+.product-card {
+    background: #ffffff;
+    border: 1px solid #0000001A;
+    border-radius: 16px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: auto 1fr auto; 
+    gap: 16px;
+    align-items: center;
+}
+
+.product-img {
+    width: 96px;
+    height: 96px;
+    object-fit: cover;
+    border-radius: 12px; 
+}
+
+.product-details {
+    display: grid;
+    gap: 6px;
+}
+
+.product-title {
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 14px;
+}
+
+.product-variant {
+    margin: 0;
+    font-size: 12px;
+    color: #8c8c8c;
+}
+
+
+.quantity-control {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid #e0e0e0;
+    border-radius: 20px;
+    width: fit-content;
+    padding: 2px;
+    margin-top: 4px;
+}
+
+.qty-btn {
+    background: none;
+    border: none;
+    padding: 4px 12px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.qty-num {
+    padding: 0 8px;
+    font-size: 13px;
+}
+
+.wishlist-btn {
+    background: none;
+    border: none;
+    color: #8c8c8c;
+    font-size: 12px;
+    cursor: pointer;
+    text-align: left;
+    padding: 0;
+    margin-top: 4px;
+}
+
+.product-action-price {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 100%;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    color: #8c8c8c;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.delete-btn > svg{
+    width: 16px;
+    height: 16px;
+}
+
+.product-price {
+    margin: 0;
+    color: #1A73E8;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+
+.promo-container {
+    background: #ffffff;
+    border: 1px solid #f0f0f0;
+    border-radius: 16px;
+    padding: 20px;
+    display: grid;
+    gap: 8px;
+}
+
+.promo-title {
+    font-size: 18px;
+    font-weight: 500;
+    font-style: Medium;
+}
+
+.promo-input-group {
+    display: flex;
+    gap: 8px;
+}
+
+.promo-input {
+    flex: 1;
+    background-color: #f5f5f7;
+    border: 1px solid #e8e8e8;
+    padding: 11.5px 16px;
+    border-radius: 10px;
+    outline: none;
+}
+
+.promo-btn {
+    background-color: #1A73E8;
+    color: #FFFFFF;
+    border-radius: 12px;
+    border: none;
+    padding: 11px 20px;
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.promo-hint {
+    font-size: 11px;
+    color: #8c8c8c;
+}
+
+.container-right-cart-content {
+    max-width: 394px; 
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 20px;
+    gap: 16px;
+    display: grid;
+    border: 1px solid #0000001A
+}
+
+.summary-title {
+    font-weight: 500;
+    font-style: Medium;
+    font-size: 18px;
+}
+
+.checkout-container{
+    display: grid;
+    gap: 8px;
+}
+
+.summary-line {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #595959;
+}
+
+.free-shipping {
+    color: 00A63E;
+    font-weight: bold;
+}
+
+.summary-divider {
+    border: none;
+    border-top: 1px solid #0000001A
+}
+
+.total-line {
+    color: #1f1f1f;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.total-price {
+    color: #1A73E8; 
+    font-size: 15px;
+}
+
+.checkout-btn {
+    background-color: #F97316; 
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 14px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+
+.security-info {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+
+.secure-text {
+    text-align: center;
+    font-size: 11px;
+    color: #8c8c8c;
+}
+
+.payment-methods {
+    text-align: center;
+    font-size: 10px;
+    color: #bfbfbf;
+    line-height: 1.4;
+}

@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Marketplace">
+    <title>Browse Product</title>
+    <script src="https://kit.fontawesome.com/YOUR_KIT_CODE.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/asset/css/style.css">
+    <link rel="stylesheet" href="/asset/css/cart.css">
+</head>
+<body>
+    <header class="header">
+        <!-- header Top -->
+        <div class="bg-blue text-white top-bar">
+            <div class="container flex justify-between items-center h-full text-xs">
+                <div class="flex items-center gap-1">
+                    <img class="icon-sm" src="/asset/img/map-icon.png" alt="Icon Map">
+                    <span>Kirim ke: Jakarta Selatan</span>
+                </div>
+                <div class="flex items-center gap-4">
+                    <span>📞 0800-1234-5678 (Gratis)</span>
+                    <span>🚀 Gratis ongkir di atas Rp 100.000</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- header Middle -->
+        <div class="border-bottom">
+            <div class="container middle-bar-grid">      
+                <a href="#" class="flex items-center gap-2 text-decoration-none">
+                    <div class="logo-box bg-blue text-white flex justify-center items-center font-bold">B</div>
+                    <div class="text-lg text-dark">BeliMudah</div>
+                </a>
+                <div class="search-container">
+                    <form class="search-form flex items-center bg-gray-light">
+                        <input type="text" class="search-input w-full bg-transparent" placeholder="Cari produk, merek, kategori...">
+                        <button type="submit" class="search-btn bg-blue flex justify-center items-center pointer">
+                            <img class="icon-md" src="/asset/img/search-icon.png" alt="search-icon">
+                        </button>
+                    </form>
+                </div>
+
+                <div class="flex items-center gap-4">
+                    <span class="pointer"><img class="icon-md" src="/asset/img/bell.png" alt="lonceng"></span>
+                    <span class="flex items-center gap-1 pointer">
+                        <img class="icon-md" src="/asset/img/profile.png" alt="Icon Profile">
+                        <span class="text-sm text-dark font-medium">Budi</span>
+                    </span>
+                    <span class="pointer"><img class="icon-md" src="/asset/img/love.png" alt="Icon Favorite"></span>
+                    <span class="pointer"><img class="icon-md" src="/asset/img/cart.png" alt="Icon Keranjang"></span>
+                </div>      
+            </div>
+        </div>
+        <!-- header NAV -->
+        <nav class="nav-container">
+            <div class="container flex flex-wrap items-center gap-4 text-sm text-gray py-2">
+                <span class="flex items-center gap-1 font-medium text-dark pointer mr-2">
+                    <img class="icon-sm" src="/asset/img/list.png" alt="icon list">
+                    <span>Semua Kategori</span>
+                    <img class="icon-sm" src="/asset/img/bottom-arrow.png" alt="bottom arrow">
+                </span>
+                
+                <span class="pointer hover-blue">💻 Elektronik</span>
+                <span class="pointer hover-blue">👗 Fashion</span>
+                <span class="pointer hover-blue">🏠 Rumah & Dapur</span>
+                <span class="pointer hover-blue">💄 Kecantikan</span>
+                <span class="pointer hover-blue">⚽ Olahraga</span>
+                <span class="pointer hover-blue">📚 Buku & Alat Tulis</span>
+                <span class="pointer text-red font-medium">🔥 Promo</span>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="container nav-main">
+            <h1 class="title-browse-produk margin-top-bottom">
+                Keranjang Belanja (1 item)
+            </h1>
+        </section>
+
+        <section class="flex container cart-detail">
+            <div class="container-left-cart-content">
+                
+                <div class="product-card">
+                    <img src="/asset/img/item-1.png" alt="Headphone" class="product-img">
+                    
+                    <div class="product-details">
+                        <h3 class="product-title">Headphone Wireless Premium</h3>
+                        <p class="product-variant">Hitam</p>
+                        <div class="quantity-control">
+                            <button class="qty-btn">−</button>
+                            <span class="qty-num">1</span>
+                            <button class="qty-btn">+</button>
+                        </div>
+                        <button class="wishlist-btn">
+                            <span class="heart-icon">♡</span> Simpan ke Wishlist
+                        </button>
+                    </div>
+                    
+                    <div class="product-action-price">
+                        <button class="delete-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6B7280" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trash2-icon lucide-trash-2"><path d="M10 11v6"/><path d="M14 11v6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M3 6h18"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>
+                        </button>
+                        <p class="product-price">Rp 450.000</p>
+                    </div>
+                </div>
+
+                <div class="promo-container">
+                    <h3 class="promo-title">
+                        <span class="promo-icon">🏷️</span> Kode Promo
+                    </h3>
+                    <div class="promo-input-group">
+                        <input type="text" placeholder="Masukkan kode promo" class="promo-input">
+                        <button class="promo-btn">Terapkan</button>
+                    </div>
+                    <p class="promo-hint">Coba: HEMAT10, BELIMUDAH, atau NEWUSER</p>
+                </div>
+
+            </div>
+
+            <div class="container-right-cart-content">
+                <h3 class="summary-title">Ringkasan Pesanan</h3>
+                
+                <div class="checkout-container">
+                    <div class="summary-line">
+                        <span>Subtotal (1 item)</span>
+                        <span>Rp 450.000</span>
+                    </div>
+                    <div class="summary-line">
+                        <span>Ongkos Kirim</span>
+                        <span class="free-shipping">GRATIS</span>
+                    </div>
+                    
+                    <hr class="summary-divider">
+                    
+                    <div class="summary-line total-line">
+                        <span>Total</span>
+                        <span class="total-price">Rp 450.000</span>
+                    </div>
+                </div>
+                
+                <button class="checkout-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-icon lucide-shield"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg>
+                    Checkout Aman
+                </button>
+                
+                <div class="security-info">
+                    <p class="secure-text">🔒 Pembayaran 100% Aman</p>
+                    <p class="payment-methods">Metode: Transfer Bank • Virtual Account • Kartu Kredit • e-Wallet</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="container last-section-preview">
+            <div class="div-title-flash">
+                <span class="div-section title-flash-left">      
+                    <span class="left-content-flash logoNew">
+						Mungkin Kamu Suka Ini
+                    </span>
+                </span>
+            </div>
+            <div class="div-item-flash">
+                <div class="item-flash-container">
+                    <a href="#">
+                        <div class="img-item-flash link-bg-item-1">
+                            <span class="badge-flash">-31%</span>
+                            <span class="wishlist-flash">
+                                <button type="button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart">
+                                        <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
+                                    </svg>
+                                </button>
+                            </span>
+                        </div>
+                        <div class="title-item-flash">
+                            <div class="flash-jenis">SoundWave</div>
+                            <div class="flash-name-item">Headphone Wireless Premium</div>
+                            <div class="flash-rate-item">
+                                <span class="stars">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="20" viewBox="0 0 120 24" fill="gold" stroke="currentColor" stroke-width="0" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star">
+                                        <defs>
+                                            <path id="star" d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
+                                        </defs>
+                                        <use href="#star" x="0" />
+                                        <use href="#star" x="24" />
+                                        <use href="#star" x="48" />
+                                        <use href="#star" x="72" />
+                                        <use href="#star" x="96" />
+                                    </svg>
+                                </span>
+                                <span class="rate">4.8</span>
+                                <span class="review">(512)</span>
+                            </div>
+                            <div class="flash-price-item">
+                                <span class="discount-price">Rp 450.000</span>
+                                <span class="regular-price">Rp 650.000</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                
+                <div class="item-flash-container">
+                    <a href="#">
+                        <div class="img-item-flash link-bg-item-2">
+                            <span class="badge-flash">-16%</span>
+                            <span class="wishlist-flash"><button type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" /></svg></button></span>
+                        </div>
+                        <div class="title-item-flash">
+                            <div class="flash-jenis">PhoneX</div>
+                            <div class="flash-name-item">Smartphone 5G Ultra</div>
+                            <div class="flash-rate-item">
+                                <span class="stars">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="20" viewBox="0 0 120 24" fill="gold" stroke="currentColor" stroke-width="0" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star"><use href="#star" x="0" /><use href="#star" x="24" /><use href="#star" x="48" /><use href="#star" x="72" /><use href="#star" x="96" /></svg>
+                                </span>
+                                <span class="rate">4.6</span>
+                                <span class="review">(890)</span>
+                            </div>
+                            <div class="flash-price-item">
+                                <span class="discount-price">Rp 4.200.000</span>
+                                <span class="regular-price">Rp 5.000.000</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="item-flash-container">
+                    <a href="#">
+                        <div class="img-item-flash link-bg-item-3">
+                            <span class="badge-flash">-20%</span>
+                            <span class="wishlist-flash"><button type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" /></svg></button></span>
+                        </div>
+                        <div class="title-item-flash">
+                            <div class="flash-jenis">WristTech</div>
+                            <div class="flash-name-item">Smartwatch Series 5</div>
+                            <div class="flash-rate-item">
+                                <span class="stars">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="20" viewBox="0 0 120 24" fill="gold" stroke="currentColor" stroke-width="0" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star"><use href="#star" x="0" /><use href="#star" x="24" /><use href="#star" x="48" /><use href="#star" x="72" /><use fill="gray" href="#star" x="96" /></svg>
+                                </span>
+                                <span class="rate">4.4</span>
+                                <span class="review">(324)</span>
+                            </div>
+                            <div class="flash-price-item">
+                                <span class="discount-price">Rp 2.800.000</span>
+                                <span class="regular-price">Rp 3.500.000</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="item-flash-container">
+                    <a href="#">
+                        <div class="img-item-flash link-bg-item-4">
+                            <span class="badge-flash">-27%</span>
+                            <span class="wishlist-flash"><button type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" /></svg></button></span>
+                        </div>
+                        <div class="title-item-flash">
+                            <div class="flash-jenis">SportPro</div>
+                            <div class="flash-name-item">Sneakers Sport Runfast</div>
+                            <div class="flash-rate-item">
+                                <span class="stars">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="20" viewBox="0 0 120 24" fill="gold" stroke="currentColor" stroke-width="0" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star"><use href="#star" x="0" /><use href="#star" x="24" /><use href="#star" x="48" /><use href="#star" x="72" /><use href="#star" x="96" /></svg>
+                                </span>
+                                <span class="rate">4.6</span>
+                                <span class="review">(445)</span>
+                            </div>
+                            <div class="flash-price-item">
+                                <span class="discount-price">Rp 550.000</span>
+                                <span class="regular-price">Rp 750.000</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-wrapper">
+            <div class="container footer-top">
+                <div class="footer-feature-item">
+                    <div class="img-footer-item"><img src="/asset/img/van.svg" alt="Icon Van Ekspedisi"></div>
+                    <div class="text-footer-item">
+                        <h4>Gratis Ongkir</h4>
+                        <p>Pembelian di atas Rp 100.000</p>
+                    </div>  
+                </div>
+                <div class="footer-feature-item">
+                    <div class="img-footer-item"><img src="/asset/img/shield.svg" alt="Icon shield"></div>
+                    <div class="text-footer-item">
+                        <h4>Pembayaran Aman</h4>
+                        <p>SSL terenkripsi 256-bit</p>
+                    </div>  
+                </div>
+                <div class="footer-feature-item">
+                    <div class="img-footer-item"><img src="/asset/img/refresh-ccw.svg" alt="Icon Return"></div>
+                    <div class="text-footer-item">
+                        <h4>Pengembalian Mudah</h4>
+                        <p>30 hari pengembalian gratis</p>
+                    </div>  
+                </div>
+                <div class="footer-feature-item">
+                    <div class="img-footer-item"><img src="/asset/img/headset.svg" alt="Icon Call Center"></div>
+                    <div class="text-footer-item">
+                        <h4>Dukungan 24/7</h4>
+                        <p>Bantuan kapan saja</p>
+                    </div>  
+                </div>
+            </div>
+
+            <hr class="footer-divider">
+
+            <div class="container footer-middle">
+                <div class="footer-column brand-column">
+                    <div class="footer-brand-logo">
+                        <span class="logoBFoot">B</span>
+                        <span class="textBFoot">BeliMudah</span>
+                    </div>
+                    <p class="brand-desc">
+                        Platform belanja online terpercaya dengan ribuan produk pilihan. Belanja mudah, aman, dan menyenangkan.
+                    </p>
+                    <div class="logo-sosmed">
+                        <a href="#" class="icon-sosmed"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="icon-sosmed"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="icon-sosmed"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="icon-sosmed"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Layanan</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Tentang Kami</a></li>
+                        <li><a href="#">Karir</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Program Afiliasi</a></li>
+                        <li><a href="#">Jual di BeliMudah</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Bantuan</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Cara Belanja</a></li>
+                        <li><a href="#">Kebijakan Pengembalian</a></li>
+                        <li><a href="#">Lacak Pesanan</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Hubungi Kami</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column contact-column">
+                    <h3>Kontak</h3>
+                    <div class="contact-item">
+                        <img src="/asset/img/map-icon.png" alt="Icon Map">
+                        <p>Jl. Sudirman No. 1, Jakarta Selatan, DKI Jakarta 12190</p>
+                    </div>
+                    <div class="contact-item">
+                        <img src="/asset/img/phone.svg" alt="Icon Phone">
+                        <p>0800-1234-5678 (Gratis)</p>
+                    </div>
+                    <div class="contact-item">
+                        <img src="/asset/img/mail.svg" alt="Icon Mail">
+                        <p>bantuan@belimudah.id</p>
+                    </div>
+                    
+                    <div class="container-newsletter">
+                        <h4 class="title-newsletter">Newsletter</h4>
+                        <form class="form-newsletter">
+                            <input type="email" class="input-email" placeholder="Email kamu" required>
+                            <button type="submit" class="btn-langganan">Langganan</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="footer-divider">
+
+            <div class="container footer-bottom">
+                <p class="textLeftFoot">&copy; 2026 BeliMudah. Seluruh hak cipta dilindungi.</p>
+                <div class="textRightFoot">
+                    <a href="#">Kebijakan Privasi</a>
+                    <a href="#">Syarat & Ketentuan</a>
+                    <a href="#">Admin</a>
+                </div>
+            </div>
+        </div>
+    </footer>   
+</body>
+</html>
