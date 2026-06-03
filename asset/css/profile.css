@@ -46,8 +46,13 @@ main {
     font-weight: 400;
 }
 
+a{
+    text-decoration: none;
+}
+
 .left-profile{
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: 16px;
     padding-bottom: 2px;
 }
@@ -71,6 +76,7 @@ main {
 
 .betwen-content{
     justify-content: space-between;
+    width: 100%;
 }
 
 .centerAll{
@@ -182,7 +188,24 @@ main {
     border: 1px solid #0000001A;
     font-size: 12px;
     font-weight: 500;
+}
 
+.btn-tambah-alamat{
+    border-radius: 12px;
+    padding: 8px 16px;
+    background-color: #1A73E8;
+    color: white;
+}
+
+.widthFull{
+    width: 100%;
+}
+
+.btn-alamat-utama{
+    border-radius: 16777200px;
+    padding: 2px 8px;
+    background-color: #1A73E8;
+    color: white;    
 }
 
 

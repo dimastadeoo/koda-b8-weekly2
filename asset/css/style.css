@@ -58,6 +58,10 @@ body {
     justify-content: center; 
 }
 
+.gap-s{
+    gap: 2px;
+}
+
 .gap-1 { 
     gap: 4px; 
 }
