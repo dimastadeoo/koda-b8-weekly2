@@ -269,6 +269,11 @@ main {
     width: 16px;
 }
 
+.size-up svg{
+    height: 28px;
+    width: 28px;
+}
+
 .info-text {
     color: #5f6368;
     font-size: 12px;
@@ -288,6 +293,11 @@ main {
     border-radius: 12px;
     border: 1px solid #0000001A;
     background: none;
+    cursor: pointer;
+}
+
+.btn-back-checkout:hover{
+    background: #5f6368;
 }
 
 .btn-primary-checkout {
@@ -299,10 +309,11 @@ main {
     border-radius: 12px;
     padding: 16px;
     display: flex;
+    gap: 8px;
     justify-content: center;
     align-items: center;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 500;
     cursor: pointer;
 }
 
@@ -313,6 +324,14 @@ main {
 
 .btn-primary-checkout:hover{
     background: #1557B0;
+}
+
+.btn-payment{
+    background: #F97316;
+}
+
+.btn-payment:hover{
+    background: #EA580C;
 }
 
 .checkout-right{
