@@ -3,6 +3,7 @@
 *{
     margin: 0;
     padding: 0;
+    list-style-position: inside;
     box-sizing: border-box;
 }
 a{
@@ -46,6 +47,10 @@ main{
     background: linear-gradient(135deg, #1447E6 0%, #312C85 100%);
 }
 
+.forgot-poge-bg{
+    background: linear-gradient(135deg, #4F39F6 0%, #1C398E 100%);
+}
+
 .auth-hero > img{
     position: absolute;
     opacity: 20%;
@@ -79,13 +84,15 @@ main{
 }
 
 .brand-logo {
-    background: #6599E1;
+    background-color: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(8px);
     padding: 8px 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-weight: 400;
     border-radius: 12px;
     font-size: 16px;
-
 }
 
 .brand span{
@@ -98,6 +105,12 @@ main{
     display: grid;
     gap: 16px;
     max-width: 440px;
+}
+
+.logo-lock-size{
+    max-width: 64px;
+    max-height: 64px;
+    padding: 18px 18px;
 }
 
 .hero-text-new-login{
@@ -125,6 +138,10 @@ main{
     list-style: none;
     display: grid;
     gap: 12px;
+}
+
+.gap8{
+    gap: 8px;
 }
 
 .feature-item {
@@ -200,6 +217,20 @@ main{
     display: grid;
     gap: 32px;
 }
+
+.nav-forgotPass{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    color: #6B7280;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.paddingTop16{
+    padding-top: 16px;
+}
+
 
 .title-form-box{
     display: grid;
@@ -404,6 +435,27 @@ main{
     margin-top: 32px;
     text-align: center;
 }
+
+
+
+.container-tips-password{
+    padding: 20px;
+    display: grid;
+    gap: 12px;
+    border-radius: 16px;
+    background: #E5E7EB80;
+}
+
+.container-tips-password > li{
+    padding-left: 8px;
+    display: grid;
+    gap: 8px;
+    font-weight: 400;
+    font-size: 12px;
+    vertical-align: middle;
+    color: #6B7280;
+}
+
 
 .secure-notice {
     font-size: 11px;
