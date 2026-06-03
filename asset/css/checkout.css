@@ -489,3 +489,226 @@ main {
         font-size: 10px;
     }
 }
+
+.container-order-succes{
+    display: grid;
+    padding: 48px 16px;
+    gap: 32px;
+}
+
+.icon-success{
+    place-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 96PX;
+    height: 96PX;
+    border-radius: 16777200px;
+    background: #DCFCE7;
+}
+
+.message-order{
+    display: grid;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+.message-order h1{
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+    color: #111827;
+}
+.message-order p{
+    text-align: center;
+    color: #6B7280;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.container-content-order-success{
+    display: grid;
+    gap: 16px;
+    padding: 24px;
+    border: 1px solid #0000001A;
+    background: #FFFFFF;
+    border-radius: 16px;
+}
+
+.number-order{
+    display: flex;
+    justify-content: space-between; 
+}
+
+.number-order .content p{
+    font-weight: 400;
+    font-size: 14px;
+    color: #6B7280;
+}
+
+.number-order .content h1{
+    font-weight: bold;
+    font-size: 16px;
+    color: #111827;
+}
+
+.number-order .content h2{
+    font-weight: bold;
+    font-size: 16px;
+    color: #1A73E8;
+}
+
+.info-ship-order{
+    padding-top: 16px;
+    gap: 12px;
+}
+
+.container-info-ship{
+    display: flex;
+    gap: 12px;
+}
+.info-shipping h4{
+    font-size: 14px;
+    font-weight: 400;
+    color: #111827;
+}
+
+.info-shipping p{
+    font-size: 12px;
+    font-weight: 400;
+    color: #6B7280;
+}
+
+.status-order-container{
+    display: grid;
+    gap: 16px;
+}
+
+.status-step {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    align-items: flex-start;
+}
+
+.last-step .status-line {
+    display: none;
+}
+
+.status-icon-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 16777200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    font-size: 1rem;
+}
+
+.status-icon-circle-succes{
+    width: 27px;
+    height: 20px;
+    padding-top: 2px;
+    padding-right: 8px;
+    padding-bottom: 2px;
+    padding-left: 8px;
+    border-radius: 16777200px;
+    margin-left: auto;
+}
+
+.grey-circle {
+    background-color: #E5E7EB; 
+}
+
+.green-circle {
+    background-color: #DCFCE7; 
+}
+
+.active-step .green-circle {
+    background-color: #c8e6c9; 
+}
+
+.status-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.status-main-text {
+    font-weight: 500;
+    font-size: 14px;
+    color: #111827;
+}
+
+.status-sub-text {
+    margin: 0;
+    color: #6B7280;
+    font-size: 12px;
+}
+
+
+.action-buttons-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 12px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.btn-lacak-pesanan {
+    background-color: #1A73E8; 
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 12px;
+    font-weight: 400;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.2s;
+}
+
+.btn-lacak-pesanan:hover {
+    background-color: #1565c0;
+}
+
+.btn-lihat-riwayat {
+    background-color: transparent;
+    color: #6B7280; 
+    border: 1px solid #0000001A;
+    padding: 12px 24px;
+    border-radius: 12px;
+    font-weight: 400;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-lihat-riwayat:hover {
+    background-color: #f5f5f5;
+}
+
+.link-lanjut-belanja {
+    color: #1a73e8; 
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 16px;
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-left: auto; 
+    font-size: 0.95rem;
+}
+
+.link-lanjut-belanja:hover {
+    text-decoration: underline;
+}
+
+

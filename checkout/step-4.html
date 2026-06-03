@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Marketplace">
+    <title>Proses Checkout</title>
+    <script src="https://kit.fontawesome.com/YOUR_KIT_CODE.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/asset/css/style.css">
+    <link rel="stylesheet" href="/asset/css/checkout.css">
+</head>
+<body>
+    <header class="header">
+        <!-- header Top -->
+        <div class="bg-blue text-white top-bar">
+            <div class="container flex justify-between items-center h-full text-xs">
+                <div class="flex items-center gap-1">
+                    <img class="icon-sm" src="/asset/img/map-icon.png" alt="Icon Map">
+                    <span>Kirim ke: Jakarta Selatan</span>
+                </div>
+                <div class="flex items-center gap-4">
+                    <span>📞 0800-1234-5678 (Gratis)</span>
+                    <span>🚀 Gratis ongkir di atas Rp 100.000</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- header Middle -->
+        <div class="border-bottom">
+            <div class="container middle-bar-grid">      
+                <a href="#" class="flex items-center gap-2 text-decoration-none">
+                    <div class="logo-box bg-blue text-white flex justify-center items-center font-bold">B</div>
+                    <div class="text-lg text-dark">BeliMudah</div>
+                </a>
+                <div class="search-container">
+                    <form class="search-form flex items-center bg-gray-light">
+                        <input type="text" class="search-input w-full bg-transparent" placeholder="Cari produk, merek, kategori...">
+                        <button type="submit" class="search-btn bg-blue flex justify-center items-center pointer">
+                            <img class="icon-md" src="/asset/img/search-icon.png" alt="search-icon">
+                        </button>
+                    </form>
+                </div>
+
+                <div class="flex items-center gap-4">
+                    <span class="pointer"><img class="icon-md" src="/asset/img/bell.png" alt="lonceng"></span>
+                    <span class="flex items-center gap-1 pointer">
+                        <img class="icon-md" src="/asset/img/profile.png" alt="Icon Profile">
+                        <span class="text-sm text-dark font-medium">Budi</span>
+                    </span>
+                    <span class="pointer"><img class="icon-md" src="/asset/img/love.png" alt="Icon Favorite"></span>
+                    <span class="pointer"><img class="icon-md" src="/asset/img/cart.png" alt="Icon Keranjang"></span>
+                </div>      
+            </div>
+        </div>
+        <!-- header NAV -->
+        <nav class="nav-container">
+            <div class="container flex flex-wrap items-center gap-4 text-sm text-gray py-2">
+                <span class="flex items-center gap-1 font-medium text-dark pointer mr-2">
+                    <img class="icon-sm" src="/asset/img/list.png" alt="icon list">
+                    <span>Semua Kategori</span>
+                    <img class="icon-sm" src="/asset/img/bottom-arrow.png" alt="bottom arrow">
+                </span>
+                
+                <span class="pointer hover-blue">💻 Elektronik</span>
+                <span class="pointer hover-blue">👗 Fashion</span>
+                <span class="pointer hover-blue">🏠 Rumah & Dapur</span>
+                <span class="pointer hover-blue">💄 Kecantikan</span>
+                <span class="pointer hover-blue">⚽ Olahraga</span>
+                <span class="pointer hover-blue">📚 Buku & Alat Tulis</span>
+                <span class="pointer text-red font-medium">🔥 Promo</span>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="container-order-succes">
+            <div class="icon-success">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#00C950" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-big-icon lucide-circle-check-big"><path d="M21.801 10A10 10 0 1 1 17 3.335"/><path d="m9 11 3 3L22 4"/></svg>
+            </div>
+
+            <div class="message-order">
+                <h1>
+                    Pesanan Berhasil! 🎉
+                </h1>
+                <p>
+                    Terima kasih telah berbelanja di BeliMudah. Pesananmu sedang diproses.
+                </p>
+            </div>
+
+            <div class="container-content-order-success">
+                <div class="number-order">
+                    <div class="content order-number">
+                        <p>
+                            Nomor Pesanan
+                        </p>
+                        <h2 class="total-price">
+                            #BM28371132
+                        </h1>
+
+                    </div>
+                    <div class="content">
+                        <p>
+                            Total Pembayaran
+                        </p>
+                        <h1>
+                            Rp. 450.000
+                        </h1>
+
+                    </div>
+                </div>
+
+                <div class="container-total-harga info-ship-order">
+                    <div class="container-info-ship">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1A73E8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-truck-icon lucide-truck"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg>
+                        <div class="info-shipping">
+                            <h4>
+                                JNE Reguler
+                            </h4>
+                            <p>
+                                Estimasi tiba: 2-3 Juni 2026
+                            </p>
+                        </div>
+                    </div>
+                    <div class="container-info-ship">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1A73E8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin-icon lucide-map-pin"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+                        <div class="info-shipping">
+                            <h4>
+                                Alamat Pengiriman
+                            </h4>
+                            <p>
+                                Jl. Kebon Jeruk No. 15, Jakarta Barat, DKI Jakarta 11530
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="container-content-order-success">
+                <div class="status-order-container">
+                    <h2 class="card-title">
+                        Status Pesanan
+                    </h2>   
+                    
+                    <div class="status-step active-step">
+                        <div class="status-icon-circle green-circle">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00A63E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-big-icon lucide-circle-check-big"><path d="M21.801 10A10 10 0 1 1 17 3.335"/><path d="m9 11 3 3L22 4"/></svg>  
+                        </div>
+                        <div class="status-content">
+                            <p class="status-main-text">Pesanan Diterima</p>
+                            <p class="status-sub-text">Baru saja</p>
+                        </div>
+
+                        <div class="status-icon-circle-succes green-circle">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="16" viewBox="0 0 24 24" fill="none" stroke="#00A63E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-icon lucide-check"><path d="M20 6 9 17l-5-5"/></svg>
+                        </div>
+                    </div>
+
+                    <div class="status-step">
+                        <div class="status-icon-circle grey-circle">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6B7280" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-package-icon lucide-package"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/><path d="M12 22V12"/><polyline points="3.29 7 12 12 20.71 7"/><path d="m7.5 4.27 9 5.15"/></svg>
+                        </div>
+                        <div class="status-content">
+                            <p class="status-main-text">Sedang Dikemas</p>
+                            <p class="status-sub-text">Estimasi 1-2 jam</p>
+                        </div>
+                    </div>
+
+                    <div class="status-step">
+                        <div class="status-icon-circle grey-circle">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6B7280" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-truck-icon lucide-truck"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg>
+                        </div>
+                        <div class="status-content">
+                            <p class="status-main-text">Dalam Pengiriman</p>
+                            <p class="status-sub-text">3-5 hari kerja</p>
+                        </div>
+                    </div>
+
+                    <div class="status-step last-step">
+                        <div class="status-icon-circle grey-circle">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6B7280" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin-icon lucide-map-pin"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+                        </div>
+                        <div class="status-content">
+                            <p class="status-main-text">Terkirim</p>
+                            <p class="status-sub-text">2-3 Juni 2026</p>
+                        </div>
+                    </div>
+
+                </div> 
+                
+            </div>
+            <div class="action-buttons-container">
+                <button class="btn-lacak-pesanan">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-package-icon lucide-package"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/><path d="M12 22V12"/><polyline points="3.29 7 12 12 20.71 7"/><path d="m7.5 4.27 9 5.15"/></svg>                    
+                    Lacak Pesanan
+                </button>
+                <button class="btn-lihat-riwayat">
+                    Lihat Riwayat Pesanan
+                </button>
+                <a href="#" class="link-lanjut-belanja">
+                    Lanjut Belanja
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1A73E8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-icon lucide-arrow-right"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </a>
+            </div>
+        </section> 
+    </main>
+    <footer>
+        <div class="footer-wrapper">
+            <div class="container footer-top">
+                <div class="footer-feature-item">
+                    <div class="img-footer-item"><img src="/asset/img/van.svg" alt="Icon Van Ekspedisi"></div>
+                    <div class="text-footer-item">
+                        <h4>Gratis Ongkir</h4>
+                        <p>Pembelian di atas Rp 100.000</p>
+                    </div>  
+                </div>
+                <div class="footer-feature-item">
+                    <div class="img-footer-item"><img src="/asset/img/shield.svg" alt="Icon shield"></div>
+                    <div class="text-footer-item">
+                        <h4>Pembayaran Aman</h4>
+                        <p>SSL terenkripsi 256-bit</p>
+                    </div>  
+                </div>
+                <div class="footer-feature-item">
+                    <div class="img-footer-item"><img src="/asset/img/refresh-ccw.svg" alt="Icon Return"></div>
+                    <div class="text-footer-item">
+                        <h4>Pengembalian Mudah</h4>
+                        <p>30 hari pengembalian gratis</p>
+                    </div>  
+                </div>
+                <div class="footer-feature-item">
+                    <div class="img-footer-item"><img src="/asset/img/headset.svg" alt="Icon Call Center"></div>
+                    <div class="text-footer-item">
+                        <h4>Dukungan 24/7</h4>
+                        <p>Bantuan kapan saja</p>
+                    </div>  
+                </div>
+            </div>
+
+            <hr class="footer-divider">
+
+            <div class="container footer-middle">
+                <div class="footer-column brand-column">
+                    <div class="footer-brand-logo">
+                        <span class="logoBFoot">B</span>
+                        <span class="textBFoot">BeliMudah</span>
+                    </div>
+                    <p class="brand-desc">
+                        Platform belanja online terpercaya dengan ribuan produk pilihan. Belanja mudah, aman, dan menyenangkan.
+                    </p>
+                    <div class="logo-sosmed">
+                        <a href="#" class="icon-sosmed"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="icon-sosmed"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="icon-sosmed"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="icon-sosmed"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Layanan</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Tentang Kami</a></li>
+                        <li><a href="#">Karir</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Program Afiliasi</a></li>
+                        <li><a href="#">Jual di BeliMudah</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Bantuan</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Cara Belanja</a></li>
+                        <li><a href="#">Kebijakan Pengembalian</a></li>
+                        <li><a href="#">Lacak Pesanan</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Hubungi Kami</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column contact-column">
+                    <h3>Kontak</h3>
+                    <div class="contact-item">
+                        <img src="/asset/img/map-icon.png" alt="Icon Map">
+                        <p>Jl. Sudirman No. 1, Jakarta Selatan, DKI Jakarta 12190</p>
+                    </div>
+                    <div class="contact-item">
+                        <img src="/asset/img/phone.svg" alt="Icon Phone">
+                        <p>0800-1234-5678 (Gratis)</p>
+                    </div>
+                    <div class="contact-item">
+                        <img src="/asset/img/mail.svg" alt="Icon Mail">
+                        <p>bantuan@belimudah.id</p>
+                    </div>
+                    
+                    <div class="container-newsletter">
+                        <h4 class="title-newsletter">Newsletter</h4>
+                        <form class="form-newsletter">
+                            <input type="email" class="input-email" placeholder="Email kamu" required>
+                            <button type="submit" class="btn-langganan">Langganan</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="footer-divider">
+
+            <div class="container footer-bottom">
+                <p class="textLeftFoot">&copy; 2026 BeliMudah. Seluruh hak cipta dilindungi.</p>
+                <div class="textRightFoot">
+                    <a href="#">Kebijakan Privasi</a>
+                    <a href="#">Syarat & Ketentuan</a>
+                    <a href="#">Admin</a>
+                </div>
+            </div>
+        </div>
+    </footer>   
+</body>
+</html>
