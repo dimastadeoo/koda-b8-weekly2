@@ -48,6 +48,15 @@ main {
     font-weight: 600;
 }
 
+.step-circle svg{
+    width: 16px;
+    height: 16px;
+}
+
+.step-circle.done{
+    background: #00C950;
+}
+
 .step-label {
     font-size: 12px;
     font-weight: 400;
@@ -67,6 +76,10 @@ main {
     border-top: #E5E7EB solid 2px;
     width: 120px;
     margin-bottom: 20px;
+}
+
+.step-line.done{
+    border-top: #00C950 solid 2px;;
 }
 
 
