@@ -1,0 +1,181 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+    margin-bottom: 64px;
+}
+
+.container-profile{
+    padding-top: 32px;
+    padding-bottom: 32px;
+    gap: 32px;
+}
+
+.textTitle{
+    color: #111827;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.textTitlePesanan{
+    color: #111827;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.textTitlePage{
+    color: #111827;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.textNav{
+    font-size: 14px;
+    font-weight: 500;
+    color: #6B7280;
+}
+
+
+.textDesc{
+    color: #6B7280;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.left-profile{
+    display: grid;
+    gap: 16px;
+    padding-bottom: 2px;
+}
+
+.radius-16{
+    border-radius: 16px;
+    border: 1px solid #0000001A
+}
+
+.centerContent{
+    justify-content: center;
+}
+
+.centerItem{
+    align-items: center;
+}
+
+.placeCenter{
+    place-self: center;
+}
+
+.betwen-content{
+    justify-content: space-between;
+}
+
+.centerAll{
+    justify-content: center;
+    align-items: center;
+    place-self: center;
+}
+
+.logo-profile{
+    width: 64px;
+    height: 64px;
+    border-radius: 16777200px;
+    background: #1A73E81A;
+    font-size: 20px;
+    font-weight: 700;
+    color: #1A73E8;
+}
+
+.nav-checked{
+    color: #1A73E8;
+    background: #EFF6FF;
+}
+
+.color-red{
+    color: #DC2626;
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+.top-border-cont{
+    border-top: 1px solid #0000001A;
+}
+
+.margin-left-auto{
+    margin-left: auto;
+}
+
+.right-profile{
+    display: grid;
+    gap: 16px;
+    align-items: start;
+    min-width: 500px;
+}
+
+.status-ship{
+    width: 88px;
+    height: 24px;
+    gap: 6px;
+    border-radius: 16777200px;
+    padding-top: 4px;
+    padding-right: 12px;
+    padding-bottom: 4px;
+    padding-left: 12px;
+    background: #E5E7EB;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.color-green{
+    color: #00A63E;
+}
+
+.color-blue{
+    color: #1A73E8;
+}
+
+.img-crop{
+    border-radius: 8px;
+    width: 48px;
+    height: 48px;
+    object-fit: cover; 
+}
+
+.btn{
+    border-radius: 8px;
+    padding-top: 6px;
+    padding-right: 12px;
+    padding-bottom: 6px;
+    padding-left: 12px;
+}
+
+.btn-lacak{
+    font-weight: 400;
+    font-size: 12px;
+    color: #1A73E8;
+    border: 1px solid #1A73E8
+}
+
+.btn-ulasan{
+    background: #F97316;
+    font-weight: 500;
+    font-size: 12px;
+    color: #FFFFFF;
+    border: none;
+}
+
+.btn-beli-lagi{
+    color: #6B7280;
+    border: 1px solid #0000001A;
+    font-size: 12px;
+    font-weight: 500;
+
+}
+
+
+
