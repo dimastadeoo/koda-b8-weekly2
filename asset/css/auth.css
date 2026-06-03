@@ -42,6 +42,10 @@ main{
     color: #ffffff;
 }
 
+.new-login{
+    background: linear-gradient(135deg, #1447E6 0%, #312C85 100%);
+}
+
 .auth-hero > img{
     position: absolute;
     opacity: 20%;
@@ -96,16 +100,61 @@ main{
     max-width: 440px;
 }
 
+.hero-text-new-login{
+    gap: 24px;
+}
+
 .hero-text h1 {
     font-weight: 700;
     font-style: Bold;
     font-size: 32px;
 }
 
+.content-hero-text-newLogin{
+    display: grid;
+    gap: 16px;
+}
+
 .hero-text p {
     font-weight: 400;
     font-size: 16px;
     color: #FFFFFFB2;
+}
+
+.hero-features-list {
+    list-style: none;
+    display: grid;
+    gap: 12px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center; 
+    gap: 12px; 
+}
+
+
+.check-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    background-color: #4D61BA; 
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+}
+
+.check-icon svg{
+    width: 12px;
+    height: 12px;
+}
+
+.feature-text {
+    font-size: 14px;
+    color: #FFFFFFCC;
+    font-weight: 400;
+    line-height: 1.4;
 }
 
 .stats-group {
@@ -140,12 +189,14 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 48px 24px;
+    padding-bottom: 48px;
+    padding-top: 48px;
+    padding-left: 24px;
+    padding-right: 24px;
 }
 
 .form-box {
     width: 100%;
-    max-width: 448px;
     display: grid;
     gap: 32px;
 }
@@ -270,6 +321,11 @@ main{
     font-size: 14px;
 }
 
+.input-icon svg, .toggle-password svg{
+    width: 13.33px;
+    height: 10.67px;
+}
+
 .input-wrapper input {
     width: 100%;
     padding: 14px 14px 14px 40px;
@@ -335,6 +391,15 @@ main{
     background: #1565C0;
 }
 
+.new-login-submit{
+    background: #F97316;
+
+}
+
+.new-login-submit:hover{
+    background: #EA580C;
+}
+
 .form-footer {
     margin-top: 32px;
     text-align: center;
@@ -349,6 +414,7 @@ main{
     font-size: 11px;
     color: #8C8C8C;
     line-height: 1.5;
+    text-align: center;
 }
 
 .terms a {
