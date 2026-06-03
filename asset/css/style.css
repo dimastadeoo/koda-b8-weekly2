@@ -483,6 +483,7 @@ section.purple-blue {
 }
 
 footer {
+    margin-top: 64px;
     width: 100%;
     background-color: #111827; 
     color: #F3F4F6;
