@@ -117,6 +117,14 @@ main {
     min-width: 500px;
 }
 
+.right-profile-wishlist{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: start;
+    min-width: 500px;
+}
+
 .status-ship{
     width: 88px;
     height: 24px;
