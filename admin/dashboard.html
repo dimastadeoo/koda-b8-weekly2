@@ -77,224 +77,276 @@
                 </div>
             </div>
 
-            <section class="stats-grid" aria-label="Ringkasan statistik">
-                <article class="stat-card">
-                <div class="stat-top">
-                    <span>Total Pendapatan (Bulan Ini)</span>
-                    <div class="stat-icon blue">⌁</div>
-                </div>
-                <h2>Rp 125.000.000</h2>
-                <p class="up">↗ 18.2% dari bulan lalu</p>
-                </article>
-
-                <article class="stat-card">
-                <div class="stat-top">
-                    <span>Pesanan Baru</span>
-                    <div class="stat-icon orange">🛒</div>
-                </div>
-                <h2>890</h2>
-                <p class="up">↗ 12.5% dari bulan lalu</p>
-                </article>
-
-                <article class="stat-card">
-                <div class="stat-top">
-                    <span>Pelanggan Aktif</span>
-                    <div class="stat-icon green">♧</div>
-                </div>
-                <h2>3.284</h2>
-                <p class="up">↗ 8.1% dari bulan lalu</p>
-                </article>
-
-                <article class="stat-card">
-                <div class="stat-top">
-                    <span>Produk Aktif</span>
-                    <div class="stat-icon purple">⬡</div>
-                </div>
-                <h2>247</h2>
-                <p class="down">↘ 2.3% dari bulan lalu</p>
-                </article>
-            </section>
-
-            <section class="analytics-grid">
-                <article class="panel revenue-panel">
-                <div class="panel-header">
-                    <h3>Pendapatan &amp; Pesanan (2026)</h3>
-                    <button>12 Bulan Terakhir</button>
-                </div>
-
-                <div class="chart-wrap" aria-label="Grafik pendapatan dan pesanan 2026">
-                    <svg viewBox="0 0 760 250" role="img" aria-labelledby="chart-title">
-                    <title id="chart-title">Grafik garis pendapatan dan pesanan dari Januari sampai Desember</title>
-                    <defs>
-                        <linearGradient id="lineFill" x1="0" x2="0" y1="0" y2="1">
-                        <stop offset="0%" stop-color="#2f7bf6" stop-opacity="0.16" />
-                        <stop offset="100%" stop-color="#2f7bf6" stop-opacity="0" />
-                        </linearGradient>
-                    </defs>
-
-                    <g class="grid-lines">
-                        <line x1="52" y1="25" x2="735" y2="25" />
-                        <line x1="52" y1="76" x2="735" y2="76" />
-                        <line x1="52" y1="127" x2="735" y2="127" />
-                        <line x1="52" y1="178" x2="735" y2="178" />
-                        <line x1="52" y1="229" x2="735" y2="229" />
-                        <line x1="52" y1="25" x2="52" y2="229" />
-                        <line x1="112" y1="25" x2="112" y2="229" />
-                        <line x1="172" y1="25" x2="172" y2="229" />
-                        <line x1="232" y1="25" x2="232" y2="229" />
-                        <line x1="292" y1="25" x2="292" y2="229" />
-                        <line x1="352" y1="25" x2="352" y2="229" />
-                        <line x1="412" y1="25" x2="412" y2="229" />
-                        <line x1="472" y1="25" x2="472" y2="229" />
-                        <line x1="532" y1="25" x2="532" y2="229" />
-                        <line x1="592" y1="25" x2="592" y2="229" />
-                        <line x1="652" y1="25" x2="652" y2="229" />
-                        <line x1="712" y1="25" x2="712" y2="229" />
-                    </g>
-
-                    <g class="y-labels">
-                        <text x="15" y="30">140jt</text>
-                        <text x="22" y="81">105jt</text>
-                        <text x="29" y="132">70jt</text>
-                        <text x="29" y="183">35jt</text>
-                        <text x="36" y="232">0jt</text>
-                    </g>
-
-                    <polygon class="area" points="52,165 112,156 172,164 232,143 292,147 352,128 412,134 472,116 532,123 592,103 652,85 712,54 712,229 52,229" />
-                    <polyline class="line" points="52,165 112,156 172,164 232,143 292,147 352,128 412,134 472,116 532,123 592,103 652,85 712,54" />
-
-                    <g class="x-labels">
-                        <text x="48" y="247">Jan</text>
-                        <text x="108" y="247">Feb</text>
-                        <text x="168" y="247">Mar</text>
-                        <text x="229" y="247">Apr</text>
-                        <text x="288" y="247">Mei</text>
-                        <text x="348" y="247">Jun</text>
-                        <text x="408" y="247">Jul</text>
-                        <text x="468" y="247">Agu</text>
-                        <text x="528" y="247">Sep</text>
-                        <text x="588" y="247">Okt</text>
-                        <text x="648" y="247">Nov</text>
-                        <text x="708" y="247">Des</text>
-                    </g>
-                    </svg>
-                </div>
-                </article>
-
-                <article class="panel category-panel">
-                <h3>Penjualan per Kategori</h3>
-                <div class="donut-layout">
-                    <div class="donut" role="img" aria-label="Diagram donat kategori penjualan"></div>
-                    <div class="legend">
-                    <div><span class="dot c-blue"></span>Elektronik <b>45%</b></div>
-                    <div><span class="dot c-orange"></span>Fashion <b>28%</b></div>
-                    <div><span class="dot c-green"></span>Rumah &amp; Dapur <b>15%</b></div>
-                    <div><span class="dot c-purple"></span>Kecantikan <b>8%</b></div>
-                    <div><span class="dot c-slate"></span>Lainnya <b>4%</b></div>
+            <section class="stats-grid grid gap16" aria-label="Ringkasan statistik">
+                <article class="stat-card bg-white radius16 padding-20 gap12 grid">
+                    <div class="stat-top flex">
+                        <span class="font12 color-abu">Total Pendapatan (Bulan Ini)</span>
+                        <div class="stat-icon blue grid centerItem radius12 centerContent">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="blue" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-banknote-arrow-up-icon lucide-banknote-arrow-up"><path d="M12 18H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5"/><path d="M18 12h.01"/><path d="M19 22v-6"/><path d="m22 19-3-3-3 3"/><path d="M6 12h.01"/><circle cx="12" cy="12" r="2"/></svg>
+                        </div>
                     </div>
-                </div>
+                    <div class="grid gap4">
+                        <h2 class="color-black font24 weight700">Rp 125.000.000</h2>
+                        <p class="font12 color-green">↗ 18.2% dari bulan lalu</p>
+                    </div>
+                </article>
+
+                <article class="stat-card bg-white radius16 padding-20 gap12 grid">
+                    <div class="stat-top flex">
+                        <span class="font12 color-abu">Pesanan Baru</span>
+                        <div class="stat-icon orange grid centerItem radius12 centerContent">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="orange" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-list-ordered-icon lucide-list-ordered"><path d="M11 5h10"/><path d="M11 12h10"/><path d="M11 19h10"/><path d="M4 4h1v5"/><path d="M4 9h2"/><path d="M6.5 20H3.4c0-1 2.6-1.925 2.6-3.5a1.5 1.5 0 0 0-2.6-1.02"/></svg>
+                        </div>
+                    </div>
+                    <div class="grid gap4">
+                        <h2 class="color-black font24 weight700">890</h2>
+                        <p class="font12 color-green">↗ 12.5% dari bulan lalu</p>
+                    </div>
+                </article>
+
+                <article class="stat-card bg-white radius16 padding-20 gap12 grid">
+                    <div class="stat-top flex">
+                        <span class="font12 color-abu">Pelanggan Aktif</span>
+                        <div class="stat-icon green grid centerItem radius12 centerContent">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="green" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users-icon lucide-users"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M16 3.128a4 4 0 0 1 0 7.744"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><circle cx="9" cy="7" r="4"/></svg>
+                        </div>
+                    </div>
+                    <div class="grid gap4">
+                        <h2 class="color-black font24 weight700">3.284</h2>
+                        <p class="font12 color-green">↗ 8.1% dari bulan lalu</p>
+                    </div>
+                </article>
+
+                <article class="stat-card bg-white radius16 padding-20 gap12 grid">
+                    <div class="stat-top flex">
+                        <span class="font12 color-abu">Produk Aktif</span>
+                        <div class="stat-icon purple grid centerItem radius12 centerContent">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="purple" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-package-search-icon lucide-package-search"><path d="M12 22V12"/><path d="M20.27 18.27 22 20"/><path d="M21 10.498V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.729l7 4a2 2 0 0 0 2 .001l.98-.559"/><path d="M3.29 7 12 12l8.71-5"/><path d="m7.5 4.27 8.997 5.148"/><circle cx="18.5" cy="16.5" r="2.5"/></svg>
+                        </div>
+                    </div>
+                    <div class="grid gap4">
+                        <h2 class="color-black font24 weight700">247</h2>
+                        <p class="font12 color-red">↘ 2.3% dari bulan lalu</p>
+                    </div>
                 </article>
             </section>
 
-            <section class="tables-grid">
-                <article class="panel orders-panel">
-                <div class="panel-header compact">
-                    <h3>Pesanan Terbaru</h3>
-                    <a href="#">Lihat Semua ↗</a>
-                </div>
+            <section class="analytics-grid grid gap24">
+                <article class="revenue-panel bg-white radius16 padding-24 grid gap24">
+                    <div class="panel-header flex centerItem">
+                        <h3 class="font18 color-black weight500">Pendapatan &amp; Pesanan (2026)</h3>
+                        <div class="ket-sortir radius8 font12 color-abu">12 Bulan Terakhir</div>
+                    </div>
 
-                <div class="order-list">
-                    <div class="order-row">
-                    <div>
-                        <strong>#BM98765432</strong>
-                        <span class="badge success">Terkirim</span>
-                        <p>Budi Santoso · 28 Mei 2026</p>
+                    <!-- setting grafik -->
+                    <div class="chart-wrap" aria-label="Grafik pendapatan dan pesanan 2026">
+                        <svg viewBox="0 0 760 250" role="img" aria-labelledby="chart-title">
+                        <defs>
+                            <linearGradient id="lineFill" x1="0" x2="0" y1="0" y2="1">
+                            <stop offset="0%" stop-color="#2f7bf6" stop-opacity="0.16" />
+                            <stop offset="100%" stop-color="#2f7bf6" stop-opacity="0" />
+                            </linearGradient>
+                        </defs>
+
+                        <!-- setting garis putus putus di grafik -->
+                        <g class="grid-lines">
+                            <line x1="52" y1="25" x2="735" y2="25" />
+                            <line x1="52" y1="76" x2="735" y2="76" />
+                            <line x1="52" y1="127" x2="735" y2="127" />
+                            <line x1="52" y1="178" x2="735" y2="178" />
+                            <line x1="52" y1="229" x2="735" y2="229" />
+                            <line x1="52" y1="25" x2="52" y2="229" />
+                            <line x1="112" y1="25" x2="112" y2="229" />
+                            <line x1="172" y1="25" x2="172" y2="229" />
+                            <line x1="232" y1="25" x2="232" y2="229" />
+                            <line x1="292" y1="25" x2="292" y2="229" />
+                            <line x1="352" y1="25" x2="352" y2="229" />
+                            <line x1="412" y1="25" x2="412" y2="229" />
+                            <line x1="472" y1="25" x2="472" y2="229" />
+                            <line x1="532" y1="25" x2="532" y2="229" />
+                            <line x1="592" y1="25" x2="592" y2="229" />
+                            <line x1="652" y1="25" x2="652" y2="229" />
+                            <line x1="712" y1="25" x2="712" y2="229" />
+                        </g>
+
+                        <!-- setting angka jumlah penjualan -->
+                        <g class="y-labels">
+                            <text x="22" y="30">140jt</text>
+                            <text x="22" y="81">105jt</text>
+                            <text x="29" y="132">70jt</text>
+                            <text x="29" y="183">35jt</text>
+                            <text x="36" y="232">0jt</text>
+                        </g>
+
+                        <!-- setting posisi area yang akan diwarnai dibawah garis -->
+                        <polygon class="area" points="52,165 112,156 172,164 232,143 292,147 352,128 412,134 472,116 532,123 592,103 652,85 712,54 712,229 52,229" />
+                        <!-- setting posisi garis -->
+                        <polyline class="line" points="52,165 112,156 172,164 232,143 292,147 352,128 412,134 472,116 532,123 592,103 652,85 712,54" />
+
+                        <!-- setting posisi isian bulan -->
+                        <g class="x-labels">
+                            <text x="48" y="247">Jan</text>
+                            <text x="108" y="247">Feb</text>
+                            <text x="168" y="247">Mar</text>
+                            <text x="229" y="247">Apr</text>
+                            <text x="288" y="247">Mei</text>
+                            <text x="348" y="247">Jun</text>
+                            <text x="408" y="247">Jul</text>
+                            <text x="468" y="247">Agu</text>
+                            <text x="528" y="247">Sep</text>
+                            <text x="588" y="247">Okt</text>
+                            <text x="648" y="247">Nov</text>
+                            <text x="708" y="247">Des</text>
+                        </g>
+                        </svg>
                     </div>
-                    <div class="price">Rp 900.000<span>2 item</span></div>
-                    </div>
-                    <div class="order-row">
-                    <div>
-                        <strong>#BM87654321</strong>
-                        <span class="badge info">Dikirim</span>
-                        <p>Siti Rahayu · 28 Mei 2026</p>
-                    </div>
-                    <div class="price">Rp 450.000<span>1 item</span></div>
-                    </div>
-                    <div class="order-row">
-                    <div>
-                        <strong>#BM76543210</strong>
-                        <span class="badge primary">Dikemas</span>
-                        <p>Ahmad Maulana · 27 Mei 2026</p>
-                    </div>
-                    <div class="price">Rp 1.250.000<span>3 item</span></div>
-                    </div>
-                    <div class="order-row">
-                    <div>
-                        <strong>#BM65432109</strong>
-                        <span class="badge warning">Pending</span>
-                        <p>Rina Kusuma · 27 Mei 2026</p>
-                    </div>
-                    <div class="price">Rp 8.500.000<span>1 item</span></div>
-                    </div>
-                    <div class="order-row">
-                    <div>
-                        <strong>#BM54321098</strong>
-                        <span class="badge success">Terkirim</span>
-                        <p>Denny Pratama · 26 Mei 2026</p>
-                    </div>
-                    <div class="price">Rp 725.000<span>2 item</span></div>
-                    </div>
-                </div>
                 </article>
 
-                <article class="panel products-panel">
-                <div class="panel-header compact">
-                    <h3>Produk Terlaris</h3>
-                    <a href="#">Kelola ↗</a>
-                </div>
+                <article class="bg-white radius16 padding-24 category-panel grid gap8">
+                    <h3 class="font18 color-black weight500">Penjualan per Kategori
 
-                <div class="product-list">
-                    <div class="product-row">
-                    <span>1</span>
-                    <div>
-                        <strong>Headphone Wireless Premium</strong>
-                        <p>156 terjual · Stok: 45</p>
+                    </h3>
+                    
+                    <!-- setting grafik donut -->
+                    <div class="donut-layout flex centerContent centerItem">
+                        <div class="donut" role="img" aria-label="Diagram donat kategori penjualan">
+                        </div>
                     </div>
-                    <b>Rp 70.200.000</b>
+
+                    <div class="grid gap8 font12 color-abu">
+                        <div class="flex centerItem gap4">
+                            <div class="dot c-blue">
+                            </div>
+                            Elektronik 
+                            <b class="marginLeftAuto color-black">45%</b>
+                        </div>
+                        <div class="flex centerItem gap4">
+                            <div class="dot c-orange">
+                            </div>
+                            Fashion 
+                            <b class="marginLeftAuto color-black">28%</b>
+                        </div>
+                        <div class="flex centerItem gap4">
+                            <div class="dot c-green">
+                            </div>
+                            Rumah &amp; Dapur 
+                            <b class="marginLeftAuto color-black">15%</b>
+                        </div>
+                        <div class="flex centerItem gap4">
+                            <div class="dot c-purple">
+                            </div>
+                            Kecantikan 
+                            <b class="marginLeftAuto color-black">8%</b>
+                        </div>
+                        <div class="flex centerItem gap4">
+                            <div class="dot c-gray">
+                            </div>
+                            Lainnya 
+                            <b class="marginLeftAuto color-black">4%</b>
+                        </div>
                     </div>
-                    <div class="product-row">
-                    <span>2</span>
-                    <div>
-                        <strong>Laptop Ultrabook Pro 15”</strong>
-                        <p>87 terjual · Stok: 15</p>
+                </article>
+            </section>
+
+            <section class="order-section flex gap24">
+                <article class="grid padding-24 gap16 bg-white orders-panel">
+                    <div class="panel-header flex centerItem">
+                        <h3 class="font18 weight500 color-black">Pesanan Terbaru</h3>
+                        <a class="font12 color-blue" href="#">Lihat Semua ↗</a>
                     </div>
-                    <b>Rp 739.500.000</b>
+
+                    <div class="order-list">
+                        <div class="order-row">
+                        <div>
+                            <strong>#BM98765432</strong>
+                            <span class="badge success">Terkirim</span>
+                            <p>Budi Santoso · 28 Mei 2026</p>
+                        </div>
+                        <div class="price">Rp 900.000<span>2 item</span></div>
+                        </div>
+                        <div class="order-row">
+                        <div>
+                            <strong>#BM87654321</strong>
+                            <span class="badge info">Dikirim</span>
+                            <p>Siti Rahayu · 28 Mei 2026</p>
+                        </div>
+                        <div class="price">Rp 450.000<span>1 item</span></div>
+                        </div>
+                        <div class="order-row">
+                        <div>
+                            <strong>#BM76543210</strong>
+                            <span class="badge primary">Dikemas</span>
+                            <p>Ahmad Maulana · 27 Mei 2026</p>
+                        </div>
+                        <div class="price">Rp 1.250.000<span>3 item</span></div>
+                        </div>
+                        <div class="order-row">
+                        <div>
+                            <strong>#BM65432109</strong>
+                            <span class="badge warning">Pending</span>
+                            <p>Rina Kusuma · 27 Mei 2026</p>
+                        </div>
+                        <div class="price">Rp 8.500.000<span>1 item</span></div>
+                        </div>
+                        <div class="order-row">
+                        <div>
+                            <strong>#BM54321098</strong>
+                            <span class="badge success">Terkirim</span>
+                            <p>Denny Pratama · 26 Mei 2026</p>
+                        </div>
+                        <div class="price">Rp 725.000<span>2 item</span></div>
+                        </div>
                     </div>
-                    <div class="product-row">
-                    <span>3</span>
-                    <div>
-                        <strong>Kaos Polos Premium Cotton</strong>
-                        <p>312 terjual · Stok: 200</p>
+                </article>
+
+                <article class="grid padding-24 gap16 bg-white products-panel">
+                    <div class="panel-header flex centerItem">
+                        <h3 class="font18 weight500 color-black">Produk Terlaris</h3>
+                        <a class="font12 color-blue" href="#">Kelola ↗</a>
                     </div>
-                    <b>Rp 39.000.000</b>
+
+                    <div class="product-list">
+                        <div class="product-row">
+                        <span>1</span>
+                        <div>
+                            <strong>Headphone Wireless Premium</strong>
+                            <p>156 terjual · Stok: 45</p>
+                        </div>
+                        <b>Rp 70.200.000</b>
+                        </div>
+                        <div class="product-row">
+                        <span>2</span>
+                        <div>
+                            <strong>Laptop Ultrabook Pro 15”</strong>
+                            <p>87 terjual · Stok: 15</p>
+                        </div>
+                        <b>Rp 739.500.000</b>
+                        </div>
+                        <div class="product-row">
+                        <span>3</span>
+                        <div>
+                            <strong>Kaos Polos Premium Cotton</strong>
+                            <p>312 terjual · Stok: 200</p>
+                        </div>
+                        <b>Rp 39.000.000</b>
+                        </div>
+                        <div class="product-row">
+                        <span>4</span>
+                        <div>
+                            <strong>Sneakers Sport Runfast</strong>
+                            <p>203 terjual · Stok: 60</p>
+                        </div>
+                        <b>Rp 111.650.000</b>
+                        </div>
+                        <div class="product-row">
+                        <span>5</span>
+                        <div>
+                            <strong>Smartphone 5G Ultra</strong>
+                            <p>124 terjual · Stok: 30</p>
+                        </div>
+                        <b>Rp 520.800.000</b>
+                        </div>
                     </div>
-                    <div class="product-row">
-                    <span>4</span>
-                    <div>
-                        <strong>Sneakers Sport Runfast</strong>
-                        <p>203 terjual · Stok: 60</p>
-                    </div>
-                    <b>Rp 111.650.000</b>
-                    </div>
-                    <div class="product-row">
-                    <span>5</span>
-                    <div>
-                        <strong>Smartphone 5G Ultra</strong>
-                        <p>124 terjual · Stok: 30</p>
-                    </div>
-                    <b>Rp 520.800.000</b>
-                    </div>
-                </div>
                 </article>
             </section>
         </section>
