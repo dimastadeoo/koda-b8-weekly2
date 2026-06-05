@@ -15,12 +15,11 @@ body{
     background-color: #f8f9fa;
     justify-content: center;
     align-items: center;
-    max-height: 100vh;
+    min-height: 100vh;
 }
 
 main{
     width: 100%;
-    max-width: 1728px; 
     padding: 100px;
     background: #FFFFFF;
 }
@@ -30,7 +29,6 @@ main{
     display: flex;
     border: 1px solid #0000001A;
     overflow: hidden;
-    max-height: 817px;
 }
 
 .auth-hero {
