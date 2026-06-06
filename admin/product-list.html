@@ -69,7 +69,7 @@
         <section class="content padding-24 grid gap24">
             <div class="page-heading flex gap16 centerItem">
                 <h1 class="font24 color-black weight500 centerItem">Manajemen Produk</h1>
-                <button class="flex button-add centerItem padding-8-16 radius12 gap8 centerContent">
+                <button id="btn-tambah-product" class="flex button-add centerItem padding-8-16 radius12 gap8 centerContent">
                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-plus-icon lucide-plus"><path d="M5 12h14"/><path d="M12 5v14"/></svg>
                     <p class="font14 weight500 color-white">
                         Tambah Produk
@@ -787,5 +787,113 @@
             </section>
         </section>
     </main>
+
+    <!-- modal input data -->
+    <section class="modal-input-data flex centerContent centerItem">
+        <form class="form-input-product grid bg-white radius16" action="#">
+            <div class="input-data-title flex centerItem">
+                <h1 class="font18 weight500 color-black">
+                    Tambah Produk Baru
+                </h1>
+                <button id="btn-close-input" class="flex centerContent centerItem close-input">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x-icon lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+                </button>
+
+            </div>
+
+            
+            <div class="input-data-form padding-24 grid gap16">
+                <div class="form-input-text grid gap16">
+                    <div class="grid gap6">
+                        <label for="name-product" class="font14 color-abu">
+                            Nama produk
+                        </label>
+                        <input type="text" class="color-black bg-gray-soft radius12">
+                    </div>
+                    <div class="grid gap6">
+                        <label for="name-product" class="font14 color-abu">
+                            Nama produk
+                        </label>
+                        <input type="text" class="color-black bg-gray-soft radius12">
+                    </div>
+                    <div class="grid gap6">
+                        <label for="name-product" class="font14 color-abu">
+                            Nama produk
+                        </label>
+                        <input type="text" class="color-black bg-gray-soft radius12">
+                    </div>
+                    <div class="grid gap6">
+                        <label for="name-product" class="font14 color-abu">
+                            Nama produk
+                        </label>
+                        <input type="text" class="color-black bg-gray-soft radius12">
+                    </div>
+                    <div class="grid gap6">
+                        <label for="name-product" class="font14 color-abu">
+                            Nama produk
+                        </label>
+                        <input type="text" class="color-black bg-gray-soft radius12">
+                    </div>
+                    <div class="grid gap6">
+                        <label for="name-product" class="font14 color-abu">
+                            Nama produk
+                        </label>
+                        <input type="text" class="color-black bg-gray-soft radius12">
+                    </div>
+                </div>
+                <div class="form-input-textarea grid gap6">
+                    <label for="name-product" class="font14 color-abu">
+                        Nama produk
+                    </label>
+                    <input type="textarea" class="color-black bg-gray-soft radius12">
+                </div>
+
+                <div class="form-input-checkbox flex gap16">
+                    <label class="flex gap4 centerItem" for="unggul-product">
+                        <input type="checkbox" id="unggul-product" value="Produk Unggulan">
+                        <label for="unggul-product" class="font12 color-black">
+                            Produk Unggulan
+                        </label>
+                    </label>
+                    <label class="flex gap4 centerItem" for="new-product">
+                        <input type="checkbox" id="new-product" value="Produk Baru">
+                        <label for="new-product" class="font12 color-black">
+                            Produk Baru
+                        </label>
+                    </label>
+
+                </div>
+
+                <div class="button-form-input flex gap12">
+                    <button id="btn-batal" class="flex centerContent centerItem color-abu font14 weight500 radius12">
+                        Batal
+                    </button>
+                    <button id="btn-simpan" class="flex centerContent centerItem color-white font14 weight500 bg-blue radius12">
+                        Tambah Produk
+                    </button>
+                </div>
+            </div>
+
+        </form>
+    </section>
+
+    <script type="text/javascript">
+        const tombolTambah = document.getElementById('btn-tambah-product');
+        const tombolClose = document.getElementById('btn-close-input');
+        const tombolBatal = document.getElementById('btn-batal');
+        const modal = document.querySelector('.modal-input-data')
+
+        tombolTambah.addEventListener('click', function() {
+            modal.classList.add('active');
+        });
+
+        tombolClose.addEventListener('click', function() {
+            modal.classList.remove('active');
+        });
+
+        tombolBatal.addEventListener('click', function() {
+            modal.classList.remove('active');
+        });
+    </script>
 </body>
 </html>
