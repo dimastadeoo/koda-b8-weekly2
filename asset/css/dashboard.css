@@ -667,4 +667,11 @@ a{
   .product-row {
     grid-template-columns: 22px minmax(0, 1fr);
   }
+  .badge-status{
+    grid-template-columns: max-content;
+  }
+  .action{
+    display: grid;
+    grid-template-columns: max-content;
+  }
 }
