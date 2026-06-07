@@ -274,6 +274,10 @@ a{
   color: var(--gray);
 }
 
+.menu-item svg{
+  stroke: currentColor;
+}
+
 .menu-item:hover,
 .back-store:hover {
   background: #ffffff0f;
