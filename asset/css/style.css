@@ -784,6 +784,7 @@ footer {
     color: #9CA3AF;
 }
 
+
 @media (max-width: 1200px) {
     .container {
         padding: 0 40px; 
@@ -1052,13 +1053,14 @@ footer {
 
 .wishlist-flash button svg {
     fill: #dc26265e;
-    color: #dc2626;
+    stroke: none;
 }
 
 .wishlist-flash button:hover {
     background: #ffffff;
 }
-.wishlist-flash button:hover svg {
+.wishlist-flash button:hover svg,
+.btn-whislist-item.active svg {
     fill: #dc2626;
 }
 
