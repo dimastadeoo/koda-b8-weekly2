@@ -96,22 +96,31 @@ function makeElemen(nameElemen, nameClass) {
 }
 // function div Kategori
 function katContent(dataKat) {
-    const divItemShop = makeElemen('div', 'item-shop')
+    const clasItemShop = 'bg-white border border-gray-200 rounded-2xl p-4 flex flex-col items-center justify-center text-center shadow-sm hover:shadow-md hover:border-blue-500/50 transition-all group'
+    const divItemShop = makeElemen('div', clasItemShop)
 
-    const anchorItemLink = makeElemen('a', 'item-link')
+    const clasAnchItemLink = 'no-underline w-full flex flex-col items-center'
+    const anchorItemLink = makeElemen('a', clasAnchItemLink)
     anchorItemLink.href = dataKat.url
 
-    const imgItemKat = makeElemen('img', 'img-item-kat')
+    const clasDivImgCenter = 'w-24 h-20 flex items-center justify-center overflow-hidden mb-4'
+    const divImgCenter = makeElemen('div', clasDivImgCenter)
+
+    const clasImgItemKat = 'max-w-full max-h-full object-contain mix-blend-multiply transition-transform group-hover:scale-105 duration-300' 
+    const imgItemKat = makeElemen('img', clasImgItemKat)
     imgItemKat.src = dataKat.image
     imgItemKat.alt = dataKat.name
 
-    const divTitleKat = makeElemen('div', 'title-item-kat')
+    const clasDivTitleKat = 'text-sm font-semibold text-gray-900 mb-1 group-hover:text-blue-600 transition-colors'
+    const divTitleKat = makeElemen('div', clasDivTitleKat)
     divTitleKat.innerText = dataKat.name
 
+    const clasTextKat = 'text-xs text-gray-400'
     const divTextKat = makeElemen('div', 'text-item-kat')
     divTextKat.innerText = dataKat.qty
 
-    anchorItemLink.append(imgItemKat)
+    divImgCenter.append(imgItemKat)
+    anchorItemLink.append(divImgCenter)
     anchorItemLink.append(divTitleKat)
     anchorItemLink.append(divTextKat)
     divItemShop.append(anchorItemLink)
