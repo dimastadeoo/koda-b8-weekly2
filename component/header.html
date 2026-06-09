@@ -1,59 +1,65 @@
 <!-- header Top -->
-<div class="bg-blue text-white top-bar">
-    <div class="container flex justify-between items-center h-full text-xs">
-        <div class="flex items-center gap-1">
-            <img class="icon-sm" src="/asset/img/map-icon.png" alt="Icon Map">
-            <span>Kirim ke: Jakarta Selatan</span>
+<div class="bg-blue-600 text-white py-2">
+    <div class="container mx-auto max-w-5xl px-4 flex justify-between items-center text-xs">
+        <div class="flex items-center gap-1.5">
+            <img class="w-4 h-4 object-contain" src="/asset/img/map-icon.png" alt="Icon Map">
+            <span>Kirim ke: <span class="font-semibold">Jakarta Selatan</span></span>
         </div>
-        <div class="flex items-center gap-4">
-            <span>📞 0800-1234-5678 (Gratis)</span>
-            <span>🚀 Gratis ongkir di atas Rp 100.000</span>
+        <div class="flex items-center gap-6">
+            <span class="flex items-center gap-1">📞 0800-1234-5678 (Gratis)</span>
+            <span class="flex items-center gap-1">🚀 Gratis ongkir di atas Rp 100.000</span>
         </div>
     </div>
 </div>
 <!-- header Middle -->
-<div class="border-bottom">
-    <div class="container middle-bar-grid">      
-        <a href="#" class="flex items-center gap-2 text-decoration-none">
-            <div class="logo-box bg-blue text-white flex justify-center items-center font-bold">B</div>
-            <div class="text-lg text-dark">BeliMudah</div>
+<div class="border-b border-gray-200 bg-white py-4">
+    <div class="container mx-auto max-w-5xl px-4 flex items-center justify-between gap-4">      
+        <a href="#" class="flex items-center gap-2 no-underline shrink-0">
+            <div class="w-10 h-10 bg-blue-600 text-white flex justify-center items-center text-xl font-bold rounded-lg">B</div>
+            <div class="text-xl font-semibold text-gray-800 tracking-tight">BeliMudah</div>
         </a>
-        <div class="search-container">
-            <form class="search-form flex items-center bg-gray-light">
-                <input type="text" class="search-input w-full bg-transparent" placeholder="Cari produk, merek, kategori...">
-                <button type="submit" class="search-btn bg-blue flex justify-center items-center pointer">
-                    <img class="icon-md" src="/asset/img/search-icon.png" alt="search-icon">
+        
+        <div class="flex-1 max-w-2xl mx-4">
+            <form class="flex items-center bg-gray-100 rounded-lg overflow-hidden border border-gray-200 focus-within:border-blue-500 focus-within:ring-1 focus-within:ring-blue-500 transition-all">
+                <input type="text" class="w-full bg-transparent px-4 py-2.5 text-sm text-gray-700 placeholder-gray-400 outline-none" placeholder="Cari produk, merek, kategori...">
+                <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white w-12 h-10 flex justify-center items-center cursor-pointer transition-colors shrink-0">
+                    <img class="w-5 h-5 object-contain brightness-0 invert" src="/asset/img/search-icon.png" alt="search-icon">
                 </button>
             </form>
         </div>
 
-        <div class="flex items-center gap-4">
-            <span class="pointer"><img class="icon-md" src="/asset/img/bell.png" alt="lonceng"></span>
-            <span class="flex items-center gap-1 pointer">
-                <img class="icon-md" src="/asset/img/profile.png" alt="Icon Profile">
-                <span class="text-sm text-dark font-medium">Budi</span>
-            </span>
-            <span class="pointer"><img class="icon-md" src="/asset/img/love.png" alt="Icon Favorite"></span>
-            <span class="pointer"><img class="icon-md" src="/asset/img/cart.png" alt="Icon Keranjang"></span>
+        <div class="flex items-center gap-5 shrink-0 text-gray-600">
+            <button class="cursor-pointer hover:text-blue-600 transition-colors relative">
+                <img class="w-6 h-6 object-contain" src="/asset/img/bell.png" alt="lonceng">
+            </button>
+            <button class="flex items-center gap-1.5 cursor-pointer hover:text-blue-600 transition-colors">
+                <img class="w-6 h-6 object-contain rounded-full" src="/asset/img/profile.png" alt="Icon Profile">
+                <span class="text-sm font-medium text-gray-700">Budi</span>
+            </button>
+            <button class="cursor-pointer hover:text-blue-600 transition-colors">
+                <img class="w-6 h-6 object-contain" src="/asset/img/love.png" alt="Icon Favorite">
+            </button>
+            <button class="cursor-pointer hover:text-blue-600 transition-colors">
+                <img class="w-6 h-6 object-contain" src="/asset/img/cart.png" alt="Icon Keranjang">
+            </button>
         </div>
-        
     </div>
 </div>
 <!-- header NAV -->
-<nav class="nav-container">
-    <div class="container flex flex-wrap items-center gap-4 text-sm text-gray py-2">
-        <span class="flex items-center gap-1 font-medium text-dark pointer mr-2">
-            <img class="icon-sm" src="/asset/img/list.png" alt="icon list">
+<nav class="bg-white border-b border-gray-100 shadow-sm">
+    <div class="container mx-auto max-w-5xl px-4 flex flex-wrap items-center gap-6 text-sm text-gray-600 py-3">
+        <button class="flex items-center gap-1.5 font-semibold text-gray-900 cursor-pointer hover:text-blue-600 transition-colors mr-2">
+            <img class="w-4 h-4 object-contain" src="/asset/img/list.png" alt="icon list">
             <span>Semua Kategori</span>
-            <img class="icon-sm" src="/asset/img/bottom-arrow.png" alt="bottom arrow">
-        </span>
+            <img class="w-3 h-3 object-contain opacity-70" src="/asset/img/bottom-arrow.png" alt="bottom arrow">
+        </button>
         
-        <span class="pointer hover-blue">💻 Elektronik</span>
-        <span class="pointer hover-blue">👗 Fashion</span>
-        <span class="pointer hover-blue">🏠 Rumah & Dapur</span>
-        <span class="pointer hover-blue">💄 Kecantikan</span>
-        <span class="pointer hover-blue">⚽ Olahraga</span>
-        <span class="pointer hover-blue">📚 Buku & Alat Tulis</span>
-        <span class="pointer text-red font-medium">🔥 Promo</span>
+        <a href="#" class="no-underline text-gray-600 hover:text-blue-600 transition-colors cursor-pointer flex items-center gap-1">💻 Elektronik</a>
+        <a href="#" class="no-underline text-gray-600 hover:text-blue-600 transition-colors cursor-pointer flex items-center gap-1">👗 Fashion</a>
+        <a href="#" class="no-underline text-gray-600 hover:text-blue-600 transition-colors cursor-pointer flex items-center gap-1">🏠 Rumah & Dapur</a>
+        <a href="#" class="no-underline text-gray-600 hover:text-blue-600 transition-colors cursor-pointer flex items-center gap-1">💄 Kecantikan</a>
+        <a href="#" class="no-underline text-gray-600 hover:text-blue-600 transition-colors cursor-pointer flex items-center gap-1">⚽ Olahraga</a>
+        <a href="#" class="no-underline text-gray-600 hover:text-blue-600 transition-colors cursor-pointer flex items-center gap-1">📚 Buku & Alat Tulis</a>
+        <a href="#" class="no-underline text-red-500 font-semibold hover:text-red-600 transition-colors cursor-pointer flex items-center gap-1">🔥 Promo</a>
     </div>
 </nav>
