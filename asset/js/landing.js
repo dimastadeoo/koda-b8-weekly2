@@ -39,28 +39,77 @@ const dataKat = [{
     url: '#'
 }]
 
+const dataCartFlash = [{
+    url: '#',
+    badgeContent: 31,
+    cartJenisContent: 'SoundWave',
+    cartNameContent: 'Headphone Wireless Premium',
+    rateContent: 4.8,
+    reviewContent: 512,
+    price: 650000,
+    image: 'link-bg-item-1'
+
+},
+{
+    url: '#',
+    badgeContent: 31,
+    cartJenisContent: 'SoundWave',
+    cartNameContent: 'Headphone Wireless Premium',
+    rateContent: 4.8,
+    reviewContent: 512,
+    price: 650000,
+    image: 'link-bg-item-1'
+
+},
+{
+    url: '#',
+    badgeContent: 31,
+    cartJenisContent: 'SoundWave',
+    cartNameContent: 'Headphone Wireless Premium',
+    rateContent: 4.8,
+    reviewContent: 512,
+    price: 650000,
+    image: 'link-bg-item-1'
+
+},
+{
+    url: '#',
+    badgeContent: 31,
+    cartJenisContent: 'SoundWave',
+    cartNameContent: 'Headphone Wireless Premium',
+    rateContent: 4.8,
+    reviewContent: 512,
+    price: 650000,
+    image: 'link-bg-item-1'
+
+}
+]
+
 // funcion buat elemen dan memberikan kelas
-function makeElemen(nameElemen, nameClass){
+function makeElemen(nameElemen, nameClass) {
     const divElemen = document.createElement(nameElemen)
-    divElemen.classList.add(nameClass)
+
+    if (nameClass !== "") {
+        divElemen.className = nameClass
+    }
     return divElemen
 }
 // function div Kategori
-function katContent(name, qty, img, url){
+function katContent(dataKat) {
     const divItemShop = makeElemen('div', 'item-shop')
-    
+
     const anchorItemLink = makeElemen('a', 'item-link')
-    anchorItemLink.href = url
+    anchorItemLink.href = dataKat.url
 
     const imgItemKat = makeElemen('img', 'img-item-kat')
-    imgItemKat.src = img
-    imgItemKat.alt = name
+    imgItemKat.src = dataKat.image
+    imgItemKat.alt = dataKat.name
 
     const divTitleKat = makeElemen('div', 'title-item-kat')
-    divTitleKat.innerText = name
+    divTitleKat.innerText = dataKat.name
 
     const divTextKat = makeElemen('div', 'text-item-kat')
-    divTextKat.innerText = qty
+    divTextKat.innerText = dataKat.qty
 
     anchorItemLink.append(imgItemKat)
     anchorItemLink.append(divTitleKat)
@@ -70,23 +119,19 @@ function katContent(name, qty, img, url){
     return divItemShop
 }
 
-function itemCart(url, badgeContent, cartJenisContent, cartNameContent, rateContent, reviewContent, price){
+function itemCart(dataCart) {
     const divContainer = makeElemen('div', 'item-flash-container')
 
     const anchorCartItem = makeElemen('a', '')
-    anchorCartItem.href = url
+    anchorCartItem.href = dataCart.url
 
-    const classItem = ['img-item-flash', 'link-bg-item-1']
-    const imgItemCart = makeElemen('div', ...classItem)
+    const classItem = 'img-item-flash ' + dataCart.image
+    const divBadgeWhis = makeElemen('div', classItem)
 
-    const titleItemCart = makeElemen('div', 'title-item-flash')
+    const divItemCart = makeElemen('div', 'title-item-flash')
 
     const badgeSpan = makeElemen('span', 'badge-flash')
-    if (typeof badgeContent === 'number'){
-        badgeSpan.innerText = `${badgeContent} %`
-    }else{
-        badgeSpan.innerText = badgeContent
-    }
+
 
     const whislistSpan = makeElemen('span', "wishlist-flash")
 
@@ -98,10 +143,10 @@ function itemCart(url, badgeContent, cartJenisContent, cartNameContent, rateCont
                                     </svg>`
 
     const divCartJenis = makeElemen('div', 'flash-jenis')
-    divCartJenis.innerText = cartJenisContent
+    divCartJenis.innerText = dataCart.cartJenisContent
 
     const divCartName = makeElemen('div', 'flash-name-item')
-    divCartJenis.innerText = cartNameContent
+    divCartJenis.innerText = dataCart.cartNameContent
 
     const divRareStars = makeElemen('div', 'flash-rate-item')
 
@@ -116,34 +161,69 @@ function itemCart(url, badgeContent, cartJenisContent, cartNameContent, rateCont
                                         <use href="#star" x="72" />
                                         <use href="#star" x="96" />
                                     </svg>`
-    
+
     const spanRate = makeElemen('span', 'rate')
-    spanRate.innerText = rateContent
+    spanRate.innerText = dataCart.rateContent
 
     const spanReview = makeElemen('span', 'rate')
-    spanReview.innerText = reviewContent
+    spanReview.innerText = `(${dataCart.reviewContent})`
 
     const divPriceCart = makeElemen('div', 'flash-price-item')
 
-    const span
+    let spanDisPrice = ""
+    let spanRegPrice = ""
+
+    if (typeof dataCart.badgeContent === 'number') {
+        badgeSpan.innerText = `-${dataCart.badgeContent} %`
+        spanDisPrice = makeElemen('span', 'discount-price')
+        spanDisPrice.innerText = `Rp ${(dataCart.price * (1 - dataCart.badgeContent / 100)).toLocaleString()}`
+
+        spanRegPrice = makeElemen('span', 'regular-price')
+        spanRegPrice.innerText = `Rp ${dataCart.price.toLocaleString()}`
+    } else {
+        badgeSpan.innerText = dataCart.badgeContent
+        spanDisPrice.innerText = `Rp ${dataCart.price.toLocaleString()}`
+    }
+
+    divPriceCart.append(spanDisPrice)
+    divPriceCart.append(spanRegPrice)
+    divRareStars.append(spanStars)
+    divRareStars.append(spanRate)
+    divRareStars.append(spanReview)
+    divItemCart.append(divCartJenis)
+    divItemCart.append(divCartName)
+    divItemCart.append(divRareStars)
+    divItemCart.append(divPriceCart)
+    whislistSpan.append(buttonWhislist)
+    divBadgeWhis.append(badgeSpan)
+    divBadgeWhis.append(whislistSpan)
+    anchorCartItem.append(divBadgeWhis)
+    anchorCartItem.append(divItemCart)
+    divContainer.append(anchorCartItem)
+    return divContainer
 
 }
 
-const btnWhislist = document.querySelectorAll('.btn-whislist-item');
-
-btnWhislist.forEach((tombol) => {
-    tombol.addEventListener('click', function(event) {
-        event.stopPropagation(); 
-        event.preventDefault(); 
-        this.classList.toggle('active');
-    });
-});
-
 async function main() {
-    dataKat.forEach((data) =>{
-        const createKat =  katContent(data.name, data.qty, data.image, data.url)
+    dataKat.forEach((data) => {
+        const createKat = katContent(data)
         katContainer.append(createKat)
     })
-    
+
+    dataCartFlash.forEach((dataCart) => {
+        const createCart = itemCart(dataCart)
+        flashSaleCont.append(createCart)
+    })
+
+    const btnWhislist = document.querySelectorAll('.btn-whislist-item');
+
+    btnWhislist.forEach((tombol) => {
+        tombol.addEventListener('click', function (event) {
+            event.stopPropagation();
+            event.preventDefault();
+            this.classList.toggle('active');
+        });
+    });
+
 }
 main()
