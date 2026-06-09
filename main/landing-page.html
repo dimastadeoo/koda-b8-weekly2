@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,52 +9,69 @@
     <link rel="stylesheet" href="/asset/css/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <header class="header" id="header">
-    </header>
-    <main>
-        <!-- landing page -->
-        <section class="purple-blue">
-            <img class="banner-bg-img" src="/asset/img/landing-section.png" alt="Gambar Landing Utama">
-            
-            <div class="container hero-container">
-                
-                <div class="hero-content">
-                    <h1 class="landing-title">Elektronik Pilihan, Harga Spesial</h1>
-                    <p class="descript">
-                        Laptop, smartphone, headphone, dan masih banyak lagi dengan diskon hingga 40%
-                    </p>
-                    <button class="btn-promo pointer">
-                        <span>Lihat Promo</span>
-                        <img class="arrow-right" src="/asset/img/arrow-right.png" alt="icon arrow right">
-                    </button>
-                </div>
 
-                <div class="slide-indicators">
-                    <span class="dot"></span>
-                    <span class="dot active"></span>
-                    <span class="dot"></span>
-                </div>
-                
+<body>
+    <header class="sticky top-0 z-50" id="header">
+    </header>
+    <main class="grid gap-7">
+        <!-- landing page -->
+        <section
+            class="relative w-full bg-gradient-to-r from-[#4F39F6] from-50% to-[#8200DB] to-50% overflow-hidden min-h-[440px] flex items-center group">
+
+            <div
+                class="absolute inset-y-0 right-0 w-1/2 h-full opacity-60 md:opacity-90 mix-blend-multiply pointer-events-none">
+                <img class="w-full h-full object-cover object-center" src="/asset/img/landing-section.png"
+                    alt="Gambar Landing Utama">
             </div>
 
-            <button class="nav-slide prev pointer" aria-label="Previous Slide">
-                <img src="/asset/img/chevron-left (1).svg" alt="Sebelumnya">
+            <div class="relative w-full max-w-5xl mx-auto px-4 z-10 py-16">
+                <div class="max-w-xl text-white">
+                    <h1
+                        class="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight mb-4 animate-fade-in">
+                        Elektronik Pilihan, Harga Spesial
+                    </h1>
+                    <p class="text-sm md:text-base text-purple-100/90 leading-relaxed mb-8 max-w-md">
+                        Laptop, smartphone, headphone, dan masih banyak lagi dengan diskon hingga 40%
+                    </p>
+
+                    <button
+                        class="bg-white hover:bg-purple-50 text-blue-600 font-medium text-sm px-6 py-3 rounded-xl flex items-center gap-2 shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 cursor-pointer">
+                        <span>Lihat Promo</span>
+                        <img class="w-4 h-4 object-contain" src="/asset/img/arrow-right.png" alt="icon arrow right">
+                    </button>
+                </div>
+            </div>
+
+            <button
+                class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/20 hover:bg-white/30 backdrop-blur-sm flex items-center justify-center cursor-pointer transition-all text-white border border-white/10 opacity-0 group-hover:opacity-100 focus:opacity-100"
+                aria-label="Previous Slide">
+                <img class="w-5 h-5 object-contain brightness-0 invert" src="/asset/img/chevron-left (1).svg"
+                    alt="Sebelumnya">
             </button>
-            <button class="nav-slide next pointer" aria-label="Next Slide">
-                <img src="/asset/img/chevron-right.svg" alt="Selanjutnya">
+
+            <button
+                class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/20 hover:bg-white/30 backdrop-blur-sm flex items-center justify-center cursor-pointer transition-all text-white border border-white/10 opacity-0 group-hover:opacity-100 focus:opacity-100"
+                aria-label="Next Slide">
+                <img class="w-5 h-5 object-contain brightness-0 invert" src="/asset/img/chevron-right.svg"
+                    alt="Selanjutnya">
             </button>
+
+            <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-2 z-20">
+                <span class="w-2 h-2 rounded-full bg-white/40 transition-all"></span>
+                <span class="w-6 h-2 rounded-full bg-white transition-all"></span>
+                <span class="w-2 h-2 rounded-full bg-white/40 transition-all"></span>
+            </div>
         </section>
         <!-- section kategori belanja -->
         <section class="container section-shop">
             <div class="flex justify-between items-center div-shop-kat">
                 <h2>Belanja Berdasarkan Kategori</h2>
                 <a href="#" class="flex items-center gap-1 link-see-all">
-                    <span>Lihat Semua</span> 
+                    <span>Lihat Semua</span>
                     <img class="arrow-right" src="/asset/img/arrow-right.png" alt="icon arrow right">
                 </a>
             </div>
-            
+
             <div class="grid-categories" id="kategori">
                 <div class="item-shop">
                     <a href="#" class="item-link">
@@ -97,21 +115,25 @@
                         <div class="text-item-kat">7 Produk</div>
                     </a>
                 </div>
-                
+
             </div>
         </section>
         <!-- flash Sale -->
         <section class="container flash-sale">
             <div class="div-title-flash">
-                <div class="title-flash-left">      
+                <div class="title-flash-left">
                     <span class="left-content-flash logoFlash">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-zap">
-                            <path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z" />
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-zap">
+                            <path
+                                d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z" />
                         </svg>
                         Flash Deal
                     </span>
                     <span class="left-content-flash textTime">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-clock">
                             <circle cx="12" cy="12" r="10" />
                             <path d="M12 6v6l4 2" />
                         </svg>
@@ -124,7 +146,7 @@
                     </span>
                 </div>
                 <a href="#" class="flex items-center gap-1 link-see-all">
-                    <span>Lihat Semua</span> 
+                    <span>Lihat Semua</span>
                     <img class="arrow-right" src="/asset/img/arrow-right.png" alt="icon arrow right">
                 </a>
             </div>
@@ -136,8 +158,11 @@
                             <span class="badge-flash">-31%</span>
                             <span class="wishlist-flash">
                                 <button type="button" class="btn-whislist-item">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart">
-                                        <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22"
+                                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        class="lucide lucide-heart">
+                                        <path
+                                            d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
                                     </svg>
                                 </button>
                             </span>
@@ -147,9 +172,12 @@
                             <div class="flash-name-item">Headphone Wireless Premium</div>
                             <div class="flash-rate-item">
                                 <span class="stars">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="20" viewBox="0 0 120 24" fill="gold" stroke="currentColor" stroke-width="0" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="20" viewBox="0 0 120 24"
+                                        fill="gold" stroke="currentColor" stroke-width="0" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-star">
                                         <defs>
-                                            <path id="star" d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
+                                            <path id="star"
+                                                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
                                         </defs>
                                         <use href="#star" x="0" />
                                         <use href="#star" x="24" />
@@ -168,19 +196,32 @@
                         </div>
                     </a>
                 </div>
-                
+
                 <div class="item-flash-container">
                     <a href="#">
                         <div class="img-item-flash link-bg-item-2">
                             <span class="badge-flash">-16%</span>
-                            <span class="wishlist-flash"><button type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" /></svg></button></span>
+                            <span class="wishlist-flash"><button type="button"><svg xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24" width="22" height="22" stroke="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart">
+                                        <path
+                                            d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
+                                    </svg></button></span>
                         </div>
                         <div class="title-item-flash">
                             <div class="flash-jenis">PhoneX</div>
                             <div class="flash-name-item">Smartphone 5G Ultra</div>
                             <div class="flash-rate-item">
                                 <span class="stars">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="20" viewBox="0 0 120 24" fill="gold" stroke="currentColor" stroke-width="0" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star"><use href="#star" x="0" /><use href="#star" x="24" /><use href="#star" x="48" /><use href="#star" x="72" /><use href="#star" x="96" /></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="20" viewBox="0 0 120 24"
+                                        fill="gold" stroke="currentColor" stroke-width="0" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-star">
+                                        <use href="#star" x="0" />
+                                        <use href="#star" x="24" />
+                                        <use href="#star" x="48" />
+                                        <use href="#star" x="72" />
+                                        <use href="#star" x="96" />
+                                    </svg>
                                 </span>
                                 <span class="rate">4.6</span>
                                 <span class="review">(890)</span>
@@ -197,14 +238,27 @@
                     <a href="#">
                         <div class="img-item-flash link-bg-item-3">
                             <span class="badge-flash">-20%</span>
-                            <span class="wishlist-flash"><button type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" /></svg></button></span>
+                            <span class="wishlist-flash"><button type="button"><svg xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24" width="22" height="22" stroke="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart">
+                                        <path
+                                            d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
+                                    </svg></button></span>
                         </div>
                         <div class="title-item-flash">
                             <div class="flash-jenis">WristTech</div>
                             <div class="flash-name-item">Smartwatch Series 5</div>
                             <div class="flash-rate-item">
                                 <span class="stars">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="20" viewBox="0 0 120 24" fill="gold" stroke="currentColor" stroke-width="0" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star"><use href="#star" x="0" /><use href="#star" x="24" /><use href="#star" x="48" /><use href="#star" x="72" /><use fill="gray" href="#star" x="96" /></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="20" viewBox="0 0 120 24"
+                                        fill="gold" stroke="currentColor" stroke-width="0" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-star">
+                                        <use href="#star" x="0" />
+                                        <use href="#star" x="24" />
+                                        <use href="#star" x="48" />
+                                        <use href="#star" x="72" />
+                                        <use fill="gray" href="#star" x="96" />
+                                    </svg>
                                 </span>
                                 <span class="rate">4.4</span>
                                 <span class="review">(324)</span>
@@ -221,14 +275,27 @@
                     <a href="#">
                         <div class="img-item-flash link-bg-item-4">
                             <span class="badge-flash">-27%</span>
-                            <span class="wishlist-flash"><button type="button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart"><path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" /></svg></button></span>
+                            <span class="wishlist-flash"><button type="button"><svg xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24" width="22" height="22" stroke="currentColor"
+                                        stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart">
+                                        <path
+                                            d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
+                                    </svg></button></span>
                         </div>
                         <div class="title-item-flash">
                             <div class="flash-jenis">SportPro</div>
                             <div class="flash-name-item">Sneakers Sport Runfast</div>
                             <div class="flash-rate-item">
                                 <span class="stars">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="20" viewBox="0 0 120 24" fill="gold" stroke="currentColor" stroke-width="0" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star"><use href="#star" x="0" /><use href="#star" x="24" /><use href="#star" x="48" /><use href="#star" x="72" /><use href="#star" x="96" /></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="20" viewBox="0 0 120 24"
+                                        fill="gold" stroke="currentColor" stroke-width="0" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-star">
+                                        <use href="#star" x="0" />
+                                        <use href="#star" x="24" />
+                                        <use href="#star" x="48" />
+                                        <use href="#star" x="72" />
+                                        <use href="#star" x="96" />
+                                    </svg>
                                 </span>
                                 <span class="rate">4.6</span>
                                 <span class="review">(445)</span>
@@ -262,30 +329,21 @@
         </section>
 
         <!-- section 5 new product -->
-         <section class="container flash-sale">
+        <section class="container flash-sale">
             <div class="div-title-flash">
-                <div class="title-flash-left">      
+                <div class="title-flash-left">
                     <span class="left-content-flash logoNew">
-                        <svg
-							xmlns="http://www.w3.org/2000/svg"
-							width="24"
-							height="24"
-							viewBox="0 0 24 24"
-							fill="none" 
-                            stroke="#1A73E8" 
-							stroke="currentColor"
-							stroke-width="1.67"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							class="lucide lucide-trending-up-icon lucide-trending-up">
-							<path d="M16 7h6v6" />
-							<path d="m22 7-8.5 8.5-5-5L2 17" />
-						</svg>
-						Produk Terbaru
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="#1A73E8" stroke="currentColor" stroke-width="1.67" stroke-linecap="round"
+                            stroke-linejoin="round" class="lucide lucide-trending-up-icon lucide-trending-up">
+                            <path d="M16 7h6v6" />
+                            <path d="m22 7-8.5 8.5-5-5L2 17" />
+                        </svg>
+                        Produk Terbaru
                     </span>
                 </div>
                 <a href="#" class="flex items-center gap-1 link-see-all">
-                    <span>Lihat Semua</span> 
+                    <span>Lihat Semua</span>
                     <img class="arrow-right" src="/asset/img/arrow-right.png" alt="icon arrow right">
                 </a>
             </div>
@@ -297,69 +355,45 @@
                                 <p>-31%</p>
 
                             </span>
-							<span class="wishlist-flash">
-								<button>
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 24 24"
-                                        width="22"
-                                        height="22"
-                                        stroke="currentColor"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
+                            <span class="wishlist-flash">
+                                <button>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22"
+                                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                         class="lucide lucide-heart-icon lucide-heart">
-                                        <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
+                                        <path
+                                            d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
                                     </svg>
                                 </button>
-							</span>
+                            </span>
                         </div>
                         <div class="title-item-flash">
                             <div class="flash-jenis padding-12">SoundWave</div>
-							<div class="flash-name-item padding-12">Headphone Wireless Premium</div>
-							<div class="flash-rate-item padding-12">
-								<span class="stars">
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										width="100"
-										height="20"
-										viewBox="0 0 120 24"
-										fill="gold"
-										stroke="currentColor"
-										stroke-width="0"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										class="lucide lucide-star-icon lucide-star">
-										<defs>
-											<path
-												id="star"
-												d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
-										</defs>
+                            <div class="flash-name-item padding-12">Headphone Wireless Premium</div>
+                            <div class="flash-rate-item padding-12">
+                                <span class="stars">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="20" viewBox="0 0 120 24"
+                                        fill="gold" stroke="currentColor" stroke-width="0" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-star-icon lucide-star">
+                                        <defs>
+                                            <path id="star"
+                                                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
+                                        </defs>
 
-										<use 
-											href="#star"
-											x="0" />
-										<use
-											href="#star"
-											x="24" />
-										<use
-											href="#star"
-											x="48" />
-										<use
-											href="#star"
-											x="72" />
-										<use
-											href="#star"
-											x="96" />
-									</svg>
+                                        <use href="#star" x="0" />
+                                        <use href="#star" x="24" />
+                                        <use href="#star" x="48" />
+                                        <use href="#star" x="72" />
+                                        <use href="#star" x="96" />
+                                    </svg>
                                 </span>
                                 <span class="rate">4.8</span>
                                 <span class="review">(512)</span>
-								
-							</div>
-							<div class="flash-price-item">
-								<span class="discount-price">Rp 450.000</span>
-								<span class="regular-price">Rp 650.000</span>
-							</div>
+
+                            </div>
+                            <div class="flash-price-item">
+                                <span class="discount-price">Rp 450.000</span>
+                                <span class="regular-price">Rp 650.000</span>
+                            </div>
                         </div>
                     </a>
                 </div>
@@ -370,69 +404,45 @@
                                 <p>-16%</p>
 
                             </span>
-							<span class="wishlist-flash">
-								<button>
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 24 24"
-                                        width="22"
-                                        height="22"
-                                        stroke="currentColor"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
+                            <span class="wishlist-flash">
+                                <button>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22"
+                                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                         class="lucide lucide-heart-icon lucide-heart">
-                                        <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
+                                        <path
+                                            d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
                                     </svg>
                                 </button>
-							</span>
+                            </span>
                         </div>
                         <div class="title-item-flash">
                             <div class="flash-jenis padding-12">PhoneX</div>
-							<div class="flash-name-item padding-12">Smartphone 5G Ultra</div>
-							<div class="flash-rate-item padding-12">
-								<span class="stars">
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										width="100"
-										height="20"
-										viewBox="0 0 120 24"
-										fill="gold"
-										stroke="currentColor"
-										stroke-width="0"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										class="lucide lucide-star-icon lucide-star">
-										<defs>
-											<path
-												id="star"
-												d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
-										</defs>
+                            <div class="flash-name-item padding-12">Smartphone 5G Ultra</div>
+                            <div class="flash-rate-item padding-12">
+                                <span class="stars">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="20" viewBox="0 0 120 24"
+                                        fill="gold" stroke="currentColor" stroke-width="0" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-star-icon lucide-star">
+                                        <defs>
+                                            <path id="star"
+                                                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
+                                        </defs>
 
-										<use 
-											href="#star"
-											x="0" />
-										<use
-											href="#star"
-											x="24" />
-										<use
-											href="#star"
-											x="48" />
-										<use
-											href="#star"
-											x="72" />
-										<use
-											href="#star"
-											x="96" />
-									</svg>
+                                        <use href="#star" x="0" />
+                                        <use href="#star" x="24" />
+                                        <use href="#star" x="48" />
+                                        <use href="#star" x="72" />
+                                        <use href="#star" x="96" />
+                                    </svg>
                                 </span>
                                 <span class="rate">4.6</span>
                                 <span class="review">(890)</span>
-								
-							</div>
-							<div class="flash-price-item">
-								<span class="discount-price">Rp 4.200.000</span>
-								<span class="regular-price">Rp 5.000.000</span>
-							</div>
+
+                            </div>
+                            <div class="flash-price-item">
+                                <span class="discount-price">Rp 4.200.000</span>
+                                <span class="regular-price">Rp 5.000.000</span>
+                            </div>
                         </div>
                     </a>
                 </div>
@@ -443,69 +453,45 @@
                                 <p>Baru</p>
 
                             </span>
-							<span class="wishlist-flash">
-								<button>
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 24 24"
-                                        width="22"
-                                        height="22"
-                                        stroke="currentColor"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
+                            <span class="wishlist-flash">
+                                <button>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22"
+                                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                         class="lucide lucide-heart-icon lucide-heart">
-                                        <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
+                                        <path
+                                            d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
                                     </svg>
                                 </button>
-							</span>
+                            </span>
                         </div>
                         <div class="title-item-flash">
                             <div class="flash-jenis padding-12">UrbanBag</div>
-							<div class="flash-name-item padding-12">Tas Ransel Laptop Waterproof</div>
-							<div class="flash-rate-item padding-12">
-								<span class="stars">
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										width="100"
-										height="20"
-										viewBox="0 0 120 24"
-										fill="gold"
-										stroke="currentColor"
-										stroke-width="0"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										class="lucide lucide-star-icon lucide-star">
-										<defs>
-											<path
-												id="star"
-												d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
-										</defs>
+                            <div class="flash-name-item padding-12">Tas Ransel Laptop Waterproof</div>
+                            <div class="flash-rate-item padding-12">
+                                <span class="stars">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="20" viewBox="0 0 120 24"
+                                        fill="gold" stroke="currentColor" stroke-width="0" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-star-icon lucide-star">
+                                        <defs>
+                                            <path id="star"
+                                                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
+                                        </defs>
 
-										<use 
-											href="#star"
-											x="0" />
-										<use
-											href="#star"
-											x="24" />
-										<use
-											href="#star"
-											x="48" />
-										<use
-											href="#star"
-											x="72" />
-										<use fill="gray"
-											href="#star"
-											x="96" />
-									</svg>
+                                        <use href="#star" x="0" />
+                                        <use href="#star" x="24" />
+                                        <use href="#star" x="48" />
+                                        <use href="#star" x="72" />
+                                        <use fill="gray" href="#star" x="96" />
+                                    </svg>
                                 </span>
                                 <span class="rate">4.5</span>
                                 <span class="review">(234)</span>
-								
-							</div>
-							<div class="flash-price-item">
-								<span class="discount-price">Rp 350.000</span>
-								<span class="regular-price display-none">Rp 3.500.000</span>
-							</div>
+
+                            </div>
+                            <div class="flash-price-item">
+                                <span class="discount-price">Rp 350.000</span>
+                                <span class="regular-price display-none">Rp 3.500.000</span>
+                            </div>
                         </div>
                     </a>
                 </div>
@@ -516,69 +502,45 @@
                                 <p>Baru</p>
 
                             </span>
-							<span class="wishlist-flash">
-								<button>
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 24 24"
-                                        width="22"
-                                        height="22"
-                                        stroke="currentColor"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
+                            <span class="wishlist-flash">
+                                <button>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22"
+                                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                         class="lucide lucide-heart-icon lucide-heart">
-                                        <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
+                                        <path
+                                            d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
                                     </svg>
                                 </button>
-							</span>
+                            </span>
                         </div>
                         <div class="title-item-flash">
                             <div class="flash-jenis padding-12">BlendPro</div>
-							<div class="flash-name-item padding-12">Blender Portable Mini</div>
-							<div class="flash-rate-item padding-12">
-								<span class="stars">
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										width="100"
-										height="20"
-										viewBox="0 0 120 24"
-										fill="gold"
-										stroke="currentColor"
-										stroke-width="0"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										class="lucide lucide-star-icon lucide-star">
-										<defs>
-											<path
-												id="star"
-												d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
-										</defs>
+                            <div class="flash-name-item padding-12">Blender Portable Mini</div>
+                            <div class="flash-rate-item padding-12">
+                                <span class="stars">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="20" viewBox="0 0 120 24"
+                                        fill="gold" stroke="currentColor" stroke-width="0" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-star-icon lucide-star">
+                                        <defs>
+                                            <path id="star"
+                                                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
+                                        </defs>
 
-										<use 
-											href="#star"
-											x="0" />
-										<use
-											href="#star"
-											x="24" />
-										<use
-											href="#star"
-											x="48" />
-										<use
-											href="#star"
-											x="72" />
-										<use fill="gray" 
-											href="#star"
-											x="96" />
-									</svg>
+                                        <use href="#star" x="0" />
+                                        <use href="#star" x="24" />
+                                        <use href="#star" x="48" />
+                                        <use href="#star" x="72" />
+                                        <use fill="gray" href="#star" x="96" />
+                                    </svg>
                                 </span>
                                 <span class="rate">4.2</span>
                                 <span class="review">(567)</span>
-								
-							</div>
-							<div class="flash-price-item">
-								<span class="discount-price">Rp 189.000</span>
-								<span class="regular-price display-none">Rp 750.000</span>
-							</div>
+
+                            </div>
+                            <div class="flash-price-item">
+                                <span class="discount-price">Rp 189.000</span>
+                                <span class="regular-price display-none">Rp 750.000</span>
+                            </div>
                         </div>
                     </a>
                 </div>
@@ -589,69 +551,45 @@
                                 <p>20%</p>
 
                             </span>
-							<span class="wishlist-flash">
-								<button>
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 24 24"
-                                        width="22"
-                                        height="22"
-                                        stroke="currentColor"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
+                            <span class="wishlist-flash">
+                                <button>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22"
+                                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                         class="lucide lucide-heart-icon lucide-heart">
-                                        <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
+                                        <path
+                                            d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
                                     </svg>
                                 </button>
-							</span>
+                            </span>
                         </div>
                         <div class="title-item-flash">
                             <div class="flash-jenis padding-12">TabTech</div>
-							<div class="flash-name-item padding-12">Tablet 10.5" WiFi + 4G</div>
-							<div class="flash-rate-item padding-12">
-								<span class="stars">
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										width="100"
-										height="20"
-										viewBox="0 0 120 24"
-										fill="gold"
-										stroke="currentColor"
-										stroke-width="0"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										class="lucide lucide-star-icon lucide-star">
-										<defs>
-											<path
-												id="star"
-												d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
-										</defs>
+                            <div class="flash-name-item padding-12">Tablet 10.5" WiFi + 4G</div>
+                            <div class="flash-rate-item padding-12">
+                                <span class="stars">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="20" viewBox="0 0 120 24"
+                                        fill="gold" stroke="currentColor" stroke-width="0" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-star-icon lucide-star">
+                                        <defs>
+                                            <path id="star"
+                                                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
+                                        </defs>
 
-										<use 
-											href="#star"
-											x="0" />
-										<use
-											href="#star"
-											x="24" />
-										<use
-											href="#star"
-											x="48" />
-										<use
-											href="#star"
-											x="72" />
-										<use
-											href="#star"
-											x="96" />
-									</svg>
+                                        <use href="#star" x="0" />
+                                        <use href="#star" x="24" />
+                                        <use href="#star" x="48" />
+                                        <use href="#star" x="72" />
+                                        <use href="#star" x="96" />
+                                    </svg>
                                 </span>
                                 <span class="rate">4.5</span>
                                 <span class="review">(345)</span>
-								
-							</div>
-							<div class="flash-price-item">
-								<span class="discount-price">Rp 3.200.000</span>
-								<span class="regular-price">Rp 4.000.000</span>
-							</div>
+
+                            </div>
+                            <div class="flash-price-item">
+                                <span class="discount-price">Rp 3.200.000</span>
+                                <span class="regular-price">Rp 4.000.000</span>
+                            </div>
                         </div>
                     </a>
                 </div>
@@ -662,69 +600,45 @@
                                 <p>-25%</p>
 
                             </span>
-							<span class="wishlist-flash">
-								<button>
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 24 24"
-                                        width="22"
-                                        height="22"
-                                        stroke="currentColor"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
+                            <span class="wishlist-flash">
+                                <button>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22"
+                                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                         class="lucide lucide-heart-icon lucide-heart">
-                                        <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
+                                        <path
+                                            d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
                                     </svg>
                                 </button>
-							</span>
+                            </span>
                         </div>
                         <div class="title-item-flash">
                             <div class="flash-jenis padding-12">FashionID</div>
-							<div class="flash-name-item padding-12">Dress Floral Midi</div>
-							<div class="flash-rate-item padding-12">
-								<span class="stars">
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										width="100"
-										height="20"
-										viewBox="0 0 120 24"
-										fill="gold"
-										stroke="currentColor"
-										stroke-width="0"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										class="lucide lucide-star-icon lucide-star">
-										<defs>
-											<path
-												id="star"
-												d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
-										</defs>
+                            <div class="flash-name-item padding-12">Dress Floral Midi</div>
+                            <div class="flash-rate-item padding-12">
+                                <span class="stars">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="20" viewBox="0 0 120 24"
+                                        fill="gold" stroke="currentColor" stroke-width="0" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-star-icon lucide-star">
+                                        <defs>
+                                            <path id="star"
+                                                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
+                                        </defs>
 
-										<use 
-											href="#star"
-											x="0" />
-										<use
-											href="#star"
-											x="24" />
-										<use
-											href="#star"
-											x="48" />
-										<use
-											href="#star"
-											x="72" />
-										<use
-											href="#star"
-											x="96" />
-									</svg>
+                                        <use href="#star" x="0" />
+                                        <use href="#star" x="24" />
+                                        <use href="#star" x="48" />
+                                        <use href="#star" x="72" />
+                                        <use href="#star" x="96" />
+                                    </svg>
                                 </span>
                                 <span class="rate">4.5</span>
                                 <span class="review">(312)</span>
-								
-							</div>
-							<div class="flash-price-item">
-								<span class="discount-price">Rp 295.000</span>
-								<span class="regular-price">Rp 395.000</span>
-							</div>
+
+                            </div>
+                            <div class="flash-price-item">
+                                <span class="discount-price">Rp 295.000</span>
+                                <span class="regular-price">Rp 395.000</span>
+                            </div>
                         </div>
                     </a>
                 </div>
@@ -735,69 +649,45 @@
                                 <p>Baru</p>
 
                             </span>
-							<span class="wishlist-flash">
-								<button>
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 24 24"
-                                        width="22"
-                                        height="22"
-                                        stroke="currentColor"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
+                            <span class="wishlist-flash">
+                                <button>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22"
+                                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                         class="lucide lucide-heart-icon lucide-heart">
-                                        <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
+                                        <path
+                                            d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
                                     </svg>
                                 </button>
-							</span>
+                            </span>
                         </div>
                         <div class="title-item-flash">
                             <div class="flash-jenis padding-12">AromaWell</div>
-							<div class="flash-name-item padding-12">Minyak Esensial Lavender Set</div>
-							<div class="flash-rate-item padding-12">
-								<span class="stars">
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										width="100"
-										height="20"
-										viewBox="0 0 120 24"
-										fill="gold"
-										stroke="currentColor"
-										stroke-width="0"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										class="lucide lucide-star-icon lucide-star">
-										<defs>
-											<path
-												id="star"
-												d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
-										</defs>
+                            <div class="flash-name-item padding-12">Minyak Esensial Lavender Set</div>
+                            <div class="flash-rate-item padding-12">
+                                <span class="stars">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="20" viewBox="0 0 120 24"
+                                        fill="gold" stroke="currentColor" stroke-width="0" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-star-icon lucide-star">
+                                        <defs>
+                                            <path id="star"
+                                                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
+                                        </defs>
 
-										<use 
-											href="#star"
-											x="0" />
-										<use
-											href="#star"
-											x="24" />
-										<use
-											href="#star"
-											x="48" />
-										<use
-											href="#star"
-											x="72" />
-										<use
-											href="#star"
-											x="96" />
-									</svg>
+                                        <use href="#star" x="0" />
+                                        <use href="#star" x="24" />
+                                        <use href="#star" x="48" />
+                                        <use href="#star" x="72" />
+                                        <use href="#star" x="96" />
+                                    </svg>
                                 </span>
                                 <span class="rate">4.8</span>
                                 <span class="review">(456)</span>
-								
-							</div>
-							<div class="flash-price-item">
-								<span class="discount-price">Rp 145.000</span>
-								<span class="regular-price display-none">Rp 5.000.000</span>
-							</div>
+
+                            </div>
+                            <div class="flash-price-item">
+                                <span class="discount-price">Rp 145.000</span>
+                                <span class="regular-price display-none">Rp 5.000.000</span>
+                            </div>
                         </div>
                     </a>
                 </div>
@@ -806,15 +696,15 @@
         </section>
 
         <!-- section 6 Best product -->
-         <section class="container flash-sale">
+        <section class="container flash-sale">
             <div class="div-title-flash">
-                <span class="div-section title-flash-left">      
+                <span class="div-section title-flash-left">
                     <span class="left-content-flash logoNew">
-						Produk Unggulan
+                        Produk Unggulan
                     </span>
                 </span>
                 <a href="#" class="flex items-center gap-1 link-see-all">
-                    <span>Lihat Semua</span> 
+                    <span>Lihat Semua</span>
                     <img class="arrow-right" src="/asset/img/arrow-right.png" alt="icon arrow right">
                 </a>
             </div>
@@ -826,69 +716,45 @@
                                 <p>-31%</p>
 
                             </span>
-							<span class="wishlist-flash">
-								<button>
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 24 24"
-                                        width="22"
-                                        height="22"
-                                        stroke="currentColor"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
+                            <span class="wishlist-flash">
+                                <button>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22"
+                                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                         class="lucide lucide-heart-icon lucide-heart">
-                                        <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
+                                        <path
+                                            d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
                                     </svg>
                                 </button>
-							</span>
+                            </span>
                         </div>
                         <div class="title-item-flash">
                             <div class="flash-jenis padding-12">SoundWave</div>
-							<div class="flash-name-item padding-12">Headphone Wireless Premium</div>
-							<div class="flash-rate-item padding-12">
-								<span class="stars">
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										width="100"
-										height="20"
-										viewBox="0 0 120 24"
-										fill="gold"
-										stroke="currentColor"
-										stroke-width="0"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										class="lucide lucide-star-icon lucide-star">
-										<defs>
-											<path
-												id="star"
-												d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
-										</defs>
+                            <div class="flash-name-item padding-12">Headphone Wireless Premium</div>
+                            <div class="flash-rate-item padding-12">
+                                <span class="stars">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="20" viewBox="0 0 120 24"
+                                        fill="gold" stroke="currentColor" stroke-width="0" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-star-icon lucide-star">
+                                        <defs>
+                                            <path id="star"
+                                                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
+                                        </defs>
 
-										<use 
-											href="#star"
-											x="0" />
-										<use
-											href="#star"
-											x="24" />
-										<use
-											href="#star"
-											x="48" />
-										<use
-											href="#star"
-											x="72" />
-										<use
-											href="#star"
-											x="96" />
-									</svg>
+                                        <use href="#star" x="0" />
+                                        <use href="#star" x="24" />
+                                        <use href="#star" x="48" />
+                                        <use href="#star" x="72" />
+                                        <use href="#star" x="96" />
+                                    </svg>
                                 </span>
                                 <span class="rate">4.8</span>
                                 <span class="review">(512)</span>
-								
-							</div>
-							<div class="flash-price-item">
-								<span class="discount-price">Rp 450.000</span>
-								<span class="regular-price">Rp 650.000</span>
-							</div>
+
+                            </div>
+                            <div class="flash-price-item">
+                                <span class="discount-price">Rp 450.000</span>
+                                <span class="regular-price">Rp 650.000</span>
+                            </div>
                         </div>
                     </a>
                 </div>
@@ -899,69 +765,45 @@
                                 <p>-16%</p>
 
                             </span>
-							<span class="wishlist-flash">
-								<button>
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 24 24"
-                                        width="22"
-                                        height="22"
-                                        stroke="currentColor"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
+                            <span class="wishlist-flash">
+                                <button>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22"
+                                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                         class="lucide lucide-heart-icon lucide-heart">
-                                        <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
+                                        <path
+                                            d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
                                     </svg>
                                 </button>
-							</span>
+                            </span>
                         </div>
                         <div class="title-item-flash">
                             <div class="flash-jenis padding-12">PhoneX</div>
-							<div class="flash-name-item padding-12">Smartphone 5G Ultra</div>
-							<div class="flash-rate-item padding-12">
-								<span class="stars">
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										width="100"
-										height="20"
-										viewBox="0 0 120 24"
-										fill="gold"
-										stroke="currentColor"
-										stroke-width="0"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										class="lucide lucide-star-icon lucide-star">
-										<defs>
-											<path
-												id="star"
-												d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
-										</defs>
+                            <div class="flash-name-item padding-12">Smartphone 5G Ultra</div>
+                            <div class="flash-rate-item padding-12">
+                                <span class="stars">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="20" viewBox="0 0 120 24"
+                                        fill="gold" stroke="currentColor" stroke-width="0" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-star-icon lucide-star">
+                                        <defs>
+                                            <path id="star"
+                                                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
+                                        </defs>
 
-										<use 
-											href="#star"
-											x="0" />
-										<use
-											href="#star"
-											x="24" />
-										<use
-											href="#star"
-											x="48" />
-										<use
-											href="#star"
-											x="72" />
-										<use
-											href="#star"
-											x="96" />
-									</svg>
+                                        <use href="#star" x="0" />
+                                        <use href="#star" x="24" />
+                                        <use href="#star" x="48" />
+                                        <use href="#star" x="72" />
+                                        <use href="#star" x="96" />
+                                    </svg>
                                 </span>
                                 <span class="rate">4.6</span>
                                 <span class="review">(890)</span>
-								
-							</div>
-							<div class="flash-price-item">
-								<span class="discount-price">Rp 4.200.000</span>
-								<span class="regular-price">Rp 5.000.000</span>
-							</div>
+
+                            </div>
+                            <div class="flash-price-item">
+                                <span class="discount-price">Rp 4.200.000</span>
+                                <span class="regular-price">Rp 5.000.000</span>
+                            </div>
                         </div>
                     </a>
                 </div>
@@ -972,69 +814,45 @@
                                 <p>-20%</p>
 
                             </span>
-							<span class="wishlist-flash">
-								<button>
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 24 24"
-                                        width="22"
-                                        height="22"
-                                        stroke="currentColor"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
+                            <span class="wishlist-flash">
+                                <button>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22"
+                                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                         class="lucide lucide-heart-icon lucide-heart">
-                                        <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
+                                        <path
+                                            d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
                                     </svg>
                                 </button>
-							</span>
+                            </span>
                         </div>
                         <div class="title-item-flash">
                             <div class="flash-jenis padding-12">WristTech</div>
-							<div class="flash-name-item padding-12">Smartwatch Series 5</div>
-							<div class="flash-rate-item padding-12">
-								<span class="stars">
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										width="100"
-										height="20"
-										viewBox="0 0 120 24"
-										fill="gold"
-										stroke="currentColor"
-										stroke-width="0"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										class="lucide lucide-star-icon lucide-star">
-										<defs>
-											<path
-												id="star"
-												d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
-										</defs>
+                            <div class="flash-name-item padding-12">Smartwatch Series 5</div>
+                            <div class="flash-rate-item padding-12">
+                                <span class="stars">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="20" viewBox="0 0 120 24"
+                                        fill="gold" stroke="currentColor" stroke-width="0" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-star-icon lucide-star">
+                                        <defs>
+                                            <path id="star"
+                                                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
+                                        </defs>
 
-										<use 
-											href="#star"
-											x="0" />
-										<use
-											href="#star"
-											x="24" />
-										<use
-											href="#star"
-											x="48" />
-										<use
-											href="#star"
-											x="72" />
-										<use fill="gray"
-											href="#star"
-											x="96" />
-									</svg>
+                                        <use href="#star" x="0" />
+                                        <use href="#star" x="24" />
+                                        <use href="#star" x="48" />
+                                        <use href="#star" x="72" />
+                                        <use fill="gray" href="#star" x="96" />
+                                    </svg>
                                 </span>
                                 <span class="rate">4.4</span>
                                 <span class="review">(324)</span>
-								
-							</div>
-							<div class="flash-price-item">
-								<span class="discount-price">Rp 2.800.000</span>
-								<span class="regular-price">Rp 3.500.000</span>
-							</div>
+
+                            </div>
+                            <div class="flash-price-item">
+                                <span class="discount-price">Rp 2.800.000</span>
+                                <span class="regular-price">Rp 3.500.000</span>
+                            </div>
                         </div>
                     </a>
                 </div>
@@ -1045,69 +863,45 @@
                                 <p>-27%</p>
 
                             </span>
-							<span class="wishlist-flash">
-								<button>
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 24 24"
-                                        width="22"
-                                        height="22"
-                                        stroke="currentColor"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
+                            <span class="wishlist-flash">
+                                <button>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22"
+                                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                         class="lucide lucide-heart-icon lucide-heart">
-                                        <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
+                                        <path
+                                            d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
                                     </svg>
                                 </button>
-							</span>
+                            </span>
                         </div>
                         <div class="title-item-flash">
                             <div class="flash-jenis padding-12">SportPro</div>
-							<div class="flash-name-item padding-12">Sneakers Sport Runfast</div>
-							<div class="flash-rate-item padding-12">
-								<span class="stars">
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										width="100"
-										height="20"
-										viewBox="0 0 120 24"
-										fill="gold"
-										stroke="currentColor"
-										stroke-width="0"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										class="lucide lucide-star-icon lucide-star">
-										<defs>
-											<path
-												id="star"
-												d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
-										</defs>
+                            <div class="flash-name-item padding-12">Sneakers Sport Runfast</div>
+                            <div class="flash-rate-item padding-12">
+                                <span class="stars">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="20" viewBox="0 0 120 24"
+                                        fill="gold" stroke="currentColor" stroke-width="0" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-star-icon lucide-star">
+                                        <defs>
+                                            <path id="star"
+                                                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
+                                        </defs>
 
-										<use 
-											href="#star"
-											x="0" />
-										<use
-											href="#star"
-											x="24" />
-										<use
-											href="#star"
-											x="48" />
-										<use
-											href="#star"
-											x="72" />
-										<use
-											href="#star"
-											x="96" />
-									</svg>
+                                        <use href="#star" x="0" />
+                                        <use href="#star" x="24" />
+                                        <use href="#star" x="48" />
+                                        <use href="#star" x="72" />
+                                        <use href="#star" x="96" />
+                                    </svg>
                                 </span>
                                 <span class="rate">4.6</span>
                                 <span class="review">(445)</span>
-								
-							</div>
-							<div class="flash-price-item">
-								<span class="discount-price">Rp 550.000</span>
-								<span class="regular-price">Rp 750.000</span>
-							</div>
+
+                            </div>
+                            <div class="flash-price-item">
+                                <span class="discount-price">Rp 550.000</span>
+                                <span class="regular-price">Rp 750.000</span>
+                            </div>
                         </div>
                     </a>
                 </div>
@@ -1118,69 +912,45 @@
                                 <p>20%</p>
 
                             </span>
-							<span class="wishlist-flash">
-								<button>
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 24 24"
-                                        width="22"
-                                        height="22"
-                                        stroke="currentColor"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
+                            <span class="wishlist-flash">
+                                <button>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22"
+                                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                         class="lucide lucide-heart-icon lucide-heart">
-                                        <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
+                                        <path
+                                            d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
                                     </svg>
                                 </button>
-							</span>
+                            </span>
                         </div>
                         <div class="title-item-flash">
                             <div class="flash-jenis padding-12">TabTech</div>
-							<div class="flash-name-item padding-12">Tablet 10.5" WiFi + 4G</div>
-							<div class="flash-rate-item padding-12">
-								<span class="stars">
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										width="100"
-										height="20"
-										viewBox="0 0 120 24"
-										fill="gold"
-										stroke="currentColor"
-										stroke-width="0"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										class="lucide lucide-star-icon lucide-star">
-										<defs>
-											<path
-												id="star"
-												d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
-										</defs>
+                            <div class="flash-name-item padding-12">Tablet 10.5" WiFi + 4G</div>
+                            <div class="flash-rate-item padding-12">
+                                <span class="stars">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="20" viewBox="0 0 120 24"
+                                        fill="gold" stroke="currentColor" stroke-width="0" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-star-icon lucide-star">
+                                        <defs>
+                                            <path id="star"
+                                                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
+                                        </defs>
 
-										<use 
-											href="#star"
-											x="0" />
-										<use
-											href="#star"
-											x="24" />
-										<use
-											href="#star"
-											x="48" />
-										<use
-											href="#star"
-											x="72" />
-										<use
-											href="#star"
-											x="96" />
-									</svg>
+                                        <use href="#star" x="0" />
+                                        <use href="#star" x="24" />
+                                        <use href="#star" x="48" />
+                                        <use href="#star" x="72" />
+                                        <use href="#star" x="96" />
+                                    </svg>
                                 </span>
                                 <span class="rate">4.5</span>
                                 <span class="review">(345)</span>
-								
-							</div>
-							<div class="flash-price-item">
-								<span class="discount-price">Rp 3.200.000</span>
-								<span class="regular-price">Rp 4.000.000</span>
-							</div>
+
+                            </div>
+                            <div class="flash-price-item">
+                                <span class="discount-price">Rp 3.200.000</span>
+                                <span class="regular-price">Rp 4.000.000</span>
+                            </div>
                         </div>
                     </a>
                 </div>
@@ -1191,69 +961,45 @@
                                 <p>-25%</p>
 
                             </span>
-							<span class="wishlist-flash">
-								<button>
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 24 24"
-                                        width="22"
-                                        height="22"
-                                        stroke="currentColor"
-                                        stroke-linecap="round"
-                                        stroke-linejoin="round"
+                            <span class="wishlist-flash">
+                                <button>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22"
+                                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                         class="lucide lucide-heart-icon lucide-heart">
-                                        <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
+                                        <path
+                                            d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
                                     </svg>
                                 </button>
-							</span>
+                            </span>
                         </div>
                         <div class="title-item-flash">
                             <div class="flash-jenis padding-12">FashionID</div>
-							<div class="flash-name-item padding-12">Dress Floral Midi</div>
-							<div class="flash-rate-item padding-12">
-								<span class="stars">
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										width="100"
-										height="20"
-										viewBox="0 0 120 24"
-										fill="gold"
-										stroke="currentColor"
-										stroke-width="0"
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										class="lucide lucide-star-icon lucide-star">
-										<defs>
-											<path
-												id="star"
-												d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
-										</defs>
+                            <div class="flash-name-item padding-12">Dress Floral Midi</div>
+                            <div class="flash-rate-item padding-12">
+                                <span class="stars">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="20" viewBox="0 0 120 24"
+                                        fill="gold" stroke="currentColor" stroke-width="0" stroke-linecap="round"
+                                        stroke-linejoin="round" class="lucide lucide-star-icon lucide-star">
+                                        <defs>
+                                            <path id="star"
+                                                d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z" />
+                                        </defs>
 
-										<use 
-											href="#star"
-											x="0" />
-										<use
-											href="#star"
-											x="24" />
-										<use
-											href="#star"
-											x="48" />
-										<use
-											href="#star"
-											x="72" />
-										<use
-											href="#star"
-											x="96" />
-									</svg>
+                                        <use href="#star" x="0" />
+                                        <use href="#star" x="24" />
+                                        <use href="#star" x="48" />
+                                        <use href="#star" x="72" />
+                                        <use href="#star" x="96" />
+                                    </svg>
                                 </span>
                                 <span class="rate">4.5</span>
                                 <span class="review">(312)</span>
-								
-							</div>
-							<div class="flash-price-item">
-								<span class="discount-price">Rp 295.000</span>
-								<span class="regular-price">Rp 395.000</span>
-							</div>
+
+                            </div>
+                            <div class="flash-price-item">
+                                <span class="discount-price">Rp 295.000</span>
+                                <span class="regular-price">Rp 395.000</span>
+                            </div>
                         </div>
                     </a>
                 </div>
@@ -1267,7 +1013,8 @@
                 <div class="last-container-item">
                     <div class="last-section-card">🚚</div>
                     <div class="title-last-section">Gratis Ongkir</div>
-                    <div class="description-last-section">Pembelian di atas Rp 100.000 gratis ongkir ke seluruh Indonesia</div>
+                    <div class="description-last-section">Pembelian di atas Rp 100.000 gratis ongkir ke seluruh
+                        Indonesia</div>
                 </div>
                 <div class="last-container-item">
                     <div class="last-section-card">🔒</div>
@@ -1277,7 +1024,8 @@
                 <div class="last-container-item">
                     <div class="last-section-card">↩️</div>
                     <div class="title-last-section">Retur Mudah</div>
-                    <div class="description-last-section">Produk tidak sesuai? Kembalikan dalam 30 hari tanpa ribet</div>
+                    <div class="description-last-section">Produk tidak sesuai? Kembalikan dalam 30 hari tanpa ribet
+                    </div>
                 </div>
                 <div class="last-container-item">
                     <div class="last-section-card">💬</div>
@@ -1289,10 +1037,11 @@
 
     </main>
     <footer id="footer">
-    </footer>  
-    
+    </footer>
+
     <script type="text/javascript" src="/asset/js/header-footer.js"></script>
 
     <!-- <script type="text/javascript" src="/asset/js/landing.js"></script> -->
 </body>
+
 </html>
