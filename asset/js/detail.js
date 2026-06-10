@@ -336,6 +336,84 @@ async function imporData(arr) {
 
 }
 
+// Fungsi untuk menangani proses penambahan produk ke keranjang belanja
+function initAddToCart(product) {
+    const btnAddToCart = document.getElementById('btn-add-to-cart')
+    const qtyInput = document.getElementById('qty-input');
+    const selectedColorTxt = document.getElementById('selected-color');
+
+    if (!btnAddToCart) return;
+
+    btnAddToCart.addEventListener('click', () => {
+        const currentUserSession = sessionStorage.getItem('currentUser');
+
+        if (!currentUserSession) {
+            alert('Anda harus login terlebih dahulu untuk menambahkan produk ke keranjang!');
+            window.location.href = '/auth/login.html';
+            return;
+        }
+
+        let userEmail = '';
+        try {
+            const parsedUser = JSON.parse(currentUserSession);
+            userEmail = parsedUser.email || parsedUser; 
+        } catch (e) {
+            userEmail = currentUserSession; 
+        }
+
+        const currentQty = qtyInput ? parseInt(qtyInput.value) : 1;
+        const currentVariant = selectedColorTxt ? selectedColorTxt.textContent.trim() : 'Default';
+
+        let finalPrice
+        if (typeof product.badgeContent === 'number'){
+            const discountAmount = product.price * (product.badgeContent / 100);
+            finalPrice = product.price - discountAmount;
+        }else{
+            finalPrice = product.price
+        }
+
+        const cartItem = {
+            id: product.id || Date.now().toString(),
+            name: product.cartNameContent,
+            image: product.image[0],
+            category: product.cartJenisContent,
+            price: finalPrice,
+            quantity: currentQty,
+            variant: currentVariant,
+            userEmail: userEmail 
+        };
+
+
+        let cartList = [];
+        const existingCartData = localStorage.getItem('cartItems');
+        if (existingCartData) {
+            try {
+                cartList = JSON.parse(existingCartData);
+            } catch (error) {
+                cartList = [];
+            }
+        }
+
+        const existingProductIndex = cartList.findIndex(item => 
+            item.name === cartItem.name && 
+            item.variant === cartItem.variant && 
+            item.userEmail === cartItem.userEmail
+        );
+
+        if (existingProductIndex > -1) {
+            cartList[existingProductIndex].quantity += cartItem.quantity;
+        } else {
+
+            cartList.push(cartItem);
+        }
+
+        localStorage.setItem('cartItems', JSON.stringify(cartList));
+
+        alert(`Berhasil menambahkan ${cartItem.quantity} item ke keranjang belanja Anda!`);
+        window.location.href = 'cart.html'
+    });
+}
+
 
 async function main() {
 
@@ -351,6 +429,8 @@ async function main() {
 
     renderProductGallery(product, mainImg);
     renderProductDetails(product, mainImg);
+
+    initAddToCart(product)
 
     const dataCartFlash = await imporData([1,2,3,4])
 
