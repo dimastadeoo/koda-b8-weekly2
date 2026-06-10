@@ -152,56 +152,6 @@ function renderProductDetails(product, mainImg) {
     if (savingTextElement) savingTextElement.textContent = `Kamu hemat Rp ${discountAmount.toLocaleString('id-ID')}`;
 }
 
-const dataCartFlash = [{
-    id: 1,
-    url: '#',
-    badgeContent: 31,
-    cartJenisContent: 'SoundWave',
-    cartNameContent: 'Headphone Wireless Premium',
-    rateContent: 4.8,
-    reviewContent: 512,
-    price: 650000,
-    image: ['/asset/img/item-1.png', '/asset/img/item-1a.png']
-
-},
-{
-    id: 2,
-    url: '#',
-    badgeContent: 16,
-    cartJenisContent: 'PhoneX',
-    cartNameContent: 'Smartphone 5G Ultra',
-    rateContent: 4.6,
-    reviewContent: 890,
-    price: 5000000,
-    image: ['/asset/img/item-2.png']
-
-},
-{
-    id: 3,
-    url: '#',
-    badgeContent: 20,
-    cartJenisContent: 'WristTech',
-    cartNameContent: 'Smartwatch Series 5',
-    rateContent: 4.4,
-    reviewContent: 324,
-    price: 3500000,
-    image: ['/asset/img/item-3.png']
-
-},
-{
-    id: 4,
-    url: '#',
-    badgeContent: 27,
-    cartJenisContent: 'SportPro',
-    cartNameContent: 'Sneakers Sport Runfast',
-    rateContent: 4.6,
-    reviewContent: 445,
-    price: 750000,
-    image: ['/asset/img/item-4.png']
-
-}
-]
-
 const produkTerkait = document.getElementById('terkait-sale-item')
 
 // funcion buat elemen dan memberikan kelas
@@ -215,12 +165,9 @@ function makeElemen(nameElemen, nameClass) {
 }
 
 function itemCart(dataCart) {
-    const clasDivCont = 'bg-white border border-gray-100 rounded-2xl flex flex-col justify-between shadow-sm hover:shadow-md transition-all group'
-    const divContainer = makeElemen('div', clasDivCont)
-
-
-    const anchorCartItem = makeElemen('a', 'no-underline block')
-    anchorCartItem.href = dataCart.url
+    const clasButtonCont = 'bg-white border border-gray-100 rounded-2xl flex flex-col shadow-sm hover:shadow-md transition-all group cursor-pointer'
+    const buttonContainer = makeElemen('div', clasButtonCont)
+    buttonContainer.type = 'button'
 
     const classItem = `relative w-full aspect-square rounded-xl bg-cover bg-center bg-no-repeat transition-transform group-hover:scale-[1.02] duration-300 bg-[url('${dataCart.image[0]}')]`
     const divBadgeWhis = makeElemen('div', classItem)
@@ -248,7 +195,7 @@ function itemCart(dataCart) {
 
     const clasDivCartName = 'text-sm font-semibold text-gray-900 line-clamp-1 group-hover:text-blue-600 transition-colors'
     const divCartName = makeElemen('div', clasDivCartName)
-    divCartJenis.innerText = dataCart.cartNameContent
+    divCartName.innerText = dataCart.cartNameContent
 
     const clasDivRareStars = 'flex items-center gap-1 text-xs py-0.5'
     const divRareStars = makeElemen('div', clasDivRareStars)
@@ -289,8 +236,8 @@ function itemCart(dataCart) {
     const spanReview = makeElemen('span', 'rate')
     spanReview.innerText = `(${dataCart.reviewContent})`
 
-    const clasDivPriceCart = 'pt-1 flex items-baseline justify-between'
-    const divPriceCart = makeElemen('div', 'flash-price-item')
+    const clasDivPriceCart = 'pt-1 flex items-baseline gap-2'
+    const divPriceCart = makeElemen('div', clasDivPriceCart)
 
     let spanDisPrice = ""
     let spanRegPrice = ""
@@ -306,10 +253,13 @@ function itemCart(dataCart) {
         const clasSpanRegPrice = 'text-xs text-gray-400 line-through'
         spanRegPrice = makeElemen('span', clasSpanRegPrice)
         spanRegPrice.innerText = `Rp ${dataCart.price.toLocaleString()}`
-    } else {
+    } else if (dataCart.badgeContent !== "") {
         badgeSpan.innerText = dataCart.badgeContent
         badgeSpan.classList.add('bg-[#1A73E8]')
 
+        spanDisPrice.innerText = `Rp ${dataCart.price.toLocaleString()}`
+    } else {
+        badgeSpan.classList.add('hidden')
         spanDisPrice.innerText = `Rp ${dataCart.price.toLocaleString()}`
     }
 
@@ -324,15 +274,34 @@ function itemCart(dataCart) {
     divItemCart.append(divPriceCart)
     divBadgeWhis.append(buttonWhislist)
     divBadgeWhis.append(badgeSpan)
-    anchorCartItem.append(divBadgeWhis)
-    anchorCartItem.append(divItemCart)
-    divContainer.append(anchorCartItem)
-    return divContainer
+    buttonContainer.append(divBadgeWhis)
+    buttonContainer.append(divItemCart)
+    return buttonContainer
+
+}
+
+async function imporData(arr) {
+    try {
+        const response = await fetch('/asset/json/produk.json');
+
+        if (!response.ok) {
+            throw new Error(`Gagal load JSON: ${response.status}`);
+        }
+
+        const arrayObj = await response.json();
+        const varBaru = arrayObj.filter(item => arr.includes(item.id));
+        return varBaru
+
+    } catch (error) {
+        console.error('Terjadi kesalahan:', error.message);
+    }
 
 }
 
 
-function main() {
+async function main() {
+
+
     initQuantityCounter();
     initColorVariants();
     initTabsSystem();
@@ -344,6 +313,8 @@ function main() {
 
     renderProductGallery(product, mainImg);
     renderProductDetails(product, mainImg);
+
+    const dataCartFlash = await imporData([1,2,3,4])
 
     dataCartFlash.forEach((dataCart) => {
         const createCart = itemCart(dataCart)

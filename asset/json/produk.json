@@ -1,0 +1,198 @@
+ [
+  {
+    "id": 1,
+    "url": "#",
+    "badgeContent": 31,
+    "cartJenisContent": "SoundWave",
+    "cartNameContent": "Headphone Wireless Premium",
+    "rateContent": 4.8,
+    "reviewContent": 512,
+    "price": 650000,
+    "image": [
+      "/asset/img/item-1.png",
+      "/asset/img/item-1a.png"
+    ]
+  },
+  {
+    "id": 2,
+    "url": "#",
+    "badgeContent": 16,
+    "cartJenisContent": "PhoneX",
+    "cartNameContent": "Smartphone 5G Ultra",
+    "rateContent": 4.6,
+    "reviewContent": 890,
+    "price": 5000000,
+    "image": [
+      "/asset/img/item-2.png"
+    ]
+  },
+  {
+    "id": 3,
+    "url": "#",
+    "badgeContent": 20,
+    "cartJenisContent": "WristTech",
+    "cartNameContent": "Smartwatch Series 5",
+    "rateContent": 4.4,
+    "reviewContent": 324,
+    "price": 3500000,
+    "image": [
+      "/asset/img/item-3.png"
+    ]
+  },
+  {
+    "id": 4,
+    "url": "#",
+    "badgeContent": 27,
+    "cartJenisContent": "SportPro",
+    "cartNameContent": "Sneakers Sport Runfast",
+    "rateContent": 4.6,
+    "reviewContent": 445,
+    "price": 750000,
+    "image": [
+      "/asset/img/item-4.png"
+    ]
+  },
+  {
+    "id": 5,
+    "url": "#",
+    "badgeContent": "Baru",
+    "cartJenisContent": "UrbanBag",
+    "cartNameContent": "Tas Ransel Laptop Waterproof",
+    "rateContent": 4.5,
+    "reviewContent": 234,
+    "price": 350000,
+    "image": [
+      "/asset/img/item-5.png"
+    ]
+  },
+  {
+    "id": 6,
+    "url": "#",
+    "badgeContent": "Baru",
+    "cartJenisContent": "BlendPro",
+    "cartNameContent": "Blender Portable Mini",
+    "rateContent": 4.2,
+    "reviewContent": 567,
+    "price": 189000,
+    "image": [
+      "/asset/img/item-6.png"
+    ]
+  },
+  {
+    "id": 7,
+    "url": "#",
+    "badgeContent": 20,
+    "cartJenisContent": "TabTech",
+    "cartNameContent": "Tablet 10.5\" WiFi + 4G",
+    "rateContent": 4.5,
+    "reviewContent": 345,
+    "price": 4000000,
+    "image": [
+      "/asset/img/item-7.png"
+    ]
+  },
+  {
+    "id": 8,
+    "url": "#",
+    "badgeContent": 25,
+    "cartJenisContent": "FashionID",
+    "cartNameContent": "Dress Floral Midi",
+    "rateContent": 4.5,
+    "reviewContent": 312,
+    "price": 395000,
+    "image": [
+      "/asset/img/item-8.png"
+    ]
+  },
+  {
+    "id": 9,
+    "url": "#",
+    "badgeContent": "Baru",
+    "cartJenisContent": "AromaWell",
+    "cartNameContent": "Minyak Esensial Lavender Set",
+    "rateContent": 4.8,
+    "reviewContent": 456,
+    "price": 145000,
+    "image": [
+      "/asset/img/item-9.png"
+    ]
+  },
+  {
+    "id": 10,
+    "url": "#",
+    "badgeContent": 19,
+    "cartJenisContent": "Gramedia",
+    "cartNameContent": "Buku \"Atomic Habits",
+    "rateContent": 4.9,
+    "reviewContent": 1245,
+    "price": 110000,
+    "image": [
+      "/asset/img/item-10.png"
+    ]
+  },
+  {
+    "id": 11,
+    "url": "#",
+    "badgeContent": 26,
+    "cartJenisContent": "GlowLab",
+    "cartNameContent": "Serum Vitamin C Brightening",
+    "rateContent": 4.6,
+    "reviewContent": 892,
+    "price": 250000,
+    "image": [
+      "/asset/img/item-11.png"
+    ]
+  },
+  {
+    "id": 12,
+    "url": "#",
+    "badgeContent": "",
+    "cartJenisContent": "FashionID",
+    "cartNameContent": "Kaos Polos Premium Cotton",
+    "rateContent": 4.3,
+    "reviewContent": 678,
+    "price": 125000,
+    "image": [
+      "/asset/img/item-12.png"
+    ]
+  },
+  {
+    "id": 13,
+    "url": "#",
+    "badgeContent": "Baru",
+    "cartJenisContent": "BlendPro",
+    "cartNameContent": "Blender Portable Mini",
+    "rateContent": 4.2,
+    "reviewContent": 567,
+    "price": 189000,
+    "image": [
+      "/asset/img/item-13.png"
+    ]
+  },
+  {
+    "id": 14,
+    "url": "#",
+    "badgeContent": "Baru",
+    "cartJenisContent": "AromaWell",
+    "cartNameContent": "Minyak Esensial Lavender Set",
+    "rateContent": 4.8,
+    "reviewContent": 456,
+    "price": 145000,
+    "image": [
+      "/asset/img/item-14.png"
+    ]
+  },
+  {
+    "id": 14,
+    "url": "#",
+    "badgeContent": 29,
+    "cartJenisContent": "SoundWave",
+    "cartNameContent": "Speaker Bluetooth Portable",
+    "rateContent": 4.4,
+    "reviewContent": 389,
+    "price": 450000,
+    "image": [
+      "/asset/img/item-14.png"
+    ]
+  }
+]
