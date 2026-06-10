@@ -1,47 +1,3 @@
-const katContainer = document.getElementById('kategori')
-const flashSaleCont = document.getElementById('flash-sale-item')
-const newSaleCont = document.getElementById('new-sale-item')
-const superSaleCont = document.getElementById('super-sale-item')
-
-const dataKat = [{
-    name: "Elektronik",
-    qty: `7 Produk`,
-    image: "/asset/img/landing-section.png",
-    url: '#'
-},
-{
-    name: "Fashion",
-    qty: `5 Produk`,
-    image: "/asset/img/Fashion.png",
-    url: '#'
-},
-
-{
-    name: "Rumah & Produk",
-    qty: `3 Produk`,
-    image: "/asset/img/Rumah & Dapur.png",
-    url: '#'
-},
-{
-    name: "Kecantikan",
-    qty: `2 Produk`,
-    image: "/asset/img/Kecantikan.png",
-    url: '#'
-},
-{
-    name: "Olahraga",
-    qty: `3 Produk`,
-    image: "/asset/img/Olahraga.png",
-    url: '#'
-},
-{
-    name: "Buku & Alat Tulis",
-    qty: `2 Produk`,
-    image: "/asset/img/Buku & Alat Tulis.png",
-    url: '#'
-}]
-
-// funcion buat elemen dan memberikan kelas
 function makeElemen(nameElemen, nameClass) {
     const divElemen = document.createElement(nameElemen)
 
@@ -49,39 +5,6 @@ function makeElemen(nameElemen, nameClass) {
         divElemen.className = nameClass
     }
     return divElemen
-}
-// function div Kategori
-function katContent(dataKat) {
-    const clasItemShop = 'bg-white border border-gray-200 rounded-2xl p-4 flex flex-col items-center justify-center text-center shadow-sm hover:shadow-md hover:border-blue-500/50 transition-all group'
-    const divItemShop = makeElemen('div', clasItemShop)
-
-    const clasAnchItemLink = 'no-underline w-full flex flex-col items-center'
-    const anchorItemLink = makeElemen('a', clasAnchItemLink)
-    anchorItemLink.href = dataKat.url
-
-    const clasDivImgCenter = 'w-24 h-20 flex items-center justify-center overflow-hidden mb-4'
-    const divImgCenter = makeElemen('div', clasDivImgCenter)
-
-    const clasImgItemKat = 'max-w-full max-h-full object-contain mix-blend-multiply transition-transform group-hover:scale-105 duration-300'
-    const imgItemKat = makeElemen('img', clasImgItemKat)
-    imgItemKat.src = dataKat.image
-    imgItemKat.alt = dataKat.name
-
-    const clasDivTitleKat = 'text-sm font-semibold text-gray-900 mb-1 group-hover:text-blue-600 transition-colors'
-    const divTitleKat = makeElemen('div', clasDivTitleKat)
-    divTitleKat.innerText = dataKat.name
-
-    const clasTextKat = 'text-xs text-gray-400'
-    const divTextKat = makeElemen('div', 'text-item-kat')
-    divTextKat.innerText = dataKat.qty
-
-    divImgCenter.append(imgItemKat)
-    anchorItemLink.append(divImgCenter)
-    anchorItemLink.append(divTitleKat)
-    anchorItemLink.append(divTextKat)
-    divItemShop.append(anchorItemLink)
-
-    return divItemShop
 }
 
 function itemCart(dataCart) {
@@ -208,11 +131,12 @@ async function imporData(arr) {
             throw new Error(`Gagal load JSON: ${response.status}`);
         }
 
+        const arrayObj = await response.json();
+
         if (!arr || !Array.isArray(arr) || arr.length === 0) {
             return arrayObj;
         }
 
-        const arrayObj = await response.json();
         const varBaru = arrayObj.filter(item => arr.includes(item.id));
         return varBaru
 
@@ -222,53 +146,20 @@ async function imporData(arr) {
 
 }
 
-async function main() {
-    dataKat.forEach((data) => {
-        const createKat = katContent(data)
-        katContainer.append(createKat)
-    })
+const produk = document.getElementById('all-sale-item')
 
-    const dataCartFlash = await imporData([1,2,3,4])
-    dataCartFlash.forEach((dataCart) => {
+async function main(){
+    const dataAll = await imporData()
+    console.log(dataAll)
+
+    dataAll.forEach((dataCart) => {
         const createCart = itemCart(dataCart)
-        flashSaleCont.append(createCart)
+        produk.append(createCart)
         createCart.addEventListener('click', () => {
             window.localStorage.setItem('selectedProduct', JSON.stringify(dataCart));
             window.location.href = 'detail-page.html';
         });
     })
-
-    const dataCartNew = await imporData([1,2,5,6,7,8,9])
-    dataCartNew.forEach((dataCart) => {
-        const createCart = itemCart(dataCart)
-        newSaleCont.append(createCart)
-        createCart.addEventListener('click', () => {
-            window.localStorage.setItem('selectedProduct', JSON.stringify(dataCart));
-            window.location.href = 'detail-page.html';
-        });
-    })
-
-    const dataCartSuper = await imporData([1,2,3,4,7,8])
-    dataCartSuper.forEach((dataCart) => {
-        const createCart = itemCart(dataCart)
-        superSaleCont.append(createCart)
-        createCart.addEventListener('click', () => {
-            window.localStorage.setItem('selectedProduct', JSON.stringify(dataCart));
-            window.location.href = 'detail-page.html';
-        });
-    })
-
-
-
-    const btnWhislist = document.querySelectorAll('.btn-whislist-item');
-
-    btnWhislist.forEach((tombol) => {
-        tombol.addEventListener('click', function (event) {
-            event.stopPropagation();
-            event.preventDefault();
-            this.classList.toggle('active');
-        });
-    });
-
 }
+
 main()

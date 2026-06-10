@@ -288,6 +288,10 @@ async function imporData(arr) {
             throw new Error(`Gagal load JSON: ${response.status}`);
         }
 
+        if (!arr || !Array.isArray(arr) || arr.length === 0) {
+            return arrayObj;
+        }
+
         const arrayObj = await response.json();
         const varBaru = arrayObj.filter(item => arr.includes(item.id));
         return varBaru
