@@ -21,7 +21,7 @@ function itemCart(dataCart) {
     const clasBadgeSpan = 'absolute top-2 left-2 text-white text-xs font-bold px-2 py-1 rounded-full'
     const badgeSpan = makeElemen('span', clasBadgeSpan)
 
-    const clasButtonWhislist = 'btn-whislist-item absolute top-2 right-2 w-8 h-8 rounded-full bg-white/80 hover:bg-white backdrop-blur-sm flex items-center justify-center shadow-sm cursor-pointer z-10 transition-all duration-300'
+    const clasButtonWhislist = 'btn-whislist-item absolute top-2 right-2 w-8 h-8 rounded-full bg-white/80 hover:bg-white backdrop-blur-sm flex items-center justify-center shadow-sm cursor-pointer z-10 transition-all duration-300 group'
     const buttonWhislist = makeElemen('button', clasButtonWhislist)
     buttonWhislist.type = 'button'
 
@@ -146,6 +146,18 @@ async function imporData(arr) {
 
 }
 
+function toggleWishlist(){
+    const btnWhislist = document.querySelectorAll('.btn-whislist-item');
+
+    btnWhislist.forEach((tombol) => {
+        tombol.addEventListener('click', function (event) {
+            event.stopPropagation();
+            event.preventDefault();
+            this.classList.toggle('active');
+        });
+    });
+}
+
 const produk = document.getElementById('all-sale-item')
 
 async function main(){
@@ -160,6 +172,8 @@ async function main(){
             window.location.href = 'detail-page.html';
         });
     })
+
+    toggleWishlist()
 }
 
 main()
