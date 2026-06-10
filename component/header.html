@@ -12,7 +12,7 @@
     </div>
 </div>
 <!-- header Middle -->
-<div class="border-b border-gray-200 bg-white py-4">
+<div class="border-b border-gray-200 bg-white py-4 relative">
     <div class="container mx-auto max-w-5xl px-4 flex items-center justify-between gap-4">      
         <a href="#" class="flex items-center gap-2 no-underline shrink-0">
             <div class="w-10 h-10 bg-blue-600 text-white flex justify-center items-center text-xl font-bold rounded-lg">B</div>
@@ -28,21 +28,42 @@
             </form>
         </div>
 
-        <div class="flex items-center gap-5 shrink-0 text-gray-600">
+        <div class="flex items-center gap-5 shrink-0 text-gray-600 relative">
             <button class="cursor-pointer hover:text-blue-600 transition-colors relative">
                 <img class="w-6 h-6 object-contain" src="/asset/img/bell.png" alt="lonceng">
             </button>
-            <button class="flex items-center gap-1.5 cursor-pointer hover:text-blue-600 transition-colors">
+            
+            <button id="profile-btn" class="flex items-center gap-1.5 cursor-pointer hover:text-blue-600 transition-colors relative">
                 <img class="w-6 h-6 object-contain rounded-full" src="/asset/img/profile.png" alt="Icon Profile">
-                <span class="text-sm font-medium text-gray-700">Budi</span>
+                <span id="profile-name-nav" class="text-sm font-medium text-gray-700"></span>
             </button>
-            <button class="cursor-pointer hover:text-blue-600 transition-colors">
+            
+            <button id="wishlist-btn" class="cursor-pointer hover:text-blue-600 transition-colors">
                 <img class="w-6 h-6 object-contain" src="/asset/img/love.png" alt="Icon Favorite">
             </button>
-            <button class="cursor-pointer hover:text-blue-600 transition-colors">
+            
+            <button id="cart-btn" class="cursor-pointer hover:text-blue-600 transition-colors">
                 <img class="w-6 h-6 object-contain" src="/asset/img/cart.png" alt="Icon Keranjang">
             </button>
-        </div>
+
+            <div id="account-modal" class="hidden absolute right-16 top-10 w-64 bg-white rounded-lg shadow-xl border border-gray-150 p-4 z-50">
+                <div class="flex items-center gap-3 border-b border-gray-100 pb-3 mb-3">
+                    <img class="w-10 h-10 rounded-full object-cover" src="/asset/img/profile.png" alt="User Avatar">
+                    <div>
+                        <h4 id="modal-user-name" class="font-semibold text-sm text-gray-800">Nama Pengguna</h4>
+                        <p id="modal-user-email" class="text-xs text-gray-400">user@email.com</p>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-2">
+                    <button id="view-account-btn" class="w-full bg-blue-600 hover:bg-blue-700 text-white text-xs font-medium py-2 rounded-md transition-colors cursor-pointer text-center">
+                        Lihat Akun
+                    </button>
+                    <button id="close-modal-btn" class="w-full bg-gray-100 hover:bg-gray-200 text-gray-600 text-xs font-medium py-2 rounded-md transition-colors cursor-pointer text-center">
+                        Tutup
+                    </button>
+                </div>
+            </div>
+            </div>
     </div>
 </div>
 <!-- header NAV -->
