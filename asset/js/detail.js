@@ -1,45 +1,156 @@
-const katContainer = document.getElementById('kategori')
-const flashSaleCont = document.getElementById('flash-sale-item')
-const newSaleCont = document.getElementById('new-sale-item')
-const superSaleCont = document.getElementById('super-sale-item')
+function initQuantityCounter() {
+    const qtyInput = document.getElementById('qty-input');
+    const btnMinus = document.getElementById('qty-minus');
+    const btnPlus = document.getElementById('qty-plus');
 
-const dataKat = [{
-    name: "Elektronik",
-    qty: `7 Produk`,
-    image: "/asset/img/landing-section.png",
-    url: '#'
-},
-{
-    name: "Fashion",
-    qty: `5 Produk`,
-    image: "/asset/img/Fashion.png",
-    url: '#'
-},
+    if (!qtyInput || !btnMinus || !btnPlus) return;
 
-{
-    name: "Rumah & Produk",
-    qty: `3 Produk`,
-    image: "/asset/img/Rumah & Dapur.png",
-    url: '#'
-},
-{
-    name: "Kecantikan",
-    qty: `2 Produk`,
-    image: "/asset/img/Kecantikan.png",
-    url: '#'
-},
-{
-    name: "Olahraga",
-    qty: `3 Produk`,
-    image: "/asset/img/Olahraga.png",
-    url: '#'
-},
-{
-    name: "Buku & Alat Tulis",
-    qty: `2 Produk`,
-    image: "/asset/img/Buku & Alat Tulis.png",
-    url: '#'
-}]
+    btnMinus.addEventListener('click', () => {
+        let val = parseInt(qtyInput.value);
+        if (val > 1) qtyInput.value = val - 1;
+    });
+
+    btnPlus.addEventListener('click', () => {
+        let val = parseInt(qtyInput.value);
+        if (val < 45) qtyInput.value = val + 1; // Maksimal sesuai kapasitas stok
+    });
+}
+
+// Fungsi untuk mengatur interaksi pilihan variasi warna
+function initColorVariants() {
+    const colorBtns = document.querySelectorAll('.color-variant-btn');
+    const selectedColorTxt = document.getElementById('selected-color');
+
+    if (colorBtns.length === 0) return;
+
+    colorBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Reset state semua tombol warna menjadi tidak aktif
+            colorBtns.forEach(b => {
+                b.className = "px-4 py-2 text-sm font-medium border border-gray-200 text-gray-700 hover:border-gray-400 rounded-xl transition-all color-variant-btn";
+            });
+            // Aktifkan style tombol yang diklik
+            btn.className = "px-4 py-2 text-sm font-medium border-2 border-blue-600 text-blue-600 bg-blue-50/50 rounded-xl transition-all color-variant-btn";
+            if (selectedColorTxt) selectedColorTxt.textContent = btn.textContent;
+        });
+    });
+}
+
+// Fungsi untuk mengatur sistem perpindahan tab informasi produk
+function initTabsSystem() {
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const tabPanes = document.querySelectorAll('.tab-pane');
+
+    if (tabBtns.length === 0) return;
+
+    tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const target = btn.getAttribute('data-target');
+
+            // Atur tombol aktif
+            tabBtns.forEach(b => {
+                b.className = "tab-btn px-5 py-2.5 text-sm font-medium rounded-xl text-gray-500 hover:text-gray-800 transition-all cursor-pointer";
+            });
+            btn.className = "tab-btn px-5 py-2.5 text-sm font-semibold rounded-xl text-blue-600 bg-white shadow-sm transition-all cursor-pointer";
+
+            // Atur konten aktif (Panel konten)
+            tabPanes.forEach(pane => {
+                if (pane.id === target) {
+                    pane.classList.remove('hidden');
+                    pane.classList.add('block');
+                } else {
+                    pane.classList.remove('block');
+                    pane.classList.add('hidden');
+                }
+            });
+        });
+    });
+}
+
+// Fungsi mengambil data dari Local Storage dan melakukan validasi awal
+function getProductFromStorage() {
+    const productDataString = localStorage.getItem('selectedProduct');
+    
+    if (!productDataString) {
+        alert('Produk tidak ditemukan!');
+        window.location.href = 'index.html';
+        return null;
+    }
+    
+    try {
+        return JSON.parse(productDataString);
+    } catch (error) {
+        console.error("Gagal melakukan parse data produk:", error);
+        return null;
+    }
+}
+
+// Fungsi khusus menangani render gambar utama dan daftar galeri thumbnail
+function renderProductGallery(product, mainImg) {
+    if (!mainImg) return;
+    
+    mainImg.src = product.image[0];
+
+    const thumbnailContainer = document.querySelector('.thumbnail-gallery') || mainImg.parentElement.nextElementSibling;
+    if (!thumbnailContainer || !product.image || product.image.length === 0) return;
+
+    thumbnailContainer.innerHTML = ''; // Bersihkan dummy/placeholder HTML awal
+    
+    product.image.forEach((imgUrl, index) => {
+        const thumbDiv = document.createElement('div');
+        thumbDiv.className = `w-20 h-20 bg-white rounded-xl overflow-hidden p-1 cursor-pointer transition-all ${index === 0 ? 'border-2 border-blue-600' : 'border border-gray-200 hover:border-gray-400'}`;
+        thumbDiv.innerHTML = `<img src="${imgUrl}" alt="Thumbnail ${index + 1}" class="w-full h-full object-contain">`;
+
+        // Event klik untuk mengganti tampilan gambar utama
+        thumbDiv.addEventListener('click', () => {
+            mainImg.src = imgUrl;
+            thumbnailContainer.querySelectorAll('div').forEach(d => {
+                d.className = 'w-20 h-20 bg-white border border-gray-200 hover:border-gray-400 rounded-xl overflow-hidden p-1 cursor-pointer transition-all';
+            });
+            thumbDiv.className = 'w-20 h-20 bg-white border-2 border-blue-600 rounded-xl overflow-hidden p-1 cursor-pointer transition-all';
+        });
+        
+        thumbnailContainer.appendChild(thumbDiv);
+    });
+}
+
+function renderProductDetails(product, mainImg) {
+    // Kalkulasi nilai diskon
+    const discountAmount = product.price * (product.badgeContent / 100);
+    const finalPrice = product.price - discountAmount;
+
+    // --- Render Teks & Informasi Komponen ---
+    const activePageBreadcrumb = document.querySelector('.active-page') || document.querySelector('main section ul li:last-child a');
+    if (activePageBreadcrumb) activePageBreadcrumb.textContent = product.cartNameContent;
+
+    const badgeDiscount = document.querySelector('.badge-discount') || (mainImg ? mainImg.previousElementSibling : null);
+    if (badgeDiscount) badgeDiscount.textContent = `-${product.badgeContent}%`;
+
+    const productMeta = document.querySelector('.product-meta') || document.querySelector('.text-gray-400.uppercase');
+    if (productMeta) productMeta.innerHTML = `${product.cartJenisContent} &bull; Kategori`;
+
+    const productTitle = document.querySelector('.product-title') || document.querySelector('h1');
+    if (productTitle) productTitle.textContent = product.cartNameContent;
+
+    const rateTxt = document.querySelector('.rate') || document.querySelector('.font-bold.text-gray-800');
+    if (rateTxt) rateTxt.textContent = product.rateContent;
+
+    const reviewTxt = document.querySelector('.review') || document.querySelector('.text-gray-400');
+    if (reviewTxt) reviewTxt.textContent = `(${product.reviewContent} Ulasan)`;
+
+    // --- Render Harga Setelah Terhitung Diskon ---
+    const mainPriceElement = document.querySelector('.main-price') || document.querySelector('.text-3xl.font-black.text-blue-600');
+    if (mainPriceElement) mainPriceElement.textContent = `Rp ${finalPrice.toLocaleString('id-ID')}`;
+
+    const strikePriceElement = document.querySelector('.strike-price') || document.querySelector('.line-through');
+    if (strikePriceElement) strikePriceElement.textContent = `Rp ${product.price.toLocaleString('id-ID')}`;
+
+    const badgeSaveElement = document.querySelector('.badge-save') || document.querySelector('.bg-red-100.text-red-700');
+    if (badgeSaveElement) badgeSaveElement.textContent = `Hemat ${product.badgeContent}%`;
+
+    const savingTextElement = document.querySelector('.saving-text') || document.querySelector('.text-green-600.mt-1');
+    if (savingTextElement) savingTextElement.textContent = `Kamu hemat Rp ${discountAmount.toLocaleString('id-ID')}`;
+}
 
 const dataCartFlash = [{
     id: 1,
@@ -91,6 +202,8 @@ const dataCartFlash = [{
 }
 ]
 
+const produkTerkait = document.getElementById('terkait-sale-item')
+
 // funcion buat elemen dan memberikan kelas
 function makeElemen(nameElemen, nameClass) {
     const divElemen = document.createElement(nameElemen)
@@ -99,39 +212,6 @@ function makeElemen(nameElemen, nameClass) {
         divElemen.className = nameClass
     }
     return divElemen
-}
-// function div Kategori
-function katContent(dataKat) {
-    const clasItemShop = 'bg-white border border-gray-200 rounded-2xl p-4 flex flex-col items-center justify-center text-center shadow-sm hover:shadow-md hover:border-blue-500/50 transition-all group'
-    const divItemShop = makeElemen('div', clasItemShop)
-
-    const clasAnchItemLink = 'no-underline w-full flex flex-col items-center'
-    const anchorItemLink = makeElemen('a', clasAnchItemLink)
-    anchorItemLink.href = dataKat.url
-
-    const clasDivImgCenter = 'w-24 h-20 flex items-center justify-center overflow-hidden mb-4'
-    const divImgCenter = makeElemen('div', clasDivImgCenter)
-
-    const clasImgItemKat = 'max-w-full max-h-full object-contain mix-blend-multiply transition-transform group-hover:scale-105 duration-300'
-    const imgItemKat = makeElemen('img', clasImgItemKat)
-    imgItemKat.src = dataKat.image
-    imgItemKat.alt = dataKat.name
-
-    const clasDivTitleKat = 'text-sm font-semibold text-gray-900 mb-1 group-hover:text-blue-600 transition-colors'
-    const divTitleKat = makeElemen('div', clasDivTitleKat)
-    divTitleKat.innerText = dataKat.name
-
-    const clasTextKat = 'text-xs text-gray-400'
-    const divTextKat = makeElemen('div', 'text-item-kat')
-    divTextKat.innerText = dataKat.qty
-
-    divImgCenter.append(imgItemKat)
-    anchorItemLink.append(divImgCenter)
-    anchorItemLink.append(divTitleKat)
-    anchorItemLink.append(divTextKat)
-    divItemShop.append(anchorItemLink)
-
-    return divItemShop
 }
 
 function itemCart(dataCart) {
@@ -251,42 +331,30 @@ function itemCart(dataCart) {
 
 }
 
-async function main() {
-    dataKat.forEach((data) => {
-        const createKat = katContent(data)
-        katContainer.append(createKat)
-    })
+
+function main() {
+    initQuantityCounter();
+    initColorVariants();
+    initTabsSystem();
+
+    const product = getProductFromStorage();
+    if (!product) return; 
+
+    const mainImg = document.getElementById('main-product-image');
+
+    renderProductGallery(product, mainImg);
+    renderProductDetails(product, mainImg);
 
     dataCartFlash.forEach((dataCart) => {
         const createCart = itemCart(dataCart)
-        flashSaleCont.append(createCart)
+        produkTerkait.append(createCart)
         createCart.addEventListener('click', () => {
             window.localStorage.setItem('selectedProduct', JSON.stringify(dataCart));
             window.location.href = 'detail-page.html';
         });
     })
 
-    dataCartFlash.forEach((dataCart) => {
-        const createCart = itemCart(dataCart)
-        newSaleCont.append(createCart)
-    })
-
-    dataCartFlash.forEach((dataCart) => {
-        const createCart = itemCart(dataCart)
-        superSaleCont.append(createCart)
-    })
-
-
-
-    const btnWhislist = document.querySelectorAll('.btn-whislist-item');
-
-    btnWhislist.forEach((tombol) => {
-        tombol.addEventListener('click', function (event) {
-            event.stopPropagation();
-            event.preventDefault();
-            this.classList.toggle('active');
-        });
-    });
-
 }
-main()
+
+// Daftarkan fungsi Main agar dieksekusi saat struktur HTML selesai dimuat (DOM Ready)
+document.addEventListener('DOMContentLoaded', main);
