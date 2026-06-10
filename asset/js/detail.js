@@ -116,15 +116,31 @@ function renderProductGallery(product, mainImg) {
 
 function renderProductDetails(product, mainImg) {
     // Kalkulasi nilai diskon
-    const discountAmount = product.price * (product.badgeContent / 100);
-    const finalPrice = product.price - discountAmount;
+
+    let discountAmount
+    let finalPrice
+
+    if (typeof product.badgeContent === 'number') {
+        discountAmount = product.price * (product.badgeContent / 100);
+        finalPrice = product.price - discountAmount;
+    }else{
+        finalPrice = product.price
+    }
 
     // --- Render Teks & Informasi Komponen ---
     const activePageBreadcrumb = document.querySelector('.active-page') || document.querySelector('main section ul li:last-child a');
     if (activePageBreadcrumb) activePageBreadcrumb.textContent = product.cartNameContent;
 
     const badgeDiscount = document.querySelector('.badge-discount') || (mainImg ? mainImg.previousElementSibling : null);
-    if (badgeDiscount) badgeDiscount.textContent = `-${product.badgeContent}%`;
+    if (typeof product.badgeContent === 'number'){
+        badgeDiscount.textContent = `-${product.badgeContent}%`;
+        badgeDiscount.classList.add('bg-[#DC2626]')
+    }else if(product.badgeContent !== ''){
+        badgeDiscount.textContent = product.badgeContent
+        badgeDiscount.classList.add('bg-[#1A73E8]')
+    }else{
+        badgeDiscount.classList.add('hidden')
+    }
 
     const productMeta = document.querySelector('.product-meta') || document.querySelector('.text-gray-400.uppercase');
     if (productMeta) productMeta.innerHTML = `${product.cartJenisContent} &bull; Kategori`;
@@ -143,13 +159,19 @@ function renderProductDetails(product, mainImg) {
     if (mainPriceElement) mainPriceElement.textContent = `Rp ${finalPrice.toLocaleString('id-ID')}`;
 
     const strikePriceElement = document.querySelector('.strike-price') || document.querySelector('.line-through');
-    if (strikePriceElement) strikePriceElement.textContent = `Rp ${product.price.toLocaleString('id-ID')}`;
-
     const badgeSaveElement = document.querySelector('.badge-save') || document.querySelector('.bg-red-100.text-red-700');
-    if (badgeSaveElement) badgeSaveElement.textContent = `Hemat ${product.badgeContent}%`;
 
     const savingTextElement = document.querySelector('.saving-text') || document.querySelector('.text-green-600.mt-1');
-    if (savingTextElement) savingTextElement.textContent = `Kamu hemat Rp ${discountAmount.toLocaleString('id-ID')}`;
+    
+    if (typeof product.badgeContent === 'number'){
+        strikePriceElement.textContent = `Rp ${product.price.toLocaleString('id-ID')}`;
+        badgeSaveElement.textContent = `Hemat ${product.badgeContent}%`;
+        savingTextElement.textContent = `Kamu hemat Rp ${discountAmount.toLocaleString('id-ID')}`;
+    }else{
+        strikePriceElement.classList.add('hidden')
+        badgeSaveElement.classList.add('hidden')
+    }
+
 }
 
 const produkTerkait = document.getElementById('terkait-sale-item')
