@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,15 +9,21 @@
     <script src="https://kit.fontawesome.com/YOUR_KIT_CODE.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/asset/css/style.css">
     <link rel="stylesheet" href="/asset/css/checkout.css">
-<script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body>
     <header class="sticky top-0 z-50" id="header">
     </header>
     <main>
         <section class="container-order-succes">
             <div class="icon-success">
-                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#00C950" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-big-icon lucide-circle-check-big"><path d="M21.801 10A10 10 0 1 1 17 3.335"/><path d="m9 11 3 3L22 4"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
+                    stroke="#00C950" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-circle-check-big-icon lucide-circle-check-big">
+                    <path d="M21.801 10A10 10 0 1 1 17 3.335" />
+                    <path d="m9 11 3 3L22 4" />
+                </svg>
             </div>
 
             <div class="message-order">
@@ -31,47 +38,23 @@
             <div class="container-content-order-success">
                 <div class="number-order">
                     <div class="content order-number">
-                        <p>
-                            Nomor Pesanan
-                        </p>
-                        <h2 class="total-price">
-                            #BM28371132
-                        </h1>
-
+                        <p>Nomor Pesanan</p>
+                        <h2 class="total-price" id="success-order-id">#BM28371132</h2>
                     </div>
+
                     <div class="content">
-                        <p>
-                            Total Pembayaran
-                        </p>
-                        <h1>
-                            Rp. 450.000
-                        </h1>
-
+                        <p>Total Pembayaran</p>
+                        <h1 id="success-total-price">Rp. 450.000</h1>
                     </div>
-                </div>
 
-                <div class="container-total-harga info-ship-order">
-                    <div class="container-info-ship">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1A73E8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-truck-icon lucide-truck"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg>
-                        <div class="info-shipping">
-                            <h4>
-                                JNE Reguler
-                            </h4>
-                            <p>
-                                Estimasi tiba: 2-3 Juni 2026
-                            </p>
-                        </div>
+                    <div class="info-shipping">
+                        <h4 id="success-shipping-method">JNE Reguler</h4>
+                        <p id="success-shipping-estimation">Estimasi tiba: -</p>
                     </div>
-                    <div class="container-info-ship">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1A73E8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin-icon lucide-map-pin"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
-                        <div class="info-shipping">
-                            <h4>
-                                Alamat Pengiriman
-                            </h4>
-                            <p>
-                                Jl. Kebon Jeruk No. 15, Jakarta Barat, DKI Jakarta 11530
-                            </p>
-                        </div>
+
+                    <div class="info-shipping">
+                        <h4>Alamat Pengiriman</h4>
+                        <p id="success-shipping-address">Jl. Kebon Jeruk No. 15...</p>
                     </div>
 
                 </div>
@@ -80,11 +63,17 @@
                 <div class="status-order-container">
                     <h2 class="card-title">
                         Status Pesanan
-                    </h2>   
-                    
+                    </h2>
+
                     <div class="status-step active-step">
                         <div class="status-icon-circle green-circle">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00A63E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-big-icon lucide-circle-check-big"><path d="M21.801 10A10 10 0 1 1 17 3.335"/><path d="m9 11 3 3L22 4"/></svg>  
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="#00A63E" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round"
+                                class="lucide lucide-circle-check-big-icon lucide-circle-check-big">
+                                <path d="M21.801 10A10 10 0 1 1 17 3.335" />
+                                <path d="m9 11 3 3L22 4" />
+                            </svg>
                         </div>
                         <div class="status-content">
                             <p class="status-main-text">Pesanan Diterima</p>
@@ -92,13 +81,25 @@
                         </div>
 
                         <div class="status-icon-circle-succes green-circle">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="16" viewBox="0 0 24 24" fill="none" stroke="#00A63E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-icon lucide-check"><path d="M20 6 9 17l-5-5"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="#00A63E" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-check-icon lucide-check">
+                                <path d="M20 6 9 17l-5-5" />
+                            </svg>
                         </div>
                     </div>
 
                     <div class="status-step">
                         <div class="status-icon-circle grey-circle">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6B7280" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-package-icon lucide-package"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/><path d="M12 22V12"/><polyline points="3.29 7 12 12 20.71 7"/><path d="m7.5 4.27 9 5.15"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="#6B7280" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-package-icon lucide-package">
+                                <path
+                                    d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z" />
+                                <path d="M12 22V12" />
+                                <polyline points="3.29 7 12 12 20.71 7" />
+                                <path d="m7.5 4.27 9 5.15" />
+                            </svg>
                         </div>
                         <div class="status-content">
                             <p class="status-main-text">Sedang Dikemas</p>
@@ -108,7 +109,16 @@
 
                     <div class="status-step">
                         <div class="status-icon-circle grey-circle">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6B7280" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-truck-icon lucide-truck"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="#6B7280" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-truck-icon lucide-truck">
+                                <path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2" />
+                                <path d="M15 18H9" />
+                                <path
+                                    d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14" />
+                                <circle cx="17" cy="18" r="2" />
+                                <circle cx="7" cy="18" r="2" />
+                            </svg>
                         </div>
                         <div class="status-content">
                             <p class="status-main-text">Dalam Pengiriman</p>
@@ -118,7 +128,13 @@
 
                     <div class="status-step last-step">
                         <div class="status-icon-circle grey-circle">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6B7280" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin-icon lucide-map-pin"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="#6B7280" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-map-pin-icon lucide-map-pin">
+                                <path
+                                    d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
                         </div>
                         <div class="status-content">
                             <p class="status-main-text">Terkirim</p>
@@ -126,27 +142,42 @@
                         </div>
                     </div>
 
-                </div> 
-                
+                </div>
+
             </div>
             <div class="action-buttons-container">
                 <button class="btn-lacak-pesanan">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-package-icon lucide-package"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"/><path d="M12 22V12"/><polyline points="3.29 7 12 12 20.71 7"/><path d="m7.5 4.27 9 5.15"/></svg>                    
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-package-icon lucide-package">
+                        <path
+                            d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z" />
+                        <path d="M12 22V12" />
+                        <polyline points="3.29 7 12 12 20.71 7" />
+                        <path d="m7.5 4.27 9 5.15" />
+                    </svg>
                     Lacak Pesanan
                 </button>
                 <button class="btn-lihat-riwayat">
                     Lihat Riwayat Pesanan
                 </button>
-                <a href="#" class="link-lanjut-belanja">
+                <a href="/main/landing-page.html" class="link-lanjut-belanja">
                     Lanjut Belanja
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1A73E8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right-icon lucide-arrow-right"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        stroke="#1A73E8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-arrow-right-icon lucide-arrow-right">
+                        <path d="M5 12h14" />
+                        <path d="m12 5 7 7-7 7" />
+                    </svg>
                 </a>
             </div>
-        </section> 
+        </section>
     </main>
     <footer id="footer">
     </footer>
-    
+
     <script type="text/javascript" src="/asset/js/header-footer.js"></script>
+    <script src="/asset/js/checkout-success.js"></script>
 </body>
+
 </html>
