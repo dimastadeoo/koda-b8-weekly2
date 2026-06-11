@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Marketplace">
     <title>Proses Checkout</title>
-    <script src="https://kit.fontawesome.com/YOUR_KIT_CODE.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/asset/css/style.css">
     <link rel="stylesheet" href="/asset/css/checkout.css">
-<script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
     <header class="sticky top-0 z-50" id="header">
@@ -41,52 +40,52 @@
 
             <div class="process-content-checkout">
                 
-                <div class="checkout-left">
+                <form class="checkout-left">
                     <h2 class="card-title">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#1A73E8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-truck-icon lucide-truck"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg>
                     Alamat Pengiriman</h2>
                
-                    <form class="form-grid">
+                    <div class="form-grid">
                         <div class="form-group">
-                            <label>Nama Penerima *</label>
-                            <input type="text" value="Budi Santoso" required>
+                            <label for="fullName">Nama Penerima *</label>
+                            <input id="fullName" name="fullName" type="text" value="" required>
                         </div>
                         <div class="form-group">
-                            <label>Nomor Telepon *</label>
-                            <input type="text" value="0812-3456-7890" required>
+                            <label for="noHp">Nomor Telepon *</label>
+                            <input id="noHp" name="noHp" type="text" value="" required>
                         </div>
                         <div class="form-group full-width">
-                            <label>Email *</label>
-                            <input type="email" value="budi@email.com" required>
+                            <label for="email">Email *</label>
+                            <input id="email" name="email" type="email" value="" required>
                         </div>
                         <div class="form-group full-width">
-                            <label>Alamat Lengkap *</label>
-                            <input type="text" value="Jl. Kebon Jeruk No. 15" required>
+                            <label for="alamat">Alamat Lengkap *</label>
+                            <input id="alamat" name="alamat" type="text" value="" required>
                         </div>
                         <div class="form-group">
-                            <label>Kota *</label>
-                            <input type="text" value="Jakarta Barat" required>
+                            <label for="city">Kota *</label>
+                            <input id="city" name="city" type="text" value="" required>
                         </div>
                         <div class="form-group">
-                            <label>Provinsi *</label>
-                            <input type="text" value="DKI Jakarta" required>
+                            <label for="provinsi">Provinsi *</label>
+                            <input id="provinsi" name="provinsi" type="text" value="" required>
                         </div>
                         <div class="form-group">
-                            <label>Kode Pos *</label>
-                            <input type="text" value="11530" required>
+                            <label for="kodePos">Kode Pos *</label>
+                            <input id="kodePos" name="kodePos" type="text" value="" required>
                         </div>
                         <div class="form-group">
-                            <label>Catatan (opsional)</label>
-                            <input type="text" placeholder="Warna pagar, dll.">
+                            <label for="note">Catatan (opsional)</label>
+                            <input id="note" name="note" type="text" placeholder="">
                         </div>
-                    </form>
+                    </div>
 
                     <div class="container-shiping">
                         <h2 class="card-title">Metode Pengiriman</h2>
                         
                         <div class="shipping-options">
                             <label class="shipping-item active">
-                                <input type="radio" name="shipping" checked>
+                                <input type="radio" name="shipping" value="JNE Reguler" checked>
                                 <div class="shipping-details">
                                     <span class="shipping-name">JNE Reguler</span>
                                     <span class="shipping-eta">3-5 hari kerja</span>
@@ -95,7 +94,7 @@
                             </label>
 
                             <label class="shipping-item">
-                                <input type="radio" name="shipping">
+                                <input type="radio" name="shipping" value="JNE Express">
                                 <div class="shipping-details">
                                     <span class="shipping-name">JNE Express</span>
                                     <span class="shipping-eta">1-2 hari kerja</span>
@@ -104,7 +103,7 @@
                             </label>
 
                             <label class="shipping-item">
-                                <input type="radio" name="shipping">
+                                <input type="radio" name="shipping" value="Same Day Delivery">
                                 <div class="shipping-details">
                                     <span class="shipping-name">Same Day Delivery</span>
                                     <span class="shipping-eta">Hari ini (sebelum 16:00)</span>
@@ -113,10 +112,10 @@
                             </label>
                         </div>
                     </div>
-                    <button class="btn-primary-checkout">Lanjut ke Pembayaran
+                    <button  type="submit" class="btn-primary-checkout">Lanjut ke Pembayaran
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right-icon lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg>
                     </button>
-                </div>
+                </form>
 
                 <div class="checkout-right">
                     <div class="summary-card">
@@ -156,5 +155,6 @@
     </footer> 
     
     <script type="text/javascript" src="/asset/js/header-footer.js"></script>
+    <script src="/asset/js/checkout-1.js"></script>
 </body>
 </html>
