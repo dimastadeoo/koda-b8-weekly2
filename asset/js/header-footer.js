@@ -38,6 +38,7 @@ function profile() {
             profileNameNav.textContent = user.nama.split(' ')[0];
             modalUserName.textContent = user.nama;
             modalUserEmail.textContent = user.email;
+            closeModalBtn.classList.remove('hidden')
 
             viewAccountBtn.addEventListener('click', () => {
                 window.location.href = '/profile/edit-profile.html';
@@ -52,6 +53,7 @@ function profile() {
         modalUserName.textContent = "Belum Login";
         modalUserEmail.textContent = "Silakan masuk ke akun Anda";
         viewAccountBtn.innerText = 'Silahkan Login'
+        closeModalBtn.classList.add('hidden')
         viewAccountBtn.addEventListener('click', () => {
             window.location.href = '/auth/login.html';
         });
@@ -65,7 +67,14 @@ function profile() {
     });
 
     closeModalBtn.addEventListener('click', () => {
-        accountModal.classList.add('hidden');
+        const konfirmasi = confirm("Apakah Anda yakin ingin keluar dari akun?");
+        if (!konfirmasi) return;
+
+        sessionStorage.setItem("isLoggedIn", "false");
+        sessionStorage.removeItem("currentUser");
+
+        alert("Anda telah berhasil logout.");
+        window.location.href = "/auth/login.html";
     });
 
     window.addEventListener('click', (e) => {
