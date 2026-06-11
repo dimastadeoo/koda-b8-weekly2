@@ -161,7 +161,12 @@ function toggleWishlist(){
 //FUNGSI AMBIL DATA (KONSEP HELPER UNTUK LOCAL STORAGE)
 
 function ambilDataKeranjang() {
-    return JSON.parse(localStorage.getItem("cartItems")) || [];
+    const currentUser = JSON.parse(sessionStorage.getItem("currentUser"));
+    if (!currentUser || !currentUser.email) return [];
+
+    const semuaIsiKeranjang = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+    return semuaIsiKeranjang.filter(item => item.userEmail === currentUser.email);
 }
 
 function simpanDataCheckout(data) {
@@ -169,7 +174,12 @@ function simpanDataCheckout(data) {
 }
 
 function hapusDataKeranjang() {
-    localStorage.removeItem("cartItems");
+    const currentUser = JSON.parse(sessionStorage.getItem("currentUser"));
+    if (!currentUser || !currentUser.email) return;
+    const semuaIsiKeranjang = JSON.parse(localStorage.getItem("cartItems")) || [];
+    const keranjangUserLain = semuaIsiKeranjang.filter(item => item.userEmail !== currentUser.email);
+
+    localStorage.setItem("cartItems", JSON.stringify(keranjangUserLain));
 }
 
 // FUNGSI FORMAT MATA UANG (RUPIAH)
