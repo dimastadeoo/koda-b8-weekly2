@@ -158,6 +158,198 @@ function toggleWishlist(){
 }
 
 
+//FUNGSI AMBIL DATA (KONSEP HELPER UNTUK LOCAL STORAGE)
+
+function ambilDataKeranjang() {
+    return JSON.parse(localStorage.getItem("cartItems")) || [];
+}
+
+function simpanDataCheckout(data) {
+    localStorage.setItem("checkoutItems", JSON.stringify(data));
+}
+
+function hapusDataKeranjang() {
+    localStorage.removeItem("cartItems");
+}
+
+// FUNGSI FORMAT MATA UANG (RUPIAH)
+
+function formatRupiah(angka) {
+    return new Intl.NumberFormat("id-ID", {
+        style: "currency",
+        currency: "IDR",
+        minimumFractionDigits: 0
+    }).format(angka);
+}
+
+//FUNGSI UNTUK MENGHITUNG & UPDATE RINGKASAN PESANAN 
+
+function hitungDanRenderRingkasan(daftarItem) {
+    const totalLabel = document.getElementById("total-price");
+    const subtotalLabel = document.getElementById("sub-total-price");
+    const qtyArr = document.getElementById('qty-produk-cart')
+
+
+    // Hitung total harga: harga * kuantitas
+    const totalHarga = daftarItem.reduce((total, item) => total + (item.price * item.quantity), 0);
+    const hargaTersusun = formatRupiah(totalHarga);
+
+    const qty = daftarItem.length
+
+    // Suntikkan teks ke elemen Ringkasan Pesanan di kanan
+    qtyArr.innerText = `Subtotal (${qty} item)`
+    subtotalLabel.innerText = hargaTersusun;
+    totalLabel.innerText = hargaTersusun;
+}
+
+
+//FUNGSI UTAMA UNTUK MENAMPILKAN BARANG (MENGGUNAKAN CREATEELEMENT)
+
+function renderHalamanKeranjang() {
+    const containerProduk = document.getElementById("product-list-container");
+    const btnCheckout = document.getElementById("btn-checkout");
+    
+    let cartItems = ambilDataKeranjang();
+
+    // Pastikan kontainer bersih sebelum diisi
+    containerProduk.innerHTML = "";
+
+    // Jika keranjang kosong
+    if (cartItems.length === 0) {
+        const emptyCard = document.createElement("div");
+        emptyCard.className = "bg-white p-8 rounded-2xl border border-slate-100 shadow-sm text-center w-full";
+        
+        const emptyText = document.createElement("p");
+        emptyText.className = "text-slate-500 font-medium";
+        emptyText.textContent = "Keranjang belanjaanmu kosong nih. Yuk belanja dulu!";
+        
+        emptyCard.appendChild(emptyText);
+        containerProduk.appendChild(emptyCard);
+
+        if (btnCheckout) btnCheckout.disabled = true;
+        hitungDanRenderRingkasan([]);
+        return;
+    }
+
+    // Lakukan looping data untuk membuat element secara dinamis
+    cartItems.forEach((item) => {
+        // Membuat Card Utama (Wrapper)
+        const card = document.createElement("div");
+        card.className = "bg-white p-5 rounded-2xl border border-slate-100 shadow-sm flex flex-col sm:flex-row gap-4 items-start sm:items-center relative w-full";
+        card.setAttribute("data-id", item.id);
+
+        // Membuat Foto Produk
+        const img = document.createElement("img");
+        img.className = "w-24 h-24 sm:w-28 sm:h-28 object-cover rounded-xl bg-amber-100 flex-shrink-0";
+        img.src = item.image;
+        img.alt = item.name;
+
+        // Membuat Wrapper Detail Produk (Tengah)
+        const detailsWrapper = document.createElement("div");
+        detailsWrapper.className = "flex-1 space-y-1";
+
+        const title = document.createElement("h3");
+        title.className = "text-base font-semibold sm:text-lg pr-8";
+        title.textContent = item.name;
+
+        const variant = document.createElement("p");
+        variant.className = "text-xs text-slate-400 font-medium";
+        variant.textContent = item.variant;
+
+        // --- Bagian Kontrol Kuantitas ---
+        const qtyWrapper = document.createElement("div");
+        qtyWrapper.className = "flex items-center gap-3 pt-2";
+
+        const qtyControl = document.createElement("div");
+        qtyControl.className = "flex items-center border border-slate-200 rounded-full px-2 py-1 bg-slate-50";
+
+        const btnMinus = document.createElement("button");
+        btnMinus.className = "w-7 h-7 flex items-center justify-center font-bold text-slate-500 hover:text-slate-800 transition-colors";
+        btnMinus.textContent = "-";
+
+        const qtyNum = document.createElement("span");
+        qtyNum.className = "w-8 text-center text-sm font-semibold";
+        qtyNum.textContent = item.quantity;
+
+        const btnPlus = document.createElement("button");
+        btnPlus.className = "w-7 h-7 flex items-center justify-center font-bold text-slate-500 hover:text-slate-800 transition-colors";
+        btnPlus.textContent = "+";
+
+        qtyControl.appendChild(btnMinus);
+        qtyControl.appendChild(qtyNum);
+        qtyControl.appendChild(btnPlus);
+        qtyWrapper.appendChild(qtyControl);
+
+        // Gabungkan elemen tengah ke dalam detail wrapper
+        detailsWrapper.appendChild(title);
+        detailsWrapper.appendChild(variant);
+        detailsWrapper.appendChild(qtyWrapper);
+
+
+        // Membuat Wrapper Aksi & Harga (Kanan)
+        const actionWrapper = document.createElement("div");
+        actionWrapper.className = "w-full sm:w-auto flex sm:flex-col justify-between items-center sm:items-end sm:self-stretch gap-4 pt-4 sm:pt-0 border-t sm:border-none border-slate-100";
+
+        // Tombol Hapus SVG Lucide Trash
+        const btnDelete = document.createElement("button");
+        btnDelete.className = "sm:absolute sm:top-5 sm:right-5 p-1 text-slate-400 hover:text-rose-500 rounded-lg hover:bg-rose-50 transition-all";
+        
+        // Membentuk SVG
+        const svgHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-trash-2"><path d="M10 11v6"/><path d="M14 11v6"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M3 6h18"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>`;
+        btnDelete.innerHTML = svgHTML;
+
+        const price = document.createElement("p");
+        price.className = "text-lg font-bold text-blue-600 sm:mt-auto";
+        price.textContent = formatRupiah(item.price);
+
+        // Gabungkan elemen kanan ke dalam action wrapper
+        actionWrapper.appendChild(btnDelete);
+        actionWrapper.appendChild(price);
+
+
+        // MERAKIT SEMUA KE CARD UTAMA
+        card.appendChild(img);
+        card.appendChild(detailsWrapper);
+        card.appendChild(actionWrapper);
+
+        //MASUKKAN CARD KE DALAM CONTAINER UTAMA DI SCREEN HTML
+        containerProduk.appendChild(card);
+    });
+
+    // Jalankan kalkulasi harga total di kanan layar
+    hitungDanRenderRingkasan(cartItems);
+}
+
+// ========================================================
+// 5. FUNGSI AKSI PROSES CHECKOUT
+// ========================================================
+function eksekusiCheckout() {
+    const konfirmasi = confirm("Yakin Proses Pesanan");
+
+    if (konfirmasi === false){
+        return
+    }
+    let daftarBelanjaan = ambilDataKeranjang();
+
+    // Validasi pastikan ada barang sebelum checkout
+    if (daftarBelanjaan.length === 0) {
+        alert("Gagal: Tidak ada produk di dalam keranjang untuk di-checkout!");
+        return;
+    }
+
+    // Pindahkan data ke Local Storage baru
+    simpanDataCheckout(daftarBelanjaan);
+
+    // Kosongkan keranjang belanja utama
+    hapusDataKeranjang();
+
+    alert("Checkout Berhasil! Pesanan Anda sedang diproses.");
+
+    location.href = '/checkout/step-1.html'
+}
+
+
+
 async function main() {
     const loveItem = document.getElementById('love-sale-item')
     const dataCartlove = await imporData([1,2,3,4])
@@ -171,6 +363,15 @@ async function main() {
     })
 
     toggleWishlist()
+
+        // Jalankan fungsi tampilkan barang utama
+    renderHalamanKeranjang();
+
+    // Pasang fungsi klik pada tombol checkout
+    const btnCheckout = document.getElementById("btn-checkout");
+    if (btnCheckout) {
+        btnCheckout.addEventListener("click", eksekusiCheckout);
+    }
     
 }
 
