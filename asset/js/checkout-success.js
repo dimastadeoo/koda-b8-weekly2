@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (btnRiwayat) {
         btnRiwayat.addEventListener("click", function () {
             // Arahkan ke halaman riwayat pesanan profil user kamu
-            window.location.href = "/main/profile-orders.html";
+            window.location.href = "/profile/my-order.html";
         });
     }
 });
