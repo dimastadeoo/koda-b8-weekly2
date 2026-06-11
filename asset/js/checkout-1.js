@@ -7,7 +7,7 @@ function ambilDataCheckout() {
     // Validasi awal: Apakah user sudah login?
     if (!isLoggedIn || !currentUser) {
         alert("Silakan login terlebih dahulu untuk melanjutkan checkout.");
-        window.location.href = "/main/login.html"; // Sesuaikan dengan path login kamu
+        window.location.href = "/auth/login.html"; // Sesuaikan dengan path login kamu
         return [];
     }
 
