@@ -32,5 +32,10 @@ document.addEventListener("DOMContentLoaded", async function () {
         checkoutSuccess()
     }
 
+    if (path === "/" || path.endsWith("index.html")) {
+        window.location.href = "/main/landing-page.html";
+        return;
+    }
+
 
 })
