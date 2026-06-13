@@ -54,7 +54,7 @@ define(function (require) {
             }
 
             const userData = {
-                nama: valueForm.nama,
+                nama: valueForm.name,
                 email: valueForm.email,
                 password: valueForm.pass
             };
