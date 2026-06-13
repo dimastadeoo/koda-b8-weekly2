@@ -3,7 +3,9 @@ requirejs.config({
     baseUrl: '/asset/js',
     paths: {
         jquery: 'https://code.jquery.com/jquery-4.0.0.min',
-        headerFooter: 'module/header-footer'
+        headerFooter: 'module/header-footer',
+        modalConfirmAlert: 'module/modal-confirm-alert',
+        togglePassword: 'module/toggle-password'
     }
 });
 

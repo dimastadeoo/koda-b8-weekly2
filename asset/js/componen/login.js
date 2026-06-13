@@ -1,48 +1,57 @@
 define(function (require) {
-    const $ = require('jquery')
+    const $ = require('jquery');
+    const modal = require('modalConfirmAlert');
+    const togglePass = require('togglePassword')
 
     $(document).ready(function () {
-
-        $('.to-pass').on('click', function () {
-            const inputField = $(this).siblings('input');
-            const icons = $(this).find('svg');
-
-            if (inputField.attr('type') === 'password') {
-                inputField.attr('type', 'text');
-            } else {
-                inputField.attr('type', 'password');
-            }
-
-            icons.toggleClass('hidden');
-        });
-
-        $('form').on('submit', function (e) {
+        togglePass('.to-pass')
+    
+        $('#formLogin').on('submit', async function (e) {
             e.preventDefault();
 
-            const inputEmail = $('input[name="email"]').val().trim();
-            const inputPassword = $('input[name="pass"]').val();
+            const formData = new FormData(this);
+            const valueForm = Object.fromEntries(formData.entries())
 
-            const userList = JSON.parse(localStorage.getItem('userData')) || [];
-            const foundUser = userList.find(user => user.email === inputEmail);
+            if (!inputEmail || !inputPassword) {
+                await modal.alert({
+                    title: 'Data Belum Lengkap',
+                    message: 'Email dan kata sandi wajib diisi.'
+                });
+                return;
+            }
+
+            const userList = JSON.parse(window.localStorage.getItem('userData')) || [];
+
+            const foundUser = userList.find(function (user) {
+                return user.email === inputEmail;
+            });
 
             if (!foundUser) {
-                alert('Email tidak terdaftar! Silahkan buat akun dulu.');
+                await modal.alert({
+                    title: 'Email Tidak Terdaftar',
+                    message: 'Email tidak terdaftar! Silakan buat akun terlebih dahulu.'
+                });
                 return;
             }
 
             if (foundUser.password !== inputPassword) {
-                alert('Kata sandi yang Anda masukkan salah!');
+                await modal.alert({
+                    title: 'Kata Sandi Salah',
+                    message: 'Kata sandi yang Anda masukkan salah.'
+                });
                 return;
             }
 
-            alert(`Login Berhasil Selamat Datang , ${foundUser.nama}!`);
-
             window.sessionStorage.setItem('isLoggedIn', 'true');
             window.sessionStorage.setItem('currentUser', JSON.stringify(foundUser));
+
+            await modal.alert({
+                title: 'Login Berhasil',
+                message: `Selamat datang, ${foundUser.nama}!`
+            });
 
             window.location.href = '/main/landing-page.html';
         });
 
     });
-
-})
+});
