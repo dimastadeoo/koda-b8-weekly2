@@ -92,7 +92,7 @@ function profile() {
     });
 }
 
-export async function headerFooter() {
+async function headerFooter() {
 
     const header = await display('/component/header.html', 'header')
     const footer = await display('/component/footer.html', 'footer')
@@ -102,4 +102,6 @@ export async function headerFooter() {
     profile()
 
 }
+
+headerFooter()
 
