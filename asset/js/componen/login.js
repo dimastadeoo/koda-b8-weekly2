@@ -12,7 +12,7 @@ define(function (require) {
             const formData = new FormData(this);
             const valueForm = Object.fromEntries(formData.entries())
 
-            if (!inputEmail || !inputPassword) {
+            if (!valueForm.email || !valueForm.pass) {
                 await modal.alert({
                     title: 'Data Belum Lengkap',
                     message: 'Email dan kata sandi wajib diisi.'
@@ -21,9 +21,8 @@ define(function (require) {
             }
 
             const userList = JSON.parse(window.localStorage.getItem('userData')) || [];
-
             const foundUser = userList.find(function (user) {
-                return user.email === inputEmail;
+                return user.email === valueForm.email;
             });
 
             if (!foundUser) {
@@ -34,7 +33,7 @@ define(function (require) {
                 return;
             }
 
-            if (foundUser.password !== inputPassword) {
+            if (foundUser.password !== valueForm.pass) {
                 await modal.alert({
                     title: 'Kata Sandi Salah',
                     message: 'Kata sandi yang Anda masukkan salah.'
