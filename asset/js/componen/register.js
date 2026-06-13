@@ -1,64 +1,74 @@
 define(function (require) {
-    const $ = require('jquery')
+    const $ = require('jquery');
+    const modal = require('modalConfirmAlert')
+    const togglePass = require('togglePassword')
+
     $(document).ready(function () {
 
-        function handleTogglePassword(triggerClass) {
-            $(triggerClass).on('click', function () {
-                const inputField = $(this).siblings('input');
-                const icons = $(this).find('svg');
+        togglePass('.to-pass');
+        togglePass('.to-confPass');
 
-                if (inputField.attr('type') === 'password') {
-                    inputField.attr('type', 'text');
-                } else {
-                    inputField.attr('type', 'password');
-                }
-
-                icons.toggleClass('hidden');
-            });
-        }
-
-        handleTogglePassword('.to-pass');
-        handleTogglePassword('.to-confPass');
-
-        $('form').on('submit', function (e) {
+        $('#formReg').on('submit', async function (e) {
             e.preventDefault();
 
-            const nama = $('input[name="name"]').val().trim();
-            const email = $('input[name="email"]').val().trim();
-            const pass = $('input[name*="pass"]').val();
-            const confirmPass = $('input[name*="confirmPass"]').val();
+            const formData = new FormData(this);
+            const valueForm = Object.fromEntries(formData.entries())
 
-            if (pass.length < 6) {
-                alert('Kata sandi minimal harus 6 karakter!');
+            if (valueForm.pass.length < 6) {
+                await modal.alert({
+                    title: 'Kata Sandi Terlalu Pendek',
+                    message: 'Kata sandi minimal harus 6 karakter!'
+                });
                 return;
             }
 
-            if (pass !== confirmPass) {
-                alert('Kata sandi dan konfirmasi sandi berbeda');
+            if (valueForm.pass !== valueForm.confirmPass) {
+                await modal.alert({
+                    title: 'Konfirmasi Sandi Tidak Sesuai',
+                    message: 'Kata sandi dan konfirmasi sandi berbeda.'
+                });
                 return;
             }
 
             const userList = JSON.parse(window.localStorage.getItem('userData')) || [];
 
-            const emailExists = userList.some(user => user.email === email);
+            const emailExists = userList.some(user => user.email === valueForm.email);
+
             if (emailExists) {
-                alert('Email ini sudah terdaftar! Silakan gunakan email lain.');
+                await modal.alert({
+                    title: 'Email Sudah Terdaftar',
+                    message: 'Email ini sudah terdaftar! Silakan gunakan email lain.'
+                });
+                return;
+            }
+
+            const isConfirmed = await modal.confirm({
+                title: 'Konfirmasi Pendaftaran',
+                message: 'Apakah kamu yakin ingin mendaftarkan akun ini?',
+                okText: 'Daftar',
+                cancelText: 'Batal'
+            });
+
+            if (!isConfirmed) {
                 return;
             }
 
             const userData = {
-                nama: nama,
-                email: email,
-                password: pass
+                nama: valueForm.nama,
+                email: valueForm.email,
+                password: valueForm.pass
             };
 
             userList.push(userData);
 
             window.localStorage.setItem('userData', JSON.stringify(userList));
-            alert('Pendaftaran berhasil! Akun kamu sudah terdaftar.');
+
+            await modal.alert({
+                title: 'Pendaftaran Berhasil',
+                message: 'Akun kamu sudah berhasil terdaftar.'
+            });
             window.location.href = 'login.html';
         });
 
     });
-
-})
+});
