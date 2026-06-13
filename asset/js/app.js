@@ -25,6 +25,10 @@ if (path.includes('landing-page.html')) {
     requirejs(['componen/checkout-3'])
 } else if (path.includes('checkout/success.html')) {
     requirejs(['componen/checkout-success'])
+} else if (path.includes('auth/login.html')) {
+    requirejs(['componen/login'])
+} else if (path.includes('auth/register.html')) {
+    requirejs(['componen/register'])
 }
 
 if (path === "/" || path.endsWith("index.html")) {
